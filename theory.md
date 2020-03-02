@@ -61,7 +61,7 @@ Answer here
 
 > What is overfitting? 👶
 
-Answer here
+When your model perform very well on your training set but can't generalize the test set, because it adjusted a lot to the training set.
 
 > How to validate your models? 👶
 
