@@ -73,7 +73,7 @@ Answer here
 
 > Can you explain how cross-validation works? 👶
 
-Answer here
+Cross-validation is the process to separate your total training set into two subsets: training and validation set, and evaluate your model to choose the hyperparameters. But you do this process iteratively, selecting differents training and validation set, in order to reduce the bias by selecting only one validation set.
 
 > What is K-fold cross-validation? 👶
 
