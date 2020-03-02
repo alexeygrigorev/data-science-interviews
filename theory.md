@@ -120,7 +120,7 @@ Answer here
 
 > What is precision, recall, and F1-score? 👶
 
-Answer here
+precision and recall are good for classification problems, specifically measuring true positives, false postives, true negatives and false negatives. Precision handles measuring true and false positives, whereas Recall handles true positives and false negatives. P = (tp/(tp+fp)) and R = (tp/(tp+fn)). In both cases we see that a score of 1 is the best, where we get no false positives or false negatives and only true positives. Also, we can combine them into one equation where F = 2*(PR/(P + R)). Max F score is 1 and min is 0, with 1 being the best. This can be seen if you replace P and R with the original equations. 
 
 > Precision-recall trade-off ‍⭐️
 
