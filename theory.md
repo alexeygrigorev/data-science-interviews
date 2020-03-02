@@ -108,7 +108,7 @@ Answer here
 
 > What is accuracy? 👶
 
-Answer here
+Accuracy is a metric for evaluating classification models. It is calculated by dividing the number of correct predictions by the number of total predictions.
 
 > Is accuracy always a good metric? 👶
 
