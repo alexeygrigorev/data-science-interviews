@@ -31,7 +31,21 @@ With a simple equation:
 y = B0 + B1*x1 + ... + Bn * xN
 ```
 
-B is regression coefficients, x values are the  independent variables and y is dependent variable. 
+B is regression coefficients, x values are the independent (explanatory) variables  and y is dependent variable. 
+
+The case of one explanatory variable is called simple linear regression. For more than one explanatory variable, the process is called multiple linear regression.
+
+Simple linear regression:
+
+```
+y = B0 + B1*x1
+```
+
+Multiple linear regression:
+
+```
+y = B0 + B1*x1 + ... + Bn * xN
+```
 
 <br/>
 
