@@ -127,13 +127,13 @@ Confusion matrix  =>
 |Predicted|   Positive (1) | TP           | FP            |
 |Predicted|   Negative (0) | FN           | TN            |
 
-True Positives (TP): When the actual class of the observation was 1(True) and the prediction is also 1(True)
+True Positives (TP): When the actual class of the observation was 1(True) and the prediction is 1(True)
 
-True Negative (TN): When the actual class of the observation was 0(False) and the prediction is also 0(False)
+True Negative (TN): When the actual class of the observation was 0(False) and the prediction is 0(False)
 
-False Positive (FP): When the actual class of the observation was 0(False) and the prediction is also 1(True)
+False Positive (FP): When the actual class of the observation was 0(False) and the prediction is 1(True)
 
-False Negative (FN): When the actual class of the observation was 1(True) and the prediction is also 0(False)
+False Negative (FN): When the actual class of the observation was 1(True) and the prediction is 0(False)
 
 
 > What is precision, recall, and F1-score? 👶
