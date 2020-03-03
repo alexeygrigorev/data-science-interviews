@@ -1002,37 +1002,47 @@ Answer here
 
 **What is a recommender system? 👶**
 
-Answer here
+Recommender systems are software tools and techniques that provide suggestions for items that are most likely of interest to a particular user.
 
 <br/>
 
 **What are good baselines when building a recommender system? ‍⭐️**
 
-Answer here
+* A good recommer system should give relevant and personalized information.
+* It should not recommend items the user knows well or finds easily.
+* It should make diverse suggestions.
+* A user should explore new items.
 
 <br/>
 
 **What is collaborative filtering? ‍⭐️**
 
-Answer here
+* Collaborative filtering is the most prominent approach to generate recommendations.
+* It uses the wisdom of the crowd, i.e. it gives recommendations based on the experience of others.
+* A recommendation is calculated as the average of other experiences. 
+* Say we want to give a score that indicates how much user u will like an item i. Then we can calculate it with the experience of N other users U as r_ui = 1/N * sum(v in U) r_vi.
+* In order to rate similar experiences with a higher weight, we can introduce a similarity between users that we use as a multiplier for each rating.
+* Also, as users have an individual profile, one user may have an average rating much larger than another user, so we use normalization techniques (e.g. centering or Z-score normalization) to remove the users' biases.
+* Collaborative filtering does only need a rating matrix as input and improves over time. However, it does not work well on sparse data, does not work for cold starts (see below) and usually tends to overfit. 
 
 <br/>
 
 **How we can incorporate implicit feedback (clicks, etc) into our recommender systems? ‍⭐️**
 
-Answer here
+In comparison to explicit feedback, implicit feedback datasets lacks negative examples. For example, explicit feedback can be a positive or a negative rating, but implicit feedback may be the number of purchases or clicks. One popular approach to solve this problem is named weighted alternating least squares (wALS) [Hu, Y., Koren, Y., & Volinsky, C. (2008, December). Collaborative filtering for implicit feedback datasets. In Data Mining, 2008. ICDM'08. Eighth IEEE International Conference on (pp. 263-272). IEEE.]. Instead of modeling the rating matrix directly, the numbers (e.g. amount of clicks) describes the strength in observations of user actions. The model tries to find latent factors that can be used to predict the expected preference of a user for an item.
 
 <br/>
 
 **What is the cold start problem? ‍⭐️**
 
-Answer here
+Collaborative filterung incorporates crowd knowledge to give recommendations for certain items. Say we want to recommend how much a user will like an item, we then will calculate the score using the recommendations of other users for this certain item. We can distinguish between two different ways of a cold start problem now. First, if there is a new item that has not been rated yet, we cannot give any recommendation. Also, when there is a new user, we cannot calculate a similarity to any other user.
 
 <br/>
 
 **Possible approaches to solving the cold start problem? ‍⭐️🚀**
 
-Answer here
+* Content-based filtering incorporates features about items to calculate a similarity between them. In this way, we can recommend items that have a high similarity to items that a user liked already. In this way, we are not dependant on the ratings of other users for a given item anymore and solve the cold start problem for new items.
+* Demographic filtering incorporates user profiles to calculate a similarity between them and solves the cold start problem for new users.
 
 <br/>
 
