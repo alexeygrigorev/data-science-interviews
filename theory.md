@@ -73,7 +73,7 @@ Answer here
 
 > Can you explain how cross-validation works? 👶
 
-Cross-validation is the process to separate your total training set into two subsets: training and validation set, and evaluate your model to choose the hyperparameters. But you do this process iteratively, selecting differents training and validation set, in order to reduce the bias by selecting only one validation set.
+Cross-validation is the process to separate your total training set into two subsets: training and validation set, and evaluate your model to choose the hyperparameters. But you do this process iteratively, selecting differents training and validation set, in order to reduce the bias that you would have by selecting only one validation set.
 
 > What is K-fold cross-validation? 👶
 
@@ -223,7 +223,7 @@ Answer here
 
 > How do we interpret weights in linear models? ‍⭐️
 
-Answer here
+If the variables are normalized, we can interpret weights in linear models like the importance of this variable in the predicted result.
 
 > If a weight for one variable is higher than for another  —  can we say that this variable is more important? ‍⭐️
 
