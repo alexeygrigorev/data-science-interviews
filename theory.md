@@ -120,7 +120,7 @@ Answer here
 
 **Why do we need to split our data into three parts: train, validation, and test? 👶**
 
-Answer here
+The training set is used to fit the model, i.e. to train the model with the test data. The validation set is then used to provide an unbiased evaluation of a model while fine-tuning hyperparameters. This improves the generalization of the model. Finally, a test data set which the model has never "seen" before should be used for the final evaluation of the model. This allows for an unbiased evaluation of the model. The evaluation should never be performed on the same data that is used for training. Otherwise the model performance would not be representative.
 
 <br/>
 
