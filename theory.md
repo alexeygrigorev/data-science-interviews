@@ -1,8 +1,9 @@
 # Theoretical interview questions
 
-The list of questions is based on this post: https://hackernoon.com/160-data-science-interview-questions-415s3y2a
-
-Legend: 👶 easy ‍⭐️ medium 🚀 expert
+* The list of questions is based on this post: https://hackernoon.com/160-data-science-interview-questions-415s3y2a
+* Legend: 👶 easy ‍⭐️ medium 🚀 expert
+* Do you know how to answer questions without answers? Please create a PR
+* See an error? Please create a PR with fix
 
 ## Supervised machine learning
 
