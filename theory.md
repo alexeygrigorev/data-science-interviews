@@ -6,7 +6,7 @@ Legend: 👶 easy ‍⭐️ medium 🚀 expert
 
 ## Supervised machine learning
 
-> What is supervised machine learning? 👶
+**What is supervised machine learning? 👶**
 
 A case when we have both features (the matrix X) and the labels (the vector y) 
 
@@ -14,67 +14,67 @@ A case when we have both features (the matrix X) and the labels (the vector y)
 
 ## Linear regression
 
-> What is regression? Which models can you use to solve a regression problem? 👶
+**What is regression? Which models can you use to solve a regression problem? 👶**
 
 Regression is a part of supervised ML. Regression models predict a real number
 
 <br/>
 
-> What is linear regression? When do we use it? 👶
+**What is linear regression? When do we use it? 👶**
 
 Answer here
 
 <br/>
 
-> What’s the normal distribution? Why do we care about it? 👶
+**What’s the normal distribution? Why do we care about it? 👶**
 
 Answer here
 
 <br/>
 
-> How do we check if a variable follows the normal distribution? ‍⭐️
+**How do we check if a variable follows the normal distribution? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> What if we want to build a model for predicting prices? Are prices distributed normally? Do we need to do any pre-processing for prices? ‍⭐️
+**What if we want to build a model for predicting prices? Are prices distributed normally? Do we need to do any pre-processing for prices? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> What are the methods for solving linear regression do you know? ‍⭐️
+**What are the methods for solving linear regression do you know? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> What is gradient descent? How does it work? ‍⭐️
+**What is gradient descent? How does it work? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> What is the normal equation? ‍⭐️
+**What is the normal equation? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> What is SGD  —  stochastic gradient descent? What’s the difference with the usual gradient descent? ‍⭐️
+**What is SGD  —  stochastic gradient descent? What’s the difference with the usual gradient descent? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> Which metrics for evaluating regression models do you know? 👶
+**Which metrics for evaluating regression models do you know? 👶**
 
 Answer here
 
 <br/>
 
-> What are MSE and RMSE? 👶
+**What are MSE and RMSE? 👶**
 
 Answer here
 
@@ -83,37 +83,37 @@ Answer here
 
 ## Validation
 
-> What is overfitting? 👶
+**What is overfitting? 👶**
 
 When your model perform very well on your training set but can't generalize the test set, because it adjusted a lot to the training set.
 
 <br/>
 
-> How to validate your models? 👶
+**How to validate your models? 👶**
 
 Answer here
 
 <br/>
 
-> Why do we need to split our data into three parts: train, validation, and test? 👶
+**Why do we need to split our data into three parts: train, validation, and test? 👶**
 
 Answer here
 
 <br/>
 
-> Can you explain how cross-validation works? 👶
+**Can you explain how cross-validation works? 👶**
 
 Cross-validation is the process to separate your total training set into two subsets: training and validation set, and evaluate your model to choose the hyperparameters. But you do this process iteratively, selecting differents training and validation set, in order to reduce the bias that you would have by selecting only one validation set.
 
 <br/>
 
-> What is K-fold cross-validation? 👶
+**What is K-fold cross-validation? 👶**
 
 Answer here
 
 <br/>
 
-> How do we choose K in K-fold cross-validation? What’s your favorite K? 👶
+**How do we choose K in K-fold cross-validation? What’s your favorite K? 👶**
 
 Answer here
 
@@ -122,49 +122,49 @@ Answer here
 
 ## Classification
 
-> What is classification? Which models would you use to solve a classification problem? 👶
+**What is classification? Which models would you use to solve a classification problem? 👶**
 
 Answer here
 
 <br/>
 
-> What is logistic regression? When do we need to use it? 👶
+**What is logistic regression? When do we need to use it? 👶**
 
 Answer here
 
 <br/>
 
-> Is logistic regression a linear model? Why? 👶
+**Is logistic regression a linear model? Why? 👶**
 
 Answer here
 
 <br/>
 
-> What is sigmoid? What does it do? 👶
+**What is sigmoid? What does it do? 👶**
 
 Answer here
 
 <br/>
 
-> How do we evaluate classification models? 👶
+**How do we evaluate classification models? 👶**
 
 Answer here
 
 <br/>
 
-> What is accuracy? 👶
+**What is accuracy? 👶**
 
 Accuracy is a metric for evaluating classification models. It is calculated by dividing the number of correct predictions by the number of total predictions.
 
 <br/>
 
-> Is accuracy always a good metric? 👶
+**Is accuracy always a good metric? 👶**
 
 Accuracy is not a good performance metric when there is imbalance in the dataset. For example, in binary classification with 95% of A class and 5% of B class, prediction accuracy can be 95%. In case of imbalance dataset, we need to choose Precision, recall, or F1 Score depending on the problem we are trying to solve. 
 
 <br/>
 
-> What is the confusion table? What are the cells in this table? 👶
+**What is the confusion table? What are the cells in this table? 👶**
 
 Confusion table (or confusion matrix) shows how many True positives (TP), True Negative (TN), False Positive (FP) and False Negative (FN) model has made. 
 
@@ -183,7 +183,7 @@ Most of the performance metrics for classification models are based on the value
 
 <br/>
 
-> What are precision, recall, and F1-score? 👶
+**What are precision, recall, and F1-score? 👶**
 
 * Precision and recall are classification evaluation metrics:
 * P = TP / (TP + FP) and R = TP / (TP + FN).
@@ -195,55 +195,55 @@ Most of the performance metrics for classification models are based on the value
 
 <br/>
 
-> Precision-recall trade-off ‍⭐️
+**Precision-recall trade-off ‍⭐️**
 
 Answer here
 
 <br/>
 
-> What is the ROC curve? When to use it? ‍⭐️
+**What is the ROC curve? When to use it? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> What is AUC (AU ROC)? When to use it? ‍⭐️
+**What is AUC (AU ROC)? When to use it? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> How to interpret the AU ROC score? ‍⭐️
+**How to interpret the AU ROC score? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> What is the PR (precision-recall) curve? ‍⭐️
+**What is the PR (precision-recall) curve? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> What is the area under the PR curve? Is it a useful metric? ‍⭐️I
+**What is the area under the PR curve? Is it a useful metric? ‍⭐️I**
 
 Answer here
 
 <br/>
 
-> In which cases AU PR is better than AU ROC? ‍⭐️
+**In which cases AU PR is better than AU ROC? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> What do we do with categorical variables? ‍⭐️
+**What do we do with categorical variables? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> Why do we need one-hot encoding? ‍⭐️
+**Why do we need one-hot encoding? ‍⭐️**
 
 Answer here
 
@@ -252,91 +252,91 @@ Answer here
 
 ## Regularization
 
-> What happens to our linear regression model if we have three columns in our data: x, y, z  —  and z is a sum of x and y? ‍⭐️
+**What happens to our linear regression model if we have three columns in our data: x, y, z  —  and z is a sum of x and y? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> What happens to our linear regression model if the column z in the data is a sum of columns x and y and some random noise? ‍⭐️
+**What happens to our linear regression model if the column z in the data is a sum of columns x and y and some random noise? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> What is regularization? Why do we need it? 👶
+**What is regularization? Why do we need it? 👶**
 
 Answer here
 
 <br/>
 
-> Which regularization techniques do you know? ‍⭐️
+**Which regularization techniques do you know? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> What kind of regularization techniques are applicable to linear models? ‍⭐️
+**What kind of regularization techniques are applicable to linear models? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> How does L2 regularization look like in a linear model? ‍⭐️
+**How does L2 regularization look like in a linear model? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> How do we select the right regularization parameters? 👶
+**How do we select the right regularization parameters? 👶**
 
 Answer here
 
 <br/>
 
-> What’s the effect of L2 regularization on the weights of a linear model? ‍⭐️
+**What’s the effect of L2 regularization on the weights of a linear model? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> How L1 regularization looks like in a linear model? ‍⭐️
+**How L1 regularization looks like in a linear model? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> What’s the difference between L2 and L1 regularization? ‍⭐️
+**What’s the difference between L2 and L1 regularization? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> Can we have both L1 and L2 regularization components in a linear model? ‍⭐️
+**Can we have both L1 and L2 regularization components in a linear model? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> What’s the interpretation of the bias term in linear models? ‍⭐️
+**What’s the interpretation of the bias term in linear models? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> How do we interpret weights in linear models? ‍⭐️
+**How do we interpret weights in linear models? ‍⭐️**
 
 If the variables are normalized, we can interpret weights in linear models like the importance of this variable in the predicted result.
 
 <br/>
 
-> If a weight for one variable is higher than for another  —  can we say that this variable is more important? ‍⭐️
+**If a weight for one variable is higher than for another  —  can we say that this variable is more important? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> When do we need to perform feature normalization for linear models? When it’s okay not to do it? ‍⭐️
+**When do we need to perform feature normalization for linear models? When it’s okay not to do it? ‍⭐️**
 
 Answer here
 
@@ -345,31 +345,31 @@ Answer here
 
 ## Feature selection
 
-> What is feature selection? Why do we need it? 👶
+**What is feature selection? Why do we need it? 👶**
 
 Answer here
 
 <br/>
 
-> Is feature selection important for linear models? ‍⭐️
+**Is feature selection important for linear models? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> Which feature selection techniques do you know? ‍⭐️
+**Which feature selection techniques do you know? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> Can we use L1 regularization for feature selection? ‍⭐️
+**Can we use L1 regularization for feature selection? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> Can we use L2 regularization for feature selection? ‍⭐️
+**Can we use L2 regularization for feature selection? ‍⭐️**
 
 Answer here
 
@@ -378,37 +378,37 @@ Answer here
 
 ## Decision trees
 
-> What are the decision trees? 👶
+**What are the decision trees? 👶**
 
 Answer here
 
 <br/>
 
-> How do we train decision trees? ‍⭐️
+**How do we train decision trees? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> What are the main parameters of the decision tree model? 👶
+**What are the main parameters of the decision tree model? 👶**
 
 Answer here
 
 <br/>
 
-> How do we handle categorical variables in decision trees? ‍⭐️
+**How do we handle categorical variables in decision trees? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> What are the benefits of a single decision tree compared to more complex models? ‍⭐️
+**What are the benefits of a single decision tree compared to more complex models? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> How can we know which features are more important for the decision tree model? ‍⭐️
+**How can we know which features are more important for the decision tree model? ‍⭐️**
 
 Answer here
 
@@ -417,55 +417,55 @@ Answer here
 
 ## Random forest
 
-> What is random forest? 👶
+**What is random forest? 👶**
 
 Answer here
 
 <br/>
 
-> Why do we need randomization in random forest? ‍⭐️
+**Why do we need randomization in random forest? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> What are the main parameters of the random forest model? ‍⭐️
+**What are the main parameters of the random forest model? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> How do we select the depth of the trees in random forest? ‍⭐️
+**How do we select the depth of the trees in random forest? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> How do we know how many trees we need in random forest? ‍⭐️
+**How do we know how many trees we need in random forest? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> Is it easy to parallelize training of a random forest model? How can we do it? ‍⭐️
+**Is it easy to parallelize training of a random forest model? How can we do it? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> What are the potential problems with many large trees? ‍⭐️
+**What are the potential problems with many large trees? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> What if instead of finding the best split, we randomly select a few splits and just select the best from them. Will it work? 🚀
+**What if instead of finding the best split, we randomly select a few splits and just select the best from them. Will it work? 🚀**
 
 Answer here
 
 <br/>
 
-> What happens when we have correlated features in our data? ‍⭐️
+**What happens when we have correlated features in our data? ‍⭐️**
 
 Answer here
 
@@ -474,49 +474,49 @@ Answer here
 
 ## Gradient boosting
 
-> What is gradient boosting trees? ‍⭐️
+**What is gradient boosting trees? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> What’s the difference between random forest and gradient boosting? ‍⭐️
+**What’s the difference between random forest and gradient boosting? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> Is it possible to parallelize training of a gradient boosting model? How to do it? ‍⭐️
+**Is it possible to parallelize training of a gradient boosting model? How to do it? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> Feature importance in gradient boosting trees  —  what are possible options? ‍⭐️
+**Feature importance in gradient boosting trees  —  what are possible options? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> Are there any differences between continuous and discrete variables when it comes to feature importance of gradient boosting models? 🚀
+**Are there any differences between continuous and discrete variables when it comes to feature importance of gradient boosting models? 🚀**
 
 Answer here
 
 <br/>
 
-> What are the main parameters in the gradient boosting model? ‍⭐️
+**What are the main parameters in the gradient boosting model? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> How do you approach tuning parameters in XGBoost or LightGBM? 🚀
+**How do you approach tuning parameters in XGBoost or LightGBM? 🚀**
 
 Answer here
 
 <br/>
 
-> How do you select the number of trees in the gradient boosting model? ‍⭐️
+**How do you select the number of trees in the gradient boosting model? ‍⭐️**
 
 Answer here
 
@@ -526,13 +526,13 @@ Answer here
 
 ## Parameter tuning
 
-> Which parameter tuning strategies (in general) do you know? ‍⭐️
+**Which parameter tuning strategies (in general) do you know? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> What’s the difference between grid search parameter tuning strategy and random search? When to use one or another? ‍⭐️
+**What’s the difference between grid search parameter tuning strategy and random search? When to use one or another? ‍⭐️**
 
 Answer here
 
@@ -541,55 +541,55 @@ Answer here
 
 ## Neural networks
 
-> What kind of problems neural nets can solve? 👶
+**What kind of problems neural nets can solve? 👶**
 
 Answer here
 
 <br/>
 
-> How does a usual fully-connected feed-forward neural network work? ‍⭐️
+**How does a usual fully-connected feed-forward neural network work? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> Why do we need activation functions? 👶
+**Why do we need activation functions? 👶**
 
 Answer here
 
 <br/>
 
-> What are the problems with sigmoid as an activation function? ‍⭐️
+**What are the problems with sigmoid as an activation function? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> What is ReLU? How is it better than sigmoid or tanh? ‍⭐️
+**What is ReLU? How is it better than sigmoid or tanh? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> How we can initialize the weights of a neural network? ‍⭐️
+**How we can initialize the weights of a neural network? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> What if we set all the weights of a neural network to 0? ‍⭐️
+**What if we set all the weights of a neural network to 0? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> What regularization techniques for neural nets do you know? ‍⭐️
+**What regularization techniques for neural nets do you know? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> What is dropout? Why is it useful? How does it work? ‍⭐️
+**What is dropout? Why is it useful? How does it work? ‍⭐️**
 
 Answer here
 
@@ -598,73 +598,73 @@ Answer here
 
 ## Optimization in neural networks
 
-> What is backpropagation? How does it work? Why do we need it? ‍⭐️
+**What is backpropagation? How does it work? Why do we need it? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> Which optimization techniques for training neural nets do you know? ‍⭐️
+**Which optimization techniques for training neural nets do you know? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> How do we use SGD (stochastic gradient descent) for training a neural net? ‍⭐️
+**How do we use SGD (stochastic gradient descent) for training a neural net? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> What’s the learning rate? 👶
+**What’s the learning rate? 👶**
 
 Answer here
 
 <br/>
 
-> What happens when the learning rate is too large? Too small? 👶
+**What happens when the learning rate is too large? Too small? 👶**
 
 Answer here
 
 <br/>
 
-> How to set the learning rate? ‍⭐️
+**How to set the learning rate? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> What is Adam? What’s the main difference between Adam and SGD? ‍⭐️
+**What is Adam? What’s the main difference between Adam and SGD? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> When would you use Adam and when SGD? ‍⭐️
+**When would you use Adam and when SGD? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> Do we want to have a constant learning rate or we better change it throughout training? ‍⭐️
+**Do we want to have a constant learning rate or we better change it throughout training? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> How do we decide when to stop training a neural net? 👶
+**How do we decide when to stop training a neural net? 👶**
 
 Answer here
 
 <br/>
 
-> What is model checkpointing? ‍⭐️
+**What is model checkpointing? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> Can you tell us how you approach the model training process? ‍⭐️
+**Can you tell us how you approach the model training process? ‍⭐️**
 
 Answer here
 
@@ -673,67 +673,67 @@ Answer here
 
 ## Neural networks for computer vision
 
-> How we can use neural nets for computer vision? ‍⭐️
+**How we can use neural nets for computer vision? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> What’s a convolutional layer? ‍⭐️
+**What’s a convolutional layer? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> Why do we actually need convolutions? Can’t we use fully-connected layers for that? ‍⭐️
+**Why do we actually need convolutions? Can’t we use fully-connected layers for that? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> What’s pooling in CNN? Why do we need it? ‍⭐️
+**What’s pooling in CNN? Why do we need it? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> How does max pooling work? Are there other pooling techniques? ‍⭐️
+**How does max pooling work? Are there other pooling techniques? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> Are CNNs resistant to rotations? What happens to the predictions of a CNN if an image is rotated? 🚀
+**Are CNNs resistant to rotations? What happens to the predictions of a CNN if an image is rotated? 🚀**
 
 Answer here
 
 <br/>
 
-> What are augmentations? Why do we need them? 👶What kind of augmentations do you know? 👶How to choose which augmentations to use? ‍⭐️
+**What are augmentations? Why do we need them? 👶What kind of augmentations do you know? 👶How to choose which augmentations to use? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> What kind of CNN architectures for classification do you know? 🚀
+**What kind of CNN architectures for classification do you know? 🚀**
 
 Answer here
 
 <br/>
 
-> What is transfer learning? How does it work? ‍⭐️
+**What is transfer learning? How does it work? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> What is object detection? Do you know any architectures for that? 🚀
+**What is object detection? Do you know any architectures for that? 🚀**
 
 Answer here
 
 <br/>
 
-> What is object segmentation? Do you know any architectures for that? 🚀
+**What is object segmentation? Do you know any architectures for that? 🚀**
 
 Answer here
 
@@ -742,85 +742,85 @@ Answer here
 
 ## Text classification
 
-> How can we use machine learning for text classification? ‍⭐️
+**How can we use machine learning for text classification? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> What is bag of words? How we can use it for text classification? ‍⭐️
+**What is bag of words? How we can use it for text classification? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> What are the advantages and disadvantages of bag of words? ‍⭐️
+**What are the advantages and disadvantages of bag of words? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> What are N-grams? How can we use them? ‍⭐️
+**What are N-grams? How can we use them? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> How large should be N for our bag of words when using N-grams? ‍⭐️
+**How large should be N for our bag of words when using N-grams? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> What is TF-IDF? How is it useful for text classification? ‍⭐️
+**What is TF-IDF? How is it useful for text classification? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> Which model would you use for text classification with bag of words features? ‍⭐️
+**Which model would you use for text classification with bag of words features? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> Would you prefer gradient boosting trees model or logistic regression when doing text classification with bag of words? ‍⭐️
+**Would you prefer gradient boosting trees model or logistic regression when doing text classification with bag of words? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> What are word embeddings? Why are they useful? Do you know Word2Vec? ‍⭐️
+**What are word embeddings? Why are they useful? Do you know Word2Vec? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> Do you know any other ways to get word embeddings? 🚀
+**Do you know any other ways to get word embeddings? 🚀**
 
 Answer here
 
 <br/>
 
-> If you have a sentence with multiple words, you may need to combine multiple word embeddings into one. How would you do it? ‍⭐️
+**If you have a sentence with multiple words, you may need to combine multiple word embeddings into one. How would you do it? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> Would you prefer gradient boosting trees model or logistic regression when doing text classification with embeddings? ‍⭐️
+**Would you prefer gradient boosting trees model or logistic regression when doing text classification with embeddings? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> How can you use neural nets for text classification? 🚀
+**How can you use neural nets for text classification? 🚀**
 
 Answer here
 
 <br/>
 
-> How can we use CNN for text classification? 🚀
+**How can we use CNN for text classification? 🚀**
 
 Answer here
 
@@ -829,43 +829,43 @@ Answer here
 
 ## Clustering
 
-> What is unsupervised learning? 👶
+**What is unsupervised learning? 👶**
 
 Answer here
 
 <br/>
 
-> What is clustering? When do we need it? 👶
+**What is clustering? When do we need it? 👶**
 
 Answer here
 
 <br/>
 
-> Do you know how K-means works? ‍⭐️
+**Do you know how K-means works? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> How to select K for K-means? ‍⭐️
+**How to select K for K-means? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> What are the other clustering algorithms do you know? ‍⭐️
+**What are the other clustering algorithms do you know? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> Do you know how DBScan works? ‍⭐️
+**Do you know how DBScan works? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> When would you choose K-means and when DBScan? ‍⭐️
+**When would you choose K-means and when DBScan? ‍⭐️**
 
 Answer here
 
@@ -873,19 +873,19 @@ Answer here
 
 
 ## Dimensionality reduction
-> What is the curse of dimensionality? Why do we care about it? ‍⭐️
+**What is the curse of dimensionality? Why do we care about it? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> Do you know any dimensionality reduction techniques? ‍⭐️
+**Do you know any dimensionality reduction techniques? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> What’s singular value decomposition? How is it typically used for machine learning? ‍⭐️
+**What’s singular value decomposition? How is it typically used for machine learning? ‍⭐️**
 
 Answer here
 
@@ -894,67 +894,67 @@ Answer here
 
 ## Ranking and search
 
-> What is the ranking problem? Which models can you use to solve them? ‍⭐️
+**What is the ranking problem? Which models can you use to solve them? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> What are good unsupervised baselines for text information retrieval? ‍⭐️
+**What are good unsupervised baselines for text information retrieval? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> How would you evaluate your ranking algorithms? Which offline metrics would you use? ‍⭐️
+**How would you evaluate your ranking algorithms? Which offline metrics would you use? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> What is precision and recall at k? ‍⭐️
+**What is precision and recall at k? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> What is mean average precision at k? ‍⭐️
+**What is mean average precision at k? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> How can we use machine learning for search? ‍⭐️
+**How can we use machine learning for search? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> How can we get training data for our ranking algorithms? ‍⭐️
+**How can we get training data for our ranking algorithms? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> Can we formulate the search problem as a classification problem? How? ‍⭐️
+**Can we formulate the search problem as a classification problem? How? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> How can we use clicks data as the training data for ranking algorithms? 🚀
+**How can we use clicks data as the training data for ranking algorithms? 🚀**
 
 Answer here
 
 <br/>
 
-> Do you know how to use gradient boosting trees for ranking? 🚀
+**Do you know how to use gradient boosting trees for ranking? 🚀**
 
 Answer here
 
 <br/>
 
-> How do you do an online evaluation of a new ranking algorithm? ‍⭐️
+**How do you do an online evaluation of a new ranking algorithm? ‍⭐️**
 
 Answer here
 
@@ -963,37 +963,37 @@ Answer here
 
 ## Recommender systems
 
-> What is a recommender system? 👶
+**What is a recommender system? 👶**
 
 Answer here
 
 <br/>
 
-> What are good baselines when building a recommender system? ‍⭐️
+**What are good baselines when building a recommender system? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> What is collaborative filtering? ‍⭐️
+**What is collaborative filtering? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> How we can incorporate implicit feedback (clicks, etc) into our recommender systems? ‍⭐️
+**How we can incorporate implicit feedback (clicks, etc) into our recommender systems? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> What is the cold start problem? ‍⭐️
+**What is the cold start problem? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> Possible approaches to solving the cold start problem? ‍⭐️🚀
+**Possible approaches to solving the cold start problem? ‍⭐️🚀**
 
 Answer here
 
@@ -1002,43 +1002,43 @@ Answer here
 
 ## Time series
 
-> What is a time series? 👶
+**What is a time series? 👶**
 
 Answer here
 
 <br/>
 
-> How is time series different from the usual regression problem? 👶
+**How is time series different from the usual regression problem? 👶**
 
 Answer here
 
 <br/>
 
-> Which models do you know for solving time series problems? ‍⭐️
+**Which models do you know for solving time series problems? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> If there’s a trend in our series, how we can remove it? And why would we want to do it? ‍⭐️
+**If there’s a trend in our series, how we can remove it? And why would we want to do it? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> You have a series with only one variable “y” measured at time t. How do predict “y” at time t+1? Which approaches would you use? ‍⭐️
+**You have a series with only one variable “y” measured at time t. How do predict “y” at time t+1? Which approaches would you use? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> You have a series with a variable “y” and a set of features. How do you predict “y” at t+1? Which approaches would you use? ‍⭐️
+**You have a series with a variable “y” and a set of features. How do you predict “y” at t+1? Which approaches would you use? ‍⭐️**
 
 Answer here
 
 <br/>
 
-> What are the problems with using trees for solving time series problems? ‍⭐️
+**What are the problems with using trees for solving time series problems? ‍⭐️**
 
 Answer here
 
