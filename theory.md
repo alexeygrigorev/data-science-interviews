@@ -112,11 +112,29 @@ Accuracy is a metric for evaluating classification models. It is calculated by d
 
 > Is accuracy always a good metric? 👶
 
-Answer here
+Accuracy is not a good performance metric when there is imbalance in the dataset. For example, in binary classification with 95% of A class and 5% of B class and prediction accuracy can be 95%. In case of imbalance dataset, we need to choose Precision, recall, or F1-Score depending on the problem we are trying to solve. 
 
 > What is the confusion table? What are the cells in this table? 👶
 
-Answer here
+Confusion matrix depicts how many True positives (TP), True Negative (TN), False Positive (FP) and False Negative (FN) model has made. Most of the performance metrics are based on confusion matrix. It is used for classification problem and can be used for more than two classes.
+
+Confusion matrix  =>
+
+
+||                |     Actual   |        Actual |
+|:---:|   :---:        |     :---:    |:---:          |
+||                | Positive (1) | Negative (0)  |
+|Predicted|   Positive (1) | TP           | FP            |
+|Predicted|   Negative (0) | FN           | TN            |
+
+True Positives (TP): When the actual class of the observation was 1(True) and the prediction is also 1(True)
+
+True Negative (TN): When the actual class of the observation was 0(False) and the prediction is also 0(False)
+
+False Positive (FP): When the actual class of the observation was 0(False) and the prediction is also 1(True)
+
+False Negative (FN): When the actual class of the observation was 1(True) and the prediction is also 0(False)
+
 
 > What is precision, recall, and F1-score? 👶
 
