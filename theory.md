@@ -23,7 +23,15 @@ Regression is a part of supervised ML. Regression models predict a real number
 
 **What is linear regression? When do we use it? 👶**
 
-Answer here
+Linear regression is a model that assumes a linear relationship between the input variables (X) and the single output variable (y). 
+
+With a simple equation:
+
+```
+y = B0 + B1*x1 + ... + Bn * xN
+```
+
+B is regression coefficients, x values are the  independent variables and y is dependent variable. 
 
 <br/>
 
