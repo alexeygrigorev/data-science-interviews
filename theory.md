@@ -854,43 +854,57 @@ Answer here
 
 **What is unsupervised learning? 👶**
 
-Answer here
+Unsupervised learning aims to detect paterns in data where no labels are given.
 
 <br/>
 
 **What is clustering? When do we need it? 👶**
 
-Answer here
+Clustering algorithms group objects such that similar feature points are put into the same groups (clusters) and dissimilar feature points are put into different clusters. 
 
 <br/>
 
 **Do you know how K-means works? ‍⭐️**
 
-Answer here
+1. Partition points into k subsets.
+2. Compute the seed points as the new centroids of the clusters of the current partitioning.
+3. Assign each point to the cluster with the nearest seed point.
+4. Go back to step 2 or stop when the assignment does not change.
 
 <br/>
 
 **How to select K for K-means? ‍⭐️**
 
-Answer here
+* Domain knowledge, i.e. an expert knows the value of k
+* Elbow method: compute the clusters for different values of k, for each k, calculate the total within-cluster sum of square, plot the sum according to the number of clusters and use the band as the number of clusters.
+* Average silhouette method: compute the clusters for different values of k, for each k, calculate the average silhouette of observations, plot the silhouette according to the number of clusters and select the maximum as the number of clusters.
 
 <br/>
 
 **What are the other clustering algorithms do you know? ‍⭐️**
 
-Answer here
+* k-medoids: Takes the most central point instead of the mean value as the center of the cluster. This makes it more robust to noise.
+* Agglomerative Hierarchical Clustering (AHC): hierarchical clusters combining the nearest clusters starting with each point as its own cluster.
+* DIvisive ANAlysis Clustering (DIANA): hierarchical clustering starting with one cluster containing all points and splitting the clusters until each point describes its own cluster.
+* Density-Based Spatial Clustering of Applications with Noise (DBSCAN): Cluster defined as maximum set of density-connected points.
 
 <br/>
 
 **Do you know how DBScan works? ‍⭐️**
 
-Answer here
+* Two input parameters epsilon (neighborhood radius) and minPts (minimum number of points in an epsilon-neighborhood)
+* Cluster defined as maximum set of density-connected points.
+* Points p_j and p_i are density-connected w.r.t. epsilon and minPts if there is a point o such that both, i and j are density-reachable from o w.r.t. epsilon and minPts.
+* p_j is density-reachable from p_i w.r.t. epsilon, minPts if there is a chain of points p_i -> p_i+1 -> p_i+x = p_j such that p_i+x is directly density-reachable from p_i+x-1.
+* p_j is a directly density-reachable point of the neighborhood of p_i if dist(p_i,p_j) <= epsilon.
 
 <br/>
 
 **When would you choose K-means and when DBScan? ‍⭐️**
 
-Answer here
+* DBScan is more robust to noise.
+* DBScan is better when the amount of clusters is difficult to guess.
+* K-means has a lower complexity, i.e. it will be much faster, especially with a larger amount of points.
 
 <br/>
 
