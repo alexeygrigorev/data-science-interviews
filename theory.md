@@ -912,19 +912,26 @@ Clustering algorithms group objects such that similar feature points are put int
 ## Dimensionality reduction
 **What is the curse of dimensionality? Why do we care about it? ‍⭐️**
 
-Answer here
+Data in only one dimension is relatively tightly packed. Adding a dimension stretches the points across that dimension, pushing them further apart. Additional dimensions spread the data even further making high dimensional data extremely sparse. We care about it, because it is difficult to use machine learning in sparse spaces.
 
 <br/>
 
 **Do you know any dimensionality reduction techniques? ‍⭐️**
 
-Answer here
+* Singular Value Decomposition (SVD)
+* Principal Component Analysis (PCA)
+* Linear Discriminant Analysis (LDA)
+* T-distributed Stochastic Neighbor Embedding (t-SNE)
+* Autoencoders
+* Fourier and Wavelet Transforms
 
 <br/>
 
 **What’s singular value decomposition? How is it typically used for machine learning? ‍⭐️**
 
-Answer here
+* Singular Value Decomposition (SVD) is a general matrix decomposition method that factors a matrix X into three matrices L (left singular values), Σ (diagonal matrix) and R^T (right singular values).
+* For machine learning, Principal Component Analysis (PCA) is typically used. It is a special type of SVD where the singular values correspond to the eigenvectors and the values of the diagonal matrix are the squares of the eigenvalues. We use these features as they are statistically descriptive.
+* Having calculated the eigenvectors and eigenvalues, we can use the Kaiser-Guttman criterion, a scree plot or the proportion of explained variance to determine the principal components (i.e. the final dimensionality) that are useful for dimensionality reduction.
 
 <br/>
 
