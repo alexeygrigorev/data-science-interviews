@@ -785,7 +785,7 @@ Answer here
 
 **What are N-grams? How can we use them? ‍⭐️**
 
-Answer here
+The function to tokenize into consecutive sequences of words is called n-grams. It can be used to find out N most co-occurring words (how often word X is followed by word Y) in a given sentence. 
 
 <br/>
 
