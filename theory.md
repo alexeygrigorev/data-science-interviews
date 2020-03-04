@@ -75,7 +75,7 @@ Answer here
 
 **What is gradient descent? How does it work? ‍⭐️**
 
-Answer here
+Gradient descent is an algorithm that uses calculus concept of gradient to try and reach local or global minima. It works by taking the negative of the gradient in a point of a given function, and updating that point repeatedly using the calculated negative gradient, until the algorithm reaches a local or global minimum, which will cause future iterations of the algorithm to return values that are equal or too close to the current point. It is widely used in machine learning applications.
 
 <br/>
 
@@ -99,7 +99,7 @@ Answer here
 
 **What are MSE and RMSE? 👶**
 
-Answer here
+MSE stands for <strong>M</strong>ean <strong>S</strong>quare <strong>E</strong>rror while RMSE stands for <strong>R</strong>oot <strong>M</strong>ean <strong>S</strong>quare <strong>E</strong>rror. They are metrics with which we can evaluate models.
 
 <br/>
 
@@ -147,7 +147,7 @@ Answer here
 
 **What is classification? Which models would you use to solve a classification problem? 👶**
 
-Answer here
+Classification problems are problems in which our prediction space is discrete, i.e. there is a finite number of values the output variable can be. Some models which can be used to solve classification problems are: logistic regression, decision tree, random forests, multi-layer perceptron, one-vs-all, amongst others.
 
 <br/>
 
