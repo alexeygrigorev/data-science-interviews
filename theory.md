@@ -51,11 +51,10 @@ y = B0 + B1*x1 + ... + Bn * xN
 
 **What’s the normal distribution? Why do we care about it? 👶**
 
-The normal distribution is a continuous probability distribution whose probability density function takes the following formula: 
+The normal distribution is a continuous probability distribution whose probability density function takes the following
+![formula:](https://mathworld.wolfram.com/images/equations/NormalDistribution/NumberedEquation1.gif)
 
-P(x) = \frac{1}{{\sigma \sqrt {2\pi } }}e^{{{ - \left( {x - \mu } \right)^2 } \mathord{\left/ {\vphantom {{ - \left( {x - \mu } \right)^2 } {2\sigma ^2 }}} \right. \kern-\nulldelimiterspace} {2\sigma ^2 }}}. 
-
-where \mu  is the mean and \sigma is the standard deviation of the distribution. 
+where μ  is the mean and σ is the standard deviation of the distribution. 
 
 The normal distribution derives its importance from the Central Limit Theorem, which states that if we draw a large enough number of samples, their mean will follow a normal distribution regardless of the initial distribution of the sample, i.e **the distribution of the mean of the samples is normal**. It is important that each sample is independent from the other. 
 
