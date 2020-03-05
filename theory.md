@@ -779,7 +779,13 @@ Bag of Words is a representation of text that describes the occurrence of words 
 
 **What are the advantages and disadvantages of bag of words? ‍⭐️**
 
-Answer here
+Advantages:
+1. Simple to understand and implement.
+
+Disadvantages:
+1. The vocabulary requires careful design, most specifically in order to manage the size, which impacts the sparsity of the document representations.
+2. Sparse representations are harder to model both for computational reasons (space and time complexity) and also for information reasons
+3. Discarding word order ignores the context, and in turn meaning of words in the document. Context and meaning can offer a lot to the model, that if modeled could tell the difference between the same words differently arranged (“this is interesting” vs “is this interesting”), synonyms (“old bike” vs “used bike”).
 
 <br/>
 
