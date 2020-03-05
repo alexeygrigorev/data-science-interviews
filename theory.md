@@ -1082,37 +1082,42 @@ Collaborative filterung incorporates crowd knowledge to give recommendations for
 
 **What is a time series? 👶**
 
-Answer here
+A time series is a set of observations ordered in time usually collected at regular intervals.
 
 <br/>
 
 **How is time series different from the usual regression problem? 👶**
 
-Answer here
+The principle behind causal forecasting is that the value that has to be predicted is dependant on the input features (causal factors). In time series forecasting, the to be predicted value is expected to follow a certain pattern over time.
 
 <br/>
 
 **Which models do you know for solving time series problems? ‍⭐️**
 
-Answer here
+* Simple Exponential Smoothing: approximate the time series with an exponentional function
+* Trend-Corrected Exponential Smoothing (Holt‘s Method): exponential smoothing that also models the trend
+* Trend- and Seasonality-Corrected Exponential Smoothing (Holt-Winter‘s Method): exponential smoothing that also models trend and seasonality
+* Time Series Decomposition: decomposed a time series into the four components trend, seasonal variation, cycling varation and irregular component
+* Autoregressive models: similar to multiple linear regression, except that the dependent variable y_t depends on its own previous values rather than other independent variables.
+* Deep learning approaches (RNN, LSTM, etc.)
 
 <br/>
 
 **If there’s a trend in our series, how we can remove it? And why would we want to do it? ‍⭐️**
 
-Answer here
+We can explicitly model the trend (and/or seasonality) with approaches such as Holt's Method or Holt-Winter's Method. We want to explicitly model the trend to reach the stationarity property for the data. Many time series approaches require stationarity. Without stationarity,the interpretation of the results of these analyses is problematic [Manuca, Radu & Savit, Robert. (1996). Stationarity and nonstationarity in time series analysis. Physica D: Nonlinear Phenomena. 99. 134-161. 10.1016/S0167-2789(96)00139-X. ].
 
 <br/>
 
 **You have a series with only one variable “y” measured at time t. How do predict “y” at time t+1? Which approaches would you use? ‍⭐️**
 
-Answer here
+We want to look at the correlation between different observations of y. This measure of correlation is called autocorrelation. Autoregressive models are multiple regression models where the time-lag series of the original time series are treated like multiple independent variables.
 
 <br/>
 
 **You have a series with a variable “y” and a set of features. How do you predict “y” at t+1? Which approaches would you use? ‍⭐️**
 
-Answer here
+Given the assumption that the set of features gives a meaningful causation to y, a causal forecasting approach such as linear regression or multiple nonlinear regression might be useful. In case there is a lot of data and the explanability of the results is not a high priority, we can also consider deep learning approaches.
 
 <br/>
 
@@ -1121,5 +1126,4 @@ Answer here
 Answer here
 
 <br/>
-
 
