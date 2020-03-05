@@ -773,7 +773,7 @@ Answer here
 
 **What is bag of words? How we can use it for text classification? ‍⭐️**
 
-Answer here
+Bag of Words is a representation of text that describes the occurrence of words within a document. The order or structure of the words is not considered. For text classification, we look at the histogram of the words within the text and consider each word count as a feature.
 
 <br/>
 
@@ -797,7 +797,8 @@ Answer here
 
 **What is TF-IDF? How is it useful for text classification? ‍⭐️**
 
-Answer here
+Term Frequency (TF) is a scoring of the frequency of the word in the current document. Inverse Document Frequency(IDF) is a scoring of how rare the word is across documents. It is used in scenario where highy recurring words may not contain as much informational content 
+as the domain specific words. For example, words like “the” that are frequent across all documents therefore need to be less weighted. The Tf-IDF score highlights words that are distinct (contain useful information) in a given document.  
 
 <br/>
 
