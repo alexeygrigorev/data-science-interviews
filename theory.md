@@ -17,7 +17,13 @@ A case when we have both features (the matrix X) and the labels (the vector y)
 
 **What is regression? Which models can you use to solve a regression problem? 👶**
 
-Regression is a part of supervised ML. Regression models predict a real number
+Regression is a part of supervised ML. Regression models investigate the relationship between a dependent (target) and independent variable (s) (predictor).
+Here are some common regression models:
+- *Linear Regression* establishes a linear relationship between target and predictor (s). It predicts a numeric value and has a shape of a straight line.
+- *Logistic Regression* solves classification problem when target is categorical. It searches for the probability of an event, predicts a value from 0 to 1.
+- *Polynomial Regression* has a regression equation with the power of independent variable more than 1. It is a curve that fits into the data points.
+- *Ridge Regression* helps when predictors are highly correlated (multicollinearity problem). It penalizes the squares of regression coefficients but doesn’t allow to reach zeros (uses l2 regularization).
+- *Lasso Regression* penalizes the absolute values of regression coefficients and allow reach absolute zero for some coefficient (allow feature selection).
 
 <br/>
 
