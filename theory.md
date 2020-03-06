@@ -149,13 +149,15 @@ Cross-validation is the process to separate your total training set into two sub
 
 **What is K-fold cross-validation? 👶**
 
-Answer here
+K fold cross validation is a method of cross validation where we select a hyperparameter k. The dataset is now divided into k parts. Now, we take the 1st part as validation set and remaining k-1 as training set. Then we take the 2nd part as validation set and remaining k-1 parts as training set. Like this, each part is used as validation set once and the remaining k-1 parts are taken together and used as training set.
+It should not be used in a time series data.
 
 <br/>
 
 **How do we choose K in K-fold cross-validation? What’s your favorite K? 👶**
 
-Answer here
+There are two things to consider while deciding K: the number of models we get and the size of validation set. We do not want the number of models to be too less, like 2 or 3. At least 4 models give a less biased decision on the metrics. On the other hand, we would want the dataset to be at least 20-25% of the entire data. So that at least a ratio of 3:1 between training and validation set is maintained. <br/>
+I tend to use 4 for small datasets and 5 for large ones as K.
 
 <br/>
 
