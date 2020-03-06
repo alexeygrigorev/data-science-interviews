@@ -110,7 +110,11 @@ Answer here
 
 **Which metrics for evaluating regression models do you know? 👶**
 
-Answer here
+1. Mean Squared Error(MSE)
+2. Root Mean Squared Error(RMSE)
+3. Mean Absolute Error(MAE)
+4. R² or Coefficient of Determination
+5. Adjusted R²
 
 <br/>
 
