@@ -20,7 +20,6 @@ A case when we have both features (the matrix X) and the labels (the vector y)
 Regression is a part of supervised ML. Regression models investigate the relationship between a dependent (target) and independent variable (s) (predictor).
 Here are some common regression models:
 - *Linear Regression* establishes a linear relationship between target and predictor (s). It predicts a numeric value and has a shape of a straight line.
-- *Logistic Regression* solves classification problem when target is categorical. It searches for the probability of an event, predicts a value from 0 to 1.
 - *Polynomial Regression* has a regression equation with the power of independent variable more than 1. It is a curve that fits into the data points.
 - *Ridge Regression* helps when predictors are highly correlated (multicollinearity problem). It penalizes the squares of regression coefficients but doesn’t allow to reach zeros (uses l2 regularization).
 - *Lasso Regression* penalizes the absolute values of regression coefficients and allow reach absolute zero for some coefficient (allow feature selection).
@@ -57,10 +56,11 @@ y = B0 + B1*x1 + ... + Bn * xN
 
 **What’s the normal distribution? Why do we care about it? 👶**
 
-The normal distribution is a continuous probability distribution whose probability density function takes the following formula: 
+The normal distribution is a continuous probability distribution whose probability density function takes the following formula:
+
 ![formula](https://mathworld.wolfram.com/images/equations/NormalDistribution/NumberedEquation1.gif)
 
-where μ  is the mean and σ is the standard deviation of the distribution. 
+where μ is the mean and σ is the standard deviation of the distribution. 
 
 The normal distribution derives its importance from the **Central Limit Theorem**, which states that if we draw a large enough number of samples, their mean will follow a normal distribution regardless of the initial distribution of the sample, i.e **the distribution of the mean of the samples is normal**. It is important that each sample is independent from the other. 
 
