@@ -137,7 +137,16 @@ When your model perform very well on your training set but can't generalize the 
 
 **How to validate your models? 👶**
 
-Answer here
+Validation means testing the model we have trained the data on, there are many ways to validate the data like,
+Train/Test split - feed the 70% of the data while training and use 30% for validation.
+There are other ways to do that but mainly we prefer this, others are,
+
+1. k-Fold Cross-Validation
+2. Leave-one-out Cross-Validation
+3. Leave-one-group-out Cross-Validation
+4. Nested Cross-Validation
+5. Time-series Cross-Validation
+6. Wilcoxon signed-rank test
 
 <br/>
 
@@ -178,19 +187,33 @@ Classification problems are problems in which our prediction space is discrete, 
 
 **What is logistic regression? When do we need to use it? 👶**
 
-Answer here
+Logistic regression is a classifier used to predict wheather a given set of feature vector belongs to class A or class B,
+Logistic regression uses an equation as the representation, very much like linear regression.
+
+Input values (x) are combined linearly using weights or coefficient values to predict an output value (y). A key difference from linear regression is that the output value being modeled is a binary values (0 or 1 which is decided by a threshold value - 0.5) rather than a numeric value.
+
+in linear reg. we minimize the MSE and in  LOGISTIC reg. we maximize the likelihood.
 
 <br/>
 
 **Is logistic regression a linear model? Why? 👶**
 
-Answer here
+At the time where the absence of computers required scientists to perform manual calculations, they were eager to ﬁnd a linear classiﬁcation model. They ﬁgured out that if we deﬁne a negative label as 0 and the positive label as 1, we would just need to ﬁnd a simple continuous function whose codomain is (0,1). In such a case, if the value returned by the model for input x is closer to 0, then we assign a negative label to x; otherwise, the example is labeled as positive. One function that has such a property is the standard logistic function (also known as the sigmoid function): 
+                                              f(x)= 1/1+e−x , 
 
 <br/>
 
 **What is sigmoid? What does it do? 👶**
 
-Answer here
+The sigmoid function is convex for values less than 0, and it is concave for values more than 0.
+Being a number between 0 and 1, can be interpreted as a probability of belonging to the class labeled 1.
+
+if the output is more than 0.5 , we can classify the outcome as 1 (or YES) and if it is less than 0.5 , we can classify it as 0(or NO) 
+For example: If the output is 0.65, we can say in terms of probability as:
+
+“There is a 65 percent chance that your favorite foot ball team is going to win today ” .
+
+Thus the output of the sigmoid function can not be just used to classify YES/NO, it can also be used to determine the probability of YES/NO.
 
 <br/>
 
@@ -245,7 +268,12 @@ Most of the performance metrics for classification models are based on the value
 
 **Precision-recall trade-off ‍⭐️**
 
-Answer here
+Precision-Recall is a useful measure of success of prediction when the classes are very imbalanced. In information retrieval, precision is a measure of result relevancy, while recall is a measure of how many truly relevant results are returned.
+
+The precision-recall curve shows the tradeoff between precision and recall for different threshold. A high area under the curve represents both high recall and high precision, where high precision relates to a low false positive rate, and high recall relates to a low false negative rate. High scores for both show that the classifier is returning accurate results (high precision), as well as returning a majority of all positive results (high recall).
+
+A system with high recall but low precision returns many results, but most of its predicted labels are incorrect when compared to the training labels. A system with high precision but low recall is just the opposite, returning very few results, but most of its predicted labels are correct when compared to the training labels. An ideal system with high precision and high recall will return many results, with all results labeled correctly.
+
 
 <br/>
 
