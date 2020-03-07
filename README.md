@@ -11,3 +11,6 @@ The answers are given by the community
 
 * Theoretical questions: [theory.md](theory.md)
 * More to come
+
+
+For the updates, follow me on Twitter ([@Al_Grigor](https://twitter.com/Al_Grigor)) and on LinkedIn ([agrigorev](https://www.linkedin.com/in/agrigorev)) 
