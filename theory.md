@@ -1133,7 +1133,7 @@ Given the assumption that the set of features gives a meaningful causation to y,
 
 **What are the problems with using trees for solving time series problems? ‍⭐️**
 
-Answer here
+Random Forest models are not able to extrapolate time series data and understand increasing/decreasing trends. It will provide us with average data points if the validation data has values greater than the training data points.
 
 <br/>
 
