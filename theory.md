@@ -178,7 +178,8 @@ Classification problems are problems in which our prediction space is discrete, 
 
 **What is logistic regression? When do we need to use it? 👶**
 
-Answer here
+Logistic regression is a Machine Learning algorithm that is used in classification,it is a predictive analysis algorithm and based on the concept of probability.
+You should use logistic regression when your Y variable takes only two values.The variable is said to be a "binary" or "dichotomous".
 
 <br/>
 
