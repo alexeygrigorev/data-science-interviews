@@ -240,7 +240,7 @@ Most of the performance metrics for classification models are based on the value
 * P = TP / (TP + FP) and R = TP / (TP + FN).
 * Where TP is true positives, FP is false positives and FN is false negatives
 * In both cases the score of 1 is the best: we get no false positives or false negatives and only true positives.
-* F1 is a combination of both precision and recall in one score:
+* F1 is a combination of both precision and recall in one score (harmonic mean):
 * F1 = 2 * PR / (P + R). 
 * Max F score is 1 and min is 0, with 1 being the best.
 
@@ -296,7 +296,7 @@ Answer here
 
 **Why do we need one-hot encoding? ‍⭐️**
 
-If we simply encode categorical variables, they become ordinal and it isn't true for most cases. Also linear models will treat value 4 as twice better than 2 (for example). Thus one-hot encoding can help as it created binary columns, each of them will get a separate coefficient in linear models.
+If we simply encode categorical variables with a Label encoder, they become ordinal which can lead to undesirable consequences. In this case, linear models will treat category with id 4 as twice better than a category with id 2. One-hot encoding allows us to represent a categorical variable in a numerical vector space which ensures that vectors of each category have equal distances between each other. This approach is not suited for all situations, because by using it with categorical variables of high cardinality (e.g. customer id) we will encounter problems that come into play because of the curse of dimensionality.
 
 <br/>
 
@@ -335,7 +335,7 @@ Answer here
 
 **How does L2 regularization look like in a linear model? ‍⭐️**
 
-Answer here
+L2 regularization adds a penalty term to our cost function which is equal to the sum of squares of models coefficients multiplied by a lambda hyperparameter. This technique makes sure that the coefficients are close to zero and is widely used in cases when we have a lot of features that might correlate with each other.
 
 <br/>
 
@@ -416,7 +416,7 @@ Answer here
 
 **Can we use L1 regularization for feature selection? ‍⭐️**
 
-Answer here
+Yes, because the nature of L1 regularization will lead to sparse coefficients of features. Feature selection can be done by keeping only features with non-zero coefficients. 
 
 <br/>
 
@@ -647,7 +647,7 @@ Answer here
 
 **What is dropout? Why is it useful? How does it work? ‍⭐️**
 
-Answer here
+Dropout is a technique that at each training step turns off each neuron with a certain probability of *p*. This way at each iteration we train only *1-p* of neurons, which forces the network not to rely only on the subset of neurons for feature representation. This leads to regularizing effects that are controlled by the hyperparameter *p*.  
 
 <br/>
 
@@ -869,7 +869,11 @@ Answer here
 
 **If you have a sentence with multiple words, you may need to combine multiple word embeddings into one. How would you do it? ‍⭐️**
 
-Answer here
+Approaches ranked from simple to more complex:
+
+1. Take an average over all words
+2. Take a weighted average over all words. Weighting can be done by inverse document frequency (idf part of tf-idf).
+3. Use ML model like LSTM or Transformer.
 
 <br/>
 
@@ -1000,7 +1004,12 @@ Answer here
 
 **What is precision and recall at k? ‍⭐️**
 
-Answer here
+Precision at k and recall at k are evaluation metrics for ranking algorithms. Precision at k shows the share of relevant items in the first *k* results of the ranking algorithm. And Recall at k indicates the share of relevant items returned in top *k* results out of all correct answers for a given query. 
+
+Example:
+For a search query "Car" there are 3 relevant products in your shop. Your search algorithm returns 2 of those relevant products in the first 5 search results.
+Precision at 5 = # num of relevant products in search result / k = 2/5 = 40%
+Recall at 5 = # num of relevant products in search result / # num of all relevant products = 2/3 = 66.6%
 
 <br/>
 
