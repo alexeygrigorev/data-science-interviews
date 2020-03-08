@@ -577,15 +577,20 @@ Answer here
 
 ## Parameter tuning
 
-**Which parameter tuning strategies (in general) do you know? ‍⭐️**
+**Which hyper-parameter tuning strategies (in general) do you know? ‍⭐️**
 
-Answer here
+There are several strategies for hyper-tuning but I would argue that the three most popular nowadays are the following:
+* <b>Grid Search</b> is an exhaustive approach such that for each hyper-parameter, the user needs to <i>manually</i> give a list of values for the algorithm to try. After these values are selected, grid search then evaluates the algorithm using each and every combination of hyper-parameters and returns the combination that gives the optimal result (i.e. lowest MAE). Because grid search evaluates the given algorithm using all combinations, it's easy to see that this can be quite computationally expensive and can lead to sub-optimal results specifically since the user needs to specify specific values for these hyper-parameters, which is prone for error and requires domain knowledge.
+
+* <b>Random Search</b> is similar to grid search but differs in the sense that rather than specifying which values to try for each hyper-parameter, an upper and lower bound of values for each hyper-parameter is given instead. With uniform probability, random values within these bounds are then chosen and similarly, the best combination is returned to the user. Although this seems less intuitive, no domain knowledge is necessary and theoretically much more of the parameter space can be explored.
+
+* In a completely different framework, <b>Bayesian Optimization</b> is thought of as a more statistical way of optimization and is commonly used when using neural networks, specifically since one evaluation of a neural network can be computationally costly. In numerous research papers, this method heavily outperforms Grid Search and Random Search and is currently used on the Google Cloud Platform as well as AWS. Because an in-depth explanation requires a heavy background in bayesian statistics and gaussian processes (and maybe even some game theory), a "simple" explanation is that a much simpler/faster <i>acquisition function</i> intelligently chooses (using a <i>surrogate function</i> such as probability of improvement or GP-UCB) which hyper-parameter values to try on the computationally expensive, original algorithm. Using the result of the initial combination of values on the expensive/original function, the acquisition function takes the result of the expensive/original algorithm into account and uses it as its prior knowledge to again come up with another set of hyper-parameters to choose during the next iteration. This process continues either for a specified number of iterations or for a specified amount of time and similarly the combination of hyper-parameters that performs the best on the expensive/original algorithm is chosen.
+
 
 <br/>
 
 **What’s the difference between grid search parameter tuning strategy and random search? When to use one or another? ‍⭐️**
-
-Answer here
+For specifics, refer to the above answer.
 
 <br/>
 
