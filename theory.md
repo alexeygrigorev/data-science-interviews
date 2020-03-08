@@ -137,7 +137,10 @@ When your model perform very well on your training set but can't generalize the 
 
 **How to validate your models? 👶**
 
-Answer here
+One of the most common approaches is splitting data into train, validation and test parts.
+Models are trained on train data, hyperparameters (for example early stopping) are selected based on the validation data, the final measurement is done on test dataset.
+Another approach is cross-validation: split dataset into K folds and each time train models on training folds and measure the performance on the validation folds.
+Also you could combine these approaches: make a test/holdout dataset and do cross-validation on the rest of the data. The final quality is measured on test dataset.
 
 <br/>
 
@@ -293,7 +296,7 @@ Answer here
 
 **Why do we need one-hot encoding? ‍⭐️**
 
-Answer here
+If we simply encode categorical variables, they become ordinal and it isn't true for most cases. Also linear models will treat value 4 as twice better than 2 (for example). Thus one-hot encoding can help as it created binary columns, each of them will get a separate coefficient in linear models.
 
 <br/>
 
@@ -843,7 +846,7 @@ Answer here
 
 **Would you prefer gradient boosting trees model or logistic regression when doing text classification with bag of words? ‍⭐️**
 
-Answer here
+Usually logistic regression is better because bag of words creates a matrix with large number of columns. For a huge number of columns logistic regression is usually faster than gradient boosting trees.
 
 <br/>
 
