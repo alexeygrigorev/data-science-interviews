@@ -423,7 +423,7 @@ Answer here
 
 **What is feature selection? Why do we need it? 👶**
 
-Feature selection is the process of selecting those features that will the important role in our predictions. Selecting the valuable features is a very essential step in any ML/DS project of any scale.
+Feature selection is the process of selecting those features that will play the important role in our predictions. Selecting the valuable features is a very essential step in any ML/DS project of any scale.
 
 for say we are pridicting the survival of titanic and need features like age,fare,cabin_no,etc..... those are the features on which the output can be dependent,
 but if there is a feature like 'color' of passengers then it would be making no sense so now we can drop this colomn/feature because it is useless in our final predictions.
@@ -760,7 +760,11 @@ Answer here
 
 **What’s a convolutional layer? ‍⭐️**
 
-Answer here
+A convolution is essentially sliding a filter over the input. One helpful way to think about convolutions is this quote from Dr Prasad Samarakoon: “A convolution can be thought as “looking at a function’s surroundings to make better/accurate predictions of its outcome.”
+
+Rather than looking at an entire image at once to find certain features it can be more effective to look at smaller portions of the image.
+
+Each convolutional layer contains a series of filters known as convolutional kernels. The filter is a matrix of integers that are used on a subset of the input pixel values, the same size as the kernel. Each pixel is multiplied by the corresponding value in the kernel, then the result is summed up for a single value for simplicity representing a grid cell, like a pixel, in the output channel/feature map.
 
 <br/>
 
