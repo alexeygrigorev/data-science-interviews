@@ -137,7 +137,10 @@ When your model perform very well on your training set but can't generalize the 
 
 **How to validate your models? 👶**
 
-Answer here
+One of the most common approaches is splitting data into train, validation and test parts.
+Models are trained on train data, hyperparameters (for example early stopping) are selected based on the validation data, the final measurement is done on test dataset.
+Another approach is cross-validation: split dataset into K folds and each time train models on training folds and measure the performance on the validation folds.
+Also you could combine these approaches: make a test/holdout dataset and do cross-validation on the rest of the data. The final quality is measured on test dataset.
 
 <br/>
 
@@ -293,7 +296,7 @@ Answer here
 
 **Why do we need one-hot encoding? ‍⭐️**
 
-One-hot encoding allows us to represent a categorical variable in a numerical vector space which ensures that vectors of each category have equal distances between each other. This approach is a common way to encode the categorical variables, but by using it with categorical variables of high cardinality (e.g. customer ID) we will encounter problems that come into play because of the curse of dimensionality.
+If we simply encode categorical variables with a Label encoder, they become ordinal which can lead to undesirable consequences. In this case, linear models will treat category with id 4 as twice better than a category with id 2. One-hot encoding allows us to represent a categorical variable in a numerical vector space which ensures that vectors of each category have equal distances between each other. This approach is not suited for all situations, because by using it with categorical variables of high cardinality (e.g. customer id) we will encounter problems that come into play because of the curse of dimensionality.
 
 <br/>
 
@@ -843,7 +846,7 @@ Answer here
 
 **Would you prefer gradient boosting trees model or logistic regression when doing text classification with bag of words? ‍⭐️**
 
-Answer here
+Usually logistic regression is better because bag of words creates a matrix with large number of columns. For a huge number of columns logistic regression is usually faster than gradient boosting trees.
 
 <br/>
 
