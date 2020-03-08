@@ -1,4 +1,4 @@
-## Awesome Data Science Inteview Questions
+## Awesome Data Science Inteview Resources
 
 A list of links with data science interview questions and other userful resources.
 
@@ -21,3 +21,9 @@ Contributions are welcome!
 * [How does a technical screening for data science positions look like?](https://www.linkedin.com/posts/agrigorev_datascience-machinelearning-ml-activity-6631245015718866944-Vb87) - a post on LinkedIn
 * [How to prepare for Research Engineer (ML) interview?](https://www.linkedin.com/posts/agrigorev_machinelearning-ml-interviews-activity-6622232556311990272-_dAN) - a post on LinkedIn
 * [How to prepare for a data science interview?](https://www.quora.com/How-do-I-prepare-for-a-data-scientist-interview) - 100+ answers on Quora 
+* [How to Get a Data Science Job: A Ridiculously Specific Guide](http://brohrer.github.io/get_data_science_job.html)
+
+### Negotiation
+
+* [Ten Rules for Negotiating a Job Offer](https://haseebq.com/my-ten-rules-for-negotiating-a-job-offer/)
+* [Career Advice and Salary Negotiations: Move Early and Move Often](https://thehftguy.com/2017/01/23/career-advice-and-salary-negotiations-move-early-and-move-often/)
