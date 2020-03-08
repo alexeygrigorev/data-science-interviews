@@ -1,8 +1,8 @@
 ## Awesome Data Science Inteview Questions
 
-A list of other resources with data science interview questions.
+A list of links with data science interview questions and other userful resources.
 
-Contributions are welcome! 
+Contributions are welcome!
 
 ### Questions and answers
 
