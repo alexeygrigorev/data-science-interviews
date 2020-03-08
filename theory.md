@@ -187,19 +187,26 @@ Logistic regression is a Machine Learning algorithm that is used for binary clas
 
 **Is logistic regression a linear model? Why? 👶**
 
-Answer here
+Yes, Logistic Regression is considered a generalized linear model because the outcome always depends on the sum of the inputs and parameters. Or in other words, the output cannot depend on the product (or quotient, etc.) of its parameters.
 
 <br/>
 
 **What is sigmoid? What does it do? 👶**
 
-Answer here
+A sigmoid function is a type of activation function, and more specifically defined as a squashing function. Squashing functions limit the output to a range between 0 and 1, making these functions useful in the prediction of probabilities.
 
 <br/>
 
 **How do we evaluate classification models? 👶**
 
-Answer here
+Depending on the classification problem, we can use the following evaluation metrics:
+
+1. Accuracy
+2. Precision
+3. Recall
+4. F1 Score
+5. Logistic loss (also known as Cross-entropy loss)
+6. Jaccard similarity coefficient score
 
 <br/>
 
