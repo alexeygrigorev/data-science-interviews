@@ -423,7 +423,10 @@ Answer here
 
 **What is feature selection? Why do we need it? 👶**
 
-Answer here
+Feature selection is the process of selecting those features that will the important role in our predictions. Selecting the valuable features is a very essential step in any ML/DS project of any scale.
+
+for say we are pridicting the survival of titanic and need features like age,fare,cabin_no,etc..... those are the features on which the output can be dependent,
+but if there is a feature like 'color' of passengers then it would be making no sense so now we can drop this colomn/feature because it is useless in our final predictions.
 
 <br/>
 
