@@ -25,6 +25,8 @@ Contributions are welcome!
 * [How to prepare for a data science interview?](https://www.quora.com/How-do-I-prepare-for-a-data-scientist-interview) - 100+ answers on Quora 
 * [How to Get a Data Science Job: A Ridiculously Specific Guide](http://brohrer.github.io/get_data_science_job.html)
 * [How to Succeed in A Data Science Interview](https://blog.pramp.com/how-to-succeed-in-a-data-science-interview-27553ab69d8a)
+* [Machine Learning Systems Design](https://github.com/chiphuyen/machine-learning-systems-design)
+* [I interviewed at five top companies in Silicon Valley in five days, and luckily got five job offers](https://medium.com/@XiaohanZeng/i-interviewed-at-five-top-companies-in-silicon-valley-in-five-days-and-luckily-got-five-job-offers-25178cf74e0f)
 
 ### Negotiation
 
