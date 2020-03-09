@@ -9,6 +9,8 @@ Contributions are welcome!
 * This repository: https://github.com/alexeygrigorev/data-science-interviews
 * [Data science interview questions and answers](https://github.com/iamtodor/data-science-interview-questions-and-answers) by [iamtodor](https://github.com/iamtodor)
 * [120+ data science interview questions](https://github.com/kojino/120-Data-Science-Interview-Questions) by [kojino](https://github.com/kojino/)
+* [40 Interview Questions asked at Startups in Machine Learning / Data Science] (https://www.analyticsvidhya.com/blog/2016/09/40-interview-questions-asked-at-startups-in-machine-learning-data-science/)
+* [The Most Comprehensive Data Science & Machine Learning Interview Guide You’ll Ever Need] (https://www.analyticsvidhya.com/blog/2018/06/comprehensive-data-science-machine-learning-interview-guide/)
 
 ### Questions
 
@@ -22,6 +24,7 @@ Contributions are welcome!
 * [How to prepare for Research Engineer (ML) interview?](https://www.linkedin.com/posts/agrigorev_machinelearning-ml-interviews-activity-6622232556311990272-_dAN) - a post on LinkedIn
 * [How to prepare for a data science interview?](https://www.quora.com/How-do-I-prepare-for-a-data-scientist-interview) - 100+ answers on Quora 
 * [How to Get a Data Science Job: A Ridiculously Specific Guide](http://brohrer.github.io/get_data_science_job.html)
+* [How to Succeed in A Data Science Interview] (https://blog.pramp.com/how-to-succeed-in-a-data-science-interview-27553ab69d8a)
 
 ### Negotiation
 
