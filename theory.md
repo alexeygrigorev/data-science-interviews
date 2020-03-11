@@ -438,37 +438,44 @@ Answer here
 
 **What are the decision trees? 👶**
 
-Answer here
+A decision tree is a flowchart-like tree structure, where each internal node (non-leaf node) denotes a test on an attribute, each branch represents an outcome of the test, and each leaf node (or terminal node) holds a value for the target variable.
 
 <br/>
 
 **How do we train decision trees? ‍⭐️**
 
-Answer here
+1. Start at the root node.
+2. For each variable X, find the set S_1 that minimizes the sum of the node impurities in the two child nodes and choose the split {X*,S*} that gives the minimum over all X and S.
+3. If a stopping criterion is reached, exit. Otherwise, apply step 2 to each child node in turn.
 
 <br/>
 
 **What are the main parameters of the decision tree model? 👶**
 
-Answer here
+* maximum tree depth
+* minimum samples per leaf node
+* impurity criterion
 
 <br/>
 
 **How do we handle categorical variables in decision trees? ‍⭐️**
 
-Answer here
+Some decision tree algorithms can handle categorical variables out of the box, others cannot. However, we can transform categorical variables, e.g. with a binary or a one-hot encoder.
 
 <br/>
 
 **What are the benefits of a single decision tree compared to more complex models? ‍⭐️**
 
-Answer here
+* easy to implement
+* fast training
+* fast inference
+* good explainability
 
 <br/>
 
 **How can we know which features are more important for the decision tree model? ‍⭐️**
 
-Answer here
+Often, we want to find a split such that it minimizes the sum of the node impurities. The impurity criterion is a parameter of decision trees. Popular methods to measure the impurity are the Gini impurity and the entropy describing the information gain.
 
 <br/>
 
