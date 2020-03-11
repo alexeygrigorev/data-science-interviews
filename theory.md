@@ -405,7 +405,7 @@ Answer here
 
 **What is feature selection? Why do we need it? 👶**
 
-Answer here
+Answer Feature Selection is a method used to select the relevant features for the model to train on. We need feature selection to remove the irrelevant features which leads the model to under-perform.  
 
 <br/>
 
@@ -417,7 +417,10 @@ Answer here
 
 **Which feature selection techniques do you know? ‍⭐️**
 
-Answer here
+Here are some of the feature selections:
+- Principal Component Analysis
+- Neighborhood Component Analysis
+- ReliefF Algorithm
 
 <br/>
 
@@ -438,7 +441,7 @@ Answer here
 
 **What are the decision trees? 👶**
 
-Answer here
+Decision Trees is a supervised machine learning algorithm. Which is used for classification purpose.
 
 <br/>
 
