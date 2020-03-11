@@ -261,7 +261,7 @@ Answer here
 
 **What is the ROC curve? When to use it? ‍⭐️**
 
-Answer here
+The diagrammatic representation that shows the contrast between true positive rate vs true negative rate. It is used when we need to predict the probability of the binary outcome.
 
 <br/>
 
