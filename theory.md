@@ -261,7 +261,7 @@ Answer here
 
 **What is the ROC curve? When to use it? ‍⭐️**
 
-Answer here
+The diagrammatic representation that shows the contrast between true positive rate vs true negative rate. It is used when we need to predict the probability of the binary outcome.
 
 <br/>
 
@@ -405,7 +405,7 @@ Answer here
 
 **What is feature selection? Why do we need it? 👶**
 
-Answer here
+Answer Feature Selection is a method used to select the relevant features for the model to train on. We need feature selection to remove the irrelevant features which leads the model to under-perform.  
 
 <br/>
 
@@ -417,7 +417,10 @@ Answer here
 
 **Which feature selection techniques do you know? ‍⭐️**
 
-Answer here
+Here are some of the feature selections:
+- Principal Component Analysis
+- Neighborhood Component Analysis
+- ReliefF Algorithm
 
 <br/>
 
