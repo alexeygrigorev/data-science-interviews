@@ -60,7 +60,7 @@ There are several assumptions of linear regression. If any of them is violated, 
 
 1. **Linear relationship** between features and target variable.
 2. **Additivity** means that the effect of changes in one of the features on the target variable does not depend on values of other features. For example, a model for predicting revenue of a company consists of two features - the number of sold items _a_ and the number of sold items _b_. If company sells more items _a_ the revenue will increase and this is independent of the number of sold items _b_. But, if customers who buy _a_ stop buying _b_, the additivity assumption is violated.
-3. No correlation between errors (consecutive errors in the case of time series data): y<ins>i</ins> = B0<ins>i</ins> + B1<ins>i</ins> + error<ins>i</ins>
+3. No correlation between errors (consecutive errors in the case of time series data): i<sub>i</sub> = B0 + B1*x1<sub>i</sub> + error<sub>i<sub>
 
 <br/>
 
