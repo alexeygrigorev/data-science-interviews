@@ -297,7 +297,11 @@ Answer here
 
 **What do we do with categorical variables? ‍⭐️**
 
-Answer here
+Categorical variables must be encoded before they can be used as features to train a machine learning model. There are various encoding techniques, including:
+- One-hot encoding
+- Label encoding
+- Ordinal encoding
+- Target encoding
 
 <br/>
 
