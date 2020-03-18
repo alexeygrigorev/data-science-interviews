@@ -54,6 +54,16 @@ y = B0 + B1*x1 + ... + Bn * xN
 
 <br/>
 
+**What are the main assumptions of linear regression (⭐)**
+
+There are several assumptions of linear regression. If any of them is violated, model predictions and interpretation may be worthless or misleading.
+
+1. Linear relationship between features and target variable.
+2. Additivity means that the effect of changes in one of the features on the target variable does not depend on values of other features. For example, a model for predicting revenue of a company consists of two features - the number of sold items _a_ and the number of sold items _b_. If company sells more items _a_ the revenue will increase and this is independent of the number of sold items _b_. But, if customers who buy _a_ stop buying _b_, the additivity assumption will be violated.
+
+
+<br/>
+
 **What’s the normal distribution? Why do we care about it? 👶**
 
 The normal distribution is a continuous probability distribution whose probability density function takes the following formula:
