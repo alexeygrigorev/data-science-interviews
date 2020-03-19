@@ -140,9 +140,9 @@ MSE stands for <strong>M</strong>ean <strong>S</strong>quare <strong>E</strong>r
 
 <br/>
 
-**What is bias-variance trade-off?**
+**What is the bias-variance trade-off?**
 
-**Bias** is the error introduced by approximating the true underlying function, which can be quite complex, by a simpler model. **Variance** is the amount by wich approximated function can change if it is estimated using a different training dataset.
+**Bias** is the error introduced by approximating the true underlying function, which can be quite complex, by a simpler model. **Variance** is a model sensitivity to changes in the training dataset.
 
 **Bias-variance trade-off** is a relationship between prediction error and variance and bias - both contribute to the level of the prediction error and ideally should be as small as possible:
 
@@ -150,7 +150,7 @@ MSE stands for <strong>M</strong>ean <strong>S</strong>quare <strong>E</strong>r
 ExpectedTestError = Variance + Bias² + IrreducibleError
 ```
 
-But as model complexity increases, bias decreases and variance increases which leads to *overfitting*. And vice versa, model simplification helps to decrease variance but will increase bias which leads to *underfitting*.
+But as model complexity increases, bias decreases and variance increases which leads to *overfitting*. And vice versa, model simplification helps to decrease variance but it increases bias which leads to *underfitting*.
 
 <br/>
 
