@@ -64,7 +64,7 @@ There are several assumptions of linear regression. If any of them is violated, 
 4. Errors are independently and identically normally distributed (y<sub>i</sub> = B0 + B1*x1<sub>i</sub> + ... + error<sub>i</sub>):
    1. No correlation between errors (consecutive errors in the case of time series data).
    2. Constant variance of errors - **homoscedasticity**. For example, in case of time series, seasonal patterns can increase errors in seasons with higher activity.
-   3. Errors are normaly distributed, otherwise some feature will have more influence on the target variable than to others. If the error distribution is significantly non-normal, confidence intervals may be too wide or too narrow.
+   3. Errors are normaly distributed, otherwise some features will have more influence on the target variable than to others. If the error distribution is significantly non-normal, confidence intervals may be too wide or too narrow.
 
 <br/>
 
