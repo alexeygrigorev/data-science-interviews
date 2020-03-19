@@ -140,7 +140,7 @@ MSE stands for <strong>M</strong>ean <strong>S</strong>quare <strong>E</strong>r
 
 <br/>
 
-**What is the bias-variance trade-off?**
+**What is the bias-variance trade-off? 👶**
 
 **Bias** is the error introduced by approximating the true underlying function, which can be quite complex, by a simpler model. **Variance** is a model sensitivity to changes in the training dataset.
 
