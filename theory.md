@@ -664,7 +664,7 @@ Answer here
 
 **Why do we need activation functions? 👶**
 
-Answer here
+The main idea of using neural networks is to learn complex nonlinear functions. If we are not using an activation function in between different layers of a neural network, we are just stacking up multiple linear layers one on top of another and this leads to learning a linear function. The Nonlinearity comes only with the activation function, this is the reason we need activation functions.
 
 <br/>
 
@@ -688,7 +688,7 @@ Answer here
 
 **What if we set all the weights of a neural network to 0? ‍⭐️**
 
-Answer here
+If all the weights of a neural network are set to zero, the output of each connection is same (W*x = 0). This means the gradients which are backpropagated to each connection in a layer is same. This means all the connections/weights learn the same thing, and the model never converges. 
 
 <br/>
 
