@@ -9,7 +9,7 @@
 
 **What is supervised machine learning? 👶**
 
-A case when we have both features (the matrix X) and the labels (the vector y) 
+A case when we have both features (the matrix X) and the labels (the vector y)
 
 <br/>
 
@@ -28,7 +28,7 @@ Here are some common regression models:
 
 **What is linear regression? When do we use it? 👶**
 
-Linear regression is a model that assumes a linear relationship between the input variables (X) and the single output variable (y). 
+Linear regression is a model that assumes a linear relationship between the input variables (X) and the single output variable (y).
 
 With a simple equation:
 
@@ -36,7 +36,7 @@ With a simple equation:
 y = B0 + B1*x1 + ... + Bn * xN
 ```
 
-B is regression coefficients, x values are the independent (explanatory) variables  and y is dependent variable. 
+B is regression coefficients, x values are the independent (explanatory) variables  and y is dependent variable.
 
 The case of one explanatory variable is called simple linear regression. For more than one explanatory variable, the process is called multiple linear regression.
 
@@ -74,11 +74,11 @@ The normal distribution is a continuous probability distribution whose probabili
 
 ![formula](https://mathworld.wolfram.com/images/equations/NormalDistribution/NumberedEquation1.gif)
 
-where μ is the mean and σ is the standard deviation of the distribution. 
+where μ is the mean and σ is the standard deviation of the distribution.
 
-The normal distribution derives its importance from the **Central Limit Theorem**, which states that if we draw a large enough number of samples, their mean will follow a normal distribution regardless of the initial distribution of the sample, i.e **the distribution of the mean of the samples is normal**. It is important that each sample is independent from the other. 
+The normal distribution derives its importance from the **Central Limit Theorem**, which states that if we draw a large enough number of samples, their mean will follow a normal distribution regardless of the initial distribution of the sample, i.e **the distribution of the mean of the samples is normal**. It is important that each sample is independent from the other.
 
-This is powerful because it helps us study processes whose population distribution is unknown to us. 
+This is powerful because it helps us study processes whose population distribution is unknown to us.
 
 
 <br/>
@@ -246,13 +246,13 @@ Accuracy is a metric for evaluating classification models. It is calculated by d
 
 **Is accuracy always a good metric? 👶**
 
-Accuracy is not a good performance metric when there is imbalance in the dataset. For example, in binary classification with 95% of A class and 5% of B class, prediction accuracy can be 95%. In case of imbalance dataset, we need to choose Precision, recall, or F1 Score depending on the problem we are trying to solve. 
+Accuracy is not a good performance metric when there is imbalance in the dataset. For example, in binary classification with 95% of A class and 5% of B class, prediction accuracy can be 95%. In case of imbalance dataset, we need to choose Precision, recall, or F1 Score depending on the problem we are trying to solve.
 
 <br/>
 
 **What is the confusion table? What are the cells in this table? 👶**
 
-Confusion table (or confusion matrix) shows how many True positives (TP), True Negative (TN), False Positive (FP) and False Negative (FN) model has made. 
+Confusion table (or confusion matrix) shows how many True positives (TP), True Negative (TN), False Positive (FP) and False Negative (FN) model has made.
 
 ||                |     Actual   |        Actual |
 |:---:|   :---:        |     :---:    |:---:          |
@@ -265,7 +265,7 @@ Confusion table (or confusion matrix) shows how many True positives (TP), True N
 * False Positive (FP): When the actual class of the observation is 0 (False) and the prediction is 1 (True)
 * False Negative (FN): When the actual class of the observation is 1 (True) and the prediction is 0 (False)
 
-Most of the performance metrics for classification models are based on the values of the confusion matrix. 
+Most of the performance metrics for classification models are based on the values of the confusion matrix.
 
 <br/>
 
@@ -276,7 +276,7 @@ Most of the performance metrics for classification models are based on the value
 * Where TP is true positives, FP is false positives and FN is false negatives
 * In both cases the score of 1 is the best: we get no false positives or false negatives and only true positives.
 * F1 is a combination of both precision and recall in one score (harmonic mean):
-* F1 = 2 * PR / (P + R). 
+* F1 = 2 * PR / (P + R).
 * Max F score is 1 and min is 0, with 1 being the best.
 
 <br/>
@@ -356,13 +356,17 @@ Answer here
 
 **What is regularization? Why do we need it? 👶**
 
-Answer here
+Regularization is used to reduce overfitting in machine learning models. It helps the models to generalize well and make them robust to outliers and noise in the data.
 
 <br/>
 
 **Which regularization techniques do you know? ‍⭐️**
 
-Answer here
+There are mainly two types of regularization,
+1. L1 Regularization (Lasso regularization) - Adds the sum of absolute values of the coefficients to the cost function. $\lambda\sum_{i=1}^{n} \left | w_i \right |$
+2. L2 Regularization (Ridge regularization) - Adds the sum of squares of coefficients to the cost function. $\lambda\sum_{i=1}^{n} {w_{i}}^{2}$
+
+* Where $\lambda$ determines the amount of regularization.
 
 <br/>
 
@@ -458,7 +462,7 @@ Here are some of the feature selections:
 
 **Can we use L1 regularization for feature selection? ‍⭐️**
 
-Yes, because the nature of L1 regularization will lead to sparse coefficients of features. Feature selection can be done by keeping only features with non-zero coefficients. 
+Yes, because the nature of L1 regularization will lead to sparse coefficients of features. Feature selection can be done by keeping only features with non-zero coefficients.
 
 <br/>
 
@@ -660,7 +664,7 @@ Answer here
 
 **Why do we need activation functions? 👶**
 
-Answer here
+The main idea of using neural networks is to learn complex nonlinear functions. If we are not using an activation function in between different layers of a neural network, we are just stacking up multiple linear layers one on top of another and this leads to learning a linear function. The Nonlinearity comes only with the activation function, this is the reason we need activation functions.
 
 <br/>
 
@@ -684,7 +688,7 @@ Answer here
 
 **What if we set all the weights of a neural network to 0? ‍⭐️**
 
-Answer here
+If all the weights of a neural network are set to zero, the output of each connection is same (W*x = 0). This means the gradients which are backpropagated to each connection in a layer is same. This means all the connections/weights learn the same thing, and the model never converges. 
 
 <br/>
 
@@ -875,7 +879,7 @@ Disadvantages:
 
 **What are N-grams? How can we use them? ‍⭐️**
 
-The function to tokenize into consecutive sequences of words is called n-grams. It can be used to find out N most co-occurring words (how often word X is followed by word Y) in a given sentence. 
+The function to tokenize into consecutive sequences of words is called n-grams. It can be used to find out N most co-occurring words (how often word X is followed by word Y) in a given sentence.
 
 <br/>
 
@@ -887,7 +891,7 @@ Answer here
 
 **What is TF-IDF? How is it useful for text classification? ‍⭐️**
 
-Term Frequency (TF) is a scoring of the frequency of the word in the current document. Inverse Document Frequency(IDF) is a scoring of how rare the word is across documents. It is used in scenario where highy recurring words may not contain as much informational content 
+Term Frequency (TF) is a scoring of the frequency of the word in the current document. Inverse Document Frequency(IDF) is a scoring of how rare the word is across documents. It is used in scenario where highy recurring words may not contain as much informational content
 as the domain specific words. For example, words like “the” that are frequent across all documents therefore need to be less weighted. The Tf-IDF score highlights words that are distinct (contain useful information) in a given document.  
 
 <br/>
@@ -955,7 +959,7 @@ Unsupervised learning aims to detect paterns in data where no labels are given.
 
 **What is clustering? When do we need it? 👶**
 
-Clustering algorithms group objects such that similar feature points are put into the same groups (clusters) and dissimilar feature points are put into different clusters. 
+Clustering algorithms group objects such that similar feature points are put into the same groups (clusters) and dissimilar feature points are put into different clusters.
 
 <br/>
 
@@ -1053,7 +1057,7 @@ Answer here
 
 **What is precision and recall at k? ‍⭐️**
 
-Precision at k and recall at k are evaluation metrics for ranking algorithms. Precision at k shows the share of relevant items in the first *k* results of the ranking algorithm. And Recall at k indicates the share of relevant items returned in top *k* results out of all correct answers for a given query. 
+Precision at k and recall at k are evaluation metrics for ranking algorithms. Precision at k shows the share of relevant items in the first *k* results of the ranking algorithm. And Recall at k indicates the share of relevant items returned in top *k* results out of all correct answers for a given query.
 
 Example:
 For a search query "Car" there are 3 relevant products in your shop. Your search algorithm returns 2 of those relevant products in the first 5 search results.
@@ -1126,11 +1130,11 @@ Recommender systems are software tools and techniques that provide suggestions f
 
 * Collaborative filtering is the most prominent approach to generate recommendations.
 * It uses the wisdom of the crowd, i.e. it gives recommendations based on the experience of others.
-* A recommendation is calculated as the average of other experiences. 
+* A recommendation is calculated as the average of other experiences.
 * Say we want to give a score that indicates how much user u will like an item i. Then we can calculate it with the experience of N other users U as r_ui = 1/N * sum(v in U) r_vi.
 * In order to rate similar experiences with a higher weight, we can introduce a similarity between users that we use as a multiplier for each rating.
 * Also, as users have an individual profile, one user may have an average rating much larger than another user, so we use normalization techniques (e.g. centering or Z-score normalization) to remove the users' biases.
-* Collaborative filtering does only need a rating matrix as input and improves over time. However, it does not work well on sparse data, does not work for cold starts (see below) and usually tends to overfit. 
+* Collaborative filtering does only need a rating matrix as input and improves over time. However, it does not work well on sparse data, does not work for cold starts (see below) and usually tends to overfit.
 
 <br/>
 
@@ -1202,4 +1206,3 @@ Given the assumption that the set of features gives a meaningful causation to y,
 Random Forest models are not able to extrapolate time series data and understand increasing/decreasing trends. It will provide us with average data points if the validation data has values greater than the training data points.
 
 <br/>
-
