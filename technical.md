@@ -18,6 +18,9 @@ Suppose we have the following schema with two tables: Ads and Events
 * Events(event_id, ad_id, source, event_type, date, hour)
 * event_type could be impression, click, conversion
 
+<img src="img/schema.png" />
+
+
 Write SQL queries to extract the following information:
 
 **1)** The number of active ads.
@@ -41,11 +44,15 @@ Answer here
 
 **4)** The number of events per each ad — broken down by event type.
 
+<img src="img/sql_4_example.png" />
+
 Answer here
 
 <br/>
 
 **5)** The number of events over the last week per each active ad — broken down by event type and date (most recent first).
+
+<img src="img/sql_5_example.png" />
 
 Answer here
 
@@ -53,11 +60,16 @@ Answer here
 
 **6)** The number of events per campaign — by event type.
 
+<img src="img/sql_6_example.png" />
+
+
 Answer here
 
 <br/>
 
 **7)** The number of events over the last week per each campaign — broken down by date (most recent first).
+
+<img src="img/sql_7_example.png" />
 
 Answer here
 
@@ -65,11 +77,15 @@ Answer here
 
 **8)** CTR (click-through rate) for each ad. CTR = number of impressions / number of clicks.
 
+<img src="img/sql_8_example.png" />
+
 Answer here
 
 <br/>
 
 **9)** CVR (conversion rate) for each ad. CVR = number of clicks / number of installs.
+
+<img src="img/sql_9_example.png" />
 
 Answer here
 
@@ -77,12 +93,15 @@ Answer here
 
 **10)** CTR and CVR for each ad broken down by day and hour (most recent first).
 
+<img src="img/sql_10_example.png" />
 
 Answer here
 
 <br/>
 
 **11)** CTR for each ad broken down by source and day
+
+<img src="img/sql_11_example.png" />
 
 Answer here
 
@@ -119,6 +138,8 @@ Answer here
 * `mean([4, 36, 45, 50, 75]) = 42`
 * `mean([]) = NaN` (use `float('NaN')`)
 
+<img src="img/formula_mean.png" />
+
 
 Answer here
 
@@ -130,6 +151,8 @@ Answer here
 * `std([1]) = NaN`
 * `std([]) = NaN`
 
+<img src="img/formula_std.png" />
+
 Answer here
 
 <br/>
@@ -138,6 +161,8 @@ Answer here
 
 * `rmse([1, 2], [1, 2]) = 0`
 * `rmse([1, 2, 3], [3, 2, 1]) = 1.63`
+
+<img src="img/formula_rmse.png" />
 
 Answer here
 
@@ -176,11 +201,15 @@ Answer here
 
 **9) Counter**. We have a list with identifiers of form “id-SITE”. Calculate how many ids we have per site.
 
+<img src="img/counter_1.png" />
+
 Answer here
 
 <br/>
 
 **10) Top counter**. We have a list with identifiers of form “id-SITE”. Show the top 3 sites. You can break ties in any way you want.
+
+<img src="img/counter_2_top.png" />
 
 Answer here
 
@@ -200,6 +229,8 @@ Answer here
 
 * `jaccard({'a', 'b', 'c'}, {'a', 'd'}) = 1 / 4`
 
+<img src="img/formula_jaccard.png" />
+
 Answer here
 
 <br/>
@@ -207,6 +238,8 @@ Answer here
 **13) IDF**. Given a collection of already tokenized texts, calculate the IDF (inverse document frequency) of each token.
 
 * input example: `[['interview', 'questions'], ['interview', 'answers']]`
+
+<img src="img/formula_idf_1.png" />
 
 Where:
 
@@ -224,7 +257,11 @@ Answer here
 
 PMI is used for finding collocations in text — things like “New York” or “Puerto Rico”. For two consecutive words, the PMI between them is:
 
+<img src="img/formula_pmi_1.png" />
+
 The higher the PMI, the more likely these two tokens form a collection. We can estimate PMI by counting: 
+
+<img src="img/formula_pmi_2.png" />
 
 Where:
 * N is the total number of tokens in the text,
@@ -282,6 +319,8 @@ Answer here
 **5) Flip a binary tree**. Write a function for rotating a binary tree.
 
 * The definition of a tree node: `Node(value, left, right)`
+
+<img src="img/flip_binary_tree.png" />
 
 Answer here
 
