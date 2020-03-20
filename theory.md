@@ -523,7 +523,7 @@ Often, we want to find a split such that it minimizes the sum of the node impuri
 
 **What is random forest? 👶**
 
-Answer here
+Random Forest is a machine learning method for regression and classification which is composed of many decision trees. RF belongs to a larger class of ML algorithms called ensemble methods (in other words, it involves the combination of several models to solve a single prediction problem).
 
 <br/>
 
