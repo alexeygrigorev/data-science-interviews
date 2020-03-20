@@ -13,6 +13,7 @@ For updates, follow me on Twitter ([@Al_Grigor](https://twitter.com/Al_Grigor)) 
 ## Questions by category
 
 * Theoretical questions: [theory.md](theory.md)
+* Technical questions: [technical.md](technical.md)
 * More to come
 
 ## Other useful things
