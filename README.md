@@ -12,8 +12,8 @@ For updates, follow me on Twitter ([@Al_Grigor](https://twitter.com/Al_Grigor)) 
 
 ## Questions by category
 
-* Theoretical questions: [theory.md](theory.md)
-* Technical questions: [technical.md](technical.md)
+* Theoretical questions: [theory.md](theory.md) (linear models, trees, neural networks and others)
+* Technical questions: [technical.md](technical.md) (SQL, Python, coding)
 * More to come
 
 ## Other useful things
