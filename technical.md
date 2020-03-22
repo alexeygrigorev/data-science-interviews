@@ -27,6 +27,10 @@ Write SQL queries to extract the following information:
 
 Answer here
 
+```sql
+SELECT count(*) FROM Ads WHERE status = 'active'; 
+```
+
 <br/>
 
 
@@ -119,7 +123,17 @@ Answer here
 
 Example of output: 1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz, 11, Fizz, 13, 14, Fizz Buzz, 16, 17, Fizz, 19, Buzz, Fizz, 22, 23, Fizz, Buzz, 26, Fizz, 28, 29, Fizz Buzz, 31, 32, Fizz, 34, Buzz, Fizz, ...
 
-Answer here
+```python
+for i in range(1, 101):
+    if i % 3 == 0 and i % 5 == 0:
+        print('Fizz Buzz')
+    elif i % 3 == 0:
+        print('Fizz')
+    elif i % 5 == 0:
+        print('Buzz')
+    else:
+        print(i)
+```
 
 <br/>
 
@@ -280,8 +294,40 @@ Answer here
 * `[1, 2, 3, 4], 5` ⇒ `True`
 * `[3, 4, 6], 6` ⇒ `False`
 
+Brute force, O(n<sup>2</sup>):
 
-Answer here
+```python
+def two_sum(numbers, target):
+    n = len(numbers)
+
+    for i in range(n):
+        for j in range(i + 1, n):
+            if numbers[i] + numbers[j] == target:
+                return True
+
+    return False
+```
+
+Linear, O(n):
+
+```python
+def two_sum(numbers, target):
+    index = {num: i for (i, num) in enumerate(numbers)}
+
+    n = len(numbers)
+
+    for i in range(n):
+        a = numbers[i]
+        b = target - a
+
+        if b in index:
+            j = index[b]
+            if i != j:
+                return True
+
+    return False
+```
+
 
 <br/>
 
