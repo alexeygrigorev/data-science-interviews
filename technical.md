@@ -454,6 +454,6 @@ Answer here
 *NP-complete* is a subset of hardest NP problems. Each problem in NP can be reduced to NP-complete problem in polynomial time. This means, that if we know a solution a NP-complete problem we can solve all NP problems.
 *NP-hard* is a class of problems that contains all harded problems from NP (NP-complete) and problems that are not in NP class.
 
-There are two groups of problems - decision problems and optimization problems (problems that find optimal solutions). For example, the decision version of travelling salesman problem is NP-complete and the optimization version of TSP is NP-hard.
+There are two groups of problems - decision problems and optimization problems (problems that find optimal solutions). For example, the decision version of travelling salesman problem is NP-complete (it is NP and NP-hard) and the optimization version of TSP is NP-hard.
 
 <br/>
