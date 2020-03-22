@@ -140,8 +140,13 @@ for i in range(1, 101):
 * `factorial(5)` = 5! = 1 * 2 * 3 * 4 * 5 = 120
 * `factorial(10)` = 10! = 1 * 2 * 3 * 4 * 5 * 6 * 7 * 8 * 9 * 10 = 3628800
 
-
-Answer here
+```python
+def factorial(n):
+    result = 1
+    for i in range(2, n + 1):
+        result *= i
+    return result
+```
 
 <br/>
 
@@ -152,8 +157,12 @@ Answer here
 
 <img src="img/formula_mean.png" />
 
-
-Answer here
+```python
+def mean(numbers):
+    if len(numbers):
+        return sum(numbers) / len(numbers)
+    return float('NaN')
+```
 
 <br/>
 
@@ -176,7 +185,14 @@ Answer here
 
 <img src="img/formula_rmse.png" />
 
-Answer here
+```python
+import math
+
+def rmse(y_true, y_pred):
+    assert len(y_true) == len(y_pred), 'different sizes of the arguments'
+    squares = sum((x - y)**2 for x, y in zip(y_true, y_pred))
+    return math.sqrt(squares / len(y_true))
+```
 
 <br/>
 
@@ -185,7 +201,16 @@ Answer here
 * `[1, 2, 3, 1]` ⇒ `[1, 2, 3]`
 * `[1, 3, 2, 1, 5, 3, 5, 1, 4]` ⇒ `[1, 3, 2, 5, 4]`
 
-Answer here
+```python
+def remove_duplicates(lst):
+    new_list = []
+    mentioned_values = set()
+    for elem in lst:
+        if elem not in mentioned_values:
+            new_list.append(elem)
+            mentioned_values.add(elem)      
+    lst[:] = new_list
+```
 
 <br/>
 
@@ -198,7 +223,19 @@ Answer here
 * 4: 1 time
 * 5: 2 times
 
-Answer here
+```python
+numbers = [1, 3, 2, 1, 5, 3, 5, 1, 4]
+counter = dict()
+for elem in numbers:
+    counter[elem] = counter.get(elem, 0) + 1
+```
+or
+```python
+from collections import Counter
+
+numbers = [1, 3, 2, 1, 5, 3, 5, 1, 4]
+counter = Counter(numbers)
+```
 
 <br/>
 
@@ -207,7 +244,18 @@ Answer here
 * “ololo” ⇒ Yes
 * “cafe” ⇒ No
 
-Answer here
+```python
+def is_palindrome(s):
+    return s == s[::-1]
+```
+or
+```python
+def is_palindrome(s):
+    for i in range(len(s) // 2):
+        if s[i] != s[-i - 1]:
+            return False
+    return True
+```
 
 <br/>
 
@@ -243,7 +291,10 @@ Answer here
 
 <img src="img/formula_jaccard.png" />
 
-Answer here
+```python
+def jaccard(a, b):
+    return len(a & b) / len(a | b)
+```
 
 <br/>
 
