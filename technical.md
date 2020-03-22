@@ -159,7 +159,7 @@ def factorial(n):
 
 ```python
 def mean(numbers):
-    if len(numbers):
+    if len(numbers) > 0:
         return sum(numbers) / len(numbers)
     return float('NaN')
 ```
@@ -208,8 +208,8 @@ def remove_duplicates(lst):
     for elem in lst:
         if elem not in mentioned_values:
             new_list.append(elem)
-            mentioned_values.add(elem)      
-    lst[:] = new_list
+            mentioned_values.add(elem)
+    return new_list
 ```
 
 <br/>
