@@ -148,6 +148,17 @@ def factorial(n):
     return result
 ```
 
+We can also write this function using recursion:
+
+```python
+def factorial(n: int):
+    if n == 1 or n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+```
+
+
 <br/>
 
 **3) Mean**. Compute the mean of number in a list
