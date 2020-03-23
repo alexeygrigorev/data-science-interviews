@@ -313,8 +313,21 @@ def top_counter(lst):
 * `'aaaabbbcca'` ⇒ `[('a', 4), ('b', 3), ('c', 2), ('a', 1)]`
 * (note that there are two groups of 'a')
 
-
-Answer here
+```python
+def rle(s):
+    ans, cur, num = [], None, 0
+    for i in range(len(s)):
+        if i == 0:
+            cur, num = s[i], 1
+        elif cur != s[i]:
+            ans.append((cur, num))
+            cur, num = s[i], 1
+        else:
+            num += 1
+        if i == len(s) - 1:
+            ans.append((cur, num))
+    return ans
+```
 
 <br/>
 
