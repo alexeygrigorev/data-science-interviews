@@ -122,15 +122,15 @@ Answer here
 Example of output: 1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz, 11, Fizz, 13, 14, Fizz Buzz, 16, 17, Fizz, 19, Buzz, Fizz, 22, 23, Fizz, Buzz, 26, Fizz, 28, 29, Fizz Buzz, 31, 32, Fizz, 34, Buzz, Fizz, ...
 
 ```python
-for i in range(1, 101):
-    if i % 3 == 0 and i % 5 == 0:
-        print('Fizz Buzz')
-    elif i % 3 == 0:
-        print('Fizz')
-    elif i % 5 == 0:
-        print('Buzz')
-    else:
-        print(i)
+for i in range(100):
+    j, ans = i + 1, ''
+    if j % 3 == 0:
+        ans += 'fizz'
+    if j % 5 == 0:
+        ans += 'buzz'
+    if ans == '':
+        ans += str(j)
+    print(ans)
 ```
 
 <br/>
@@ -152,7 +152,7 @@ We can also write this function using recursion:
 
 ```python
 def factorial(n: int):
-    if n == 1 or n == 0:
+    if n == 0:
         return 1
     else:
         return n * factorial(n - 1)
@@ -185,7 +185,17 @@ def mean(numbers):
 
 <img src="img/formula_std.png" />
 
-Answer here
+```python
+from math import sqrt
+
+def std_dev(numbers):
+    if len(numbers) > 0:
+        avg = mean(numbers)
+        var = sum([(i - avg) ** 2 for i in numbers]) / len(numbers)
+        ans = sqrt(var)
+        return ans
+    return float('NaN')
+```
 
 <br/>
 
@@ -274,7 +284,14 @@ def is_palindrome(s):
 
 <img src="img/counter_1.png" />
 
-Answer here
+```python
+def counter(lst):
+    ans = {}
+    for i in lst:
+        site = i[-2:]
+        ans[i] = ans.get(i, 0) + 1
+    return ans
+```
 
 <br/>
 
@@ -282,7 +299,12 @@ Answer here
 
 <img src="img/counter_2_top.png" />
 
-Answer here
+```python
+def top_counter(lst):
+    site_dict = counter(lst)
+    ans = sorted(site_dict, key=site_dict.get)[:3]
+    return ans
+```
 
 <br/>
 
@@ -291,8 +313,21 @@ Answer here
 * `'aaaabbbcca'` ⇒ `[('a', 4), ('b', 3), ('c', 2), ('a', 1)]`
 * (note that there are two groups of 'a')
 
-
-Answer here
+```python
+def rle(s):
+    ans, cur, num = [], None, 0
+    for i in range(len(s)):
+        if i == 0:
+            cur, num = s[i], 1
+        elif i == len(s) - 1:
+            ans += (cur, num)
+        elif cur == s[i]:
+            num += 1
+        else:
+            ans += (cur, num)
+            cur, num = s[i], 1
+    return ans
+```
 
 <br/>
 
@@ -321,7 +356,19 @@ Where:
 * n(t) is the number of documents that t occurs in,
 * N is the total number of documents
 
-Answer here
+```python
+from math import log10
+
+def idf(lst):
+    n_tokens = {}
+    for doc in lst:
+        for token in doc:
+            n_tokens[token] = n_tokens.get(token, 0) + 1
+    ans = {}
+    for token in n_tokens:
+        ans[token] = log10(len(lst) / (1 + n_tokens[token]))
+    return ans
+```
 
 <br/>
 
@@ -398,8 +445,43 @@ def two_sum(numbers, target):
 * F(n) = F(n-1) + F(n-2)
 * The sequence is: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
 
+```python
+def fib1(n):
+    '''naive, complexity = O(2 ** n)'''
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fib1(n - 1) + fib(n - 2)
 
-Answer here
+def fib2(n):
+    '''dynamic programming, complexity = O(n)'''
+    base1, base2 = 0, 1
+    for i in range(n):
+        base1, base2 = base2, base1 + base2
+    return base1
+
+def fib3(n):
+    '''matrix multiplication, complexity = O(log(n))'''
+    def mx_mul(m1, m2):
+        ans = [[0 for i in range(len(m2[0]))] for j in range(len(m1))]
+        for i in range(len(m1)):
+            for j in range(len(m2[0])):
+                for k in range(len(m2)):
+                    ans[i][j] += m1[i][k] * m2[k][j]
+        return ans
+    def pow(a, b):
+        ans = [[1, 0], [0, 1]]
+        while b > 0:
+            if b % 2 == 1:
+                ans = mx_mul(ans, a)
+            a = mx_mul(a, a)
+            b //= 2
+        return ans
+    ans = mx_mul(pow([[1, 1], [1, 0]], n), [[1], [0]])[1][0]
+    return ans
+```
 
 <br/>
 
@@ -408,8 +490,13 @@ Answer here
 * 6, 6 ⇒ [7]
 * 2, 4 ⇒ [3, 4, 5] 
 
-
-Answer here
+```python
+def most_frequent_outcome(d1, d2):
+    len_ans = abs(d1 - d2) + 1
+    mi = min(d1, d2)
+    ans = [mi + i for i in range(1, len_ans + 1)]
+    return ans
+```
 
 <br/>
 
@@ -418,7 +505,14 @@ Answer here
 * The definition of a list node: `Node(value, next)`
 * Example: `a -> b -> c` ⇒ `c -> b -> a`
 
-Answer here
+```python
+def reverse_ll(head):
+    if head.next is not None:
+        last = None
+        point = head
+        while point is not None:
+            point.next, point, last = last, point.next, point
+```
 
 <br/>
 
@@ -428,7 +522,13 @@ Answer here
 
 <img src="img/flip_binary_tree.png" />
 
-Answer here
+```python
+def flip_bt(head):
+    if head is not None:
+        head.left, head.right = head.right, head.left
+        flip_bt(head.left)
+        flip_bt(head.right)
+```
 
 <br/>
 
@@ -437,7 +537,20 @@ Answer here
 * `[1, 4, 6, 10], 4` ⇒ `1`
 * `[1, 4, 6, 10], 3` ⇒ `-1`
 
-Answer here
+```python
+def binary_search(lst, num):
+    left, right = -1, len(lst)
+    while right - left > 1:
+        mid = (left + right) // 2
+        if lst[mid] >= num:
+            right = mid
+        else:
+            left = mid
+    if right == len(lst) or lst[right] != num:
+        return -1
+    else:
+        return right
+```
 
 <br/>
 
@@ -445,7 +558,20 @@ Answer here
 
 * `[1, 1, 1, 2, 3, 4, 4, 4, 5, 6, 6]` ⇒ `[1, 2, 3, 4, 5, 6]`
 
-Answer here
+```python
+def deduplication1(lst):
+    '''manual'''
+    ans = []
+    last = None
+    for i in lst:
+        if last != i:
+            ans.append(i)
+            last = i
+    return ans
+
+def deduplication2(lst):
+    return list(set(lst))
+```
 
 <br/>
 
@@ -453,7 +579,25 @@ Answer here
 
 * `[1, 2, 4, 6, 10], [2, 4, 5, 7, 10]` ⇒ `[2, 4, 10]`
 
-Answer here
+```python
+def intersection1(lst1, lst2):
+    '''reserves duplicates'''
+    ans = []
+    p1, p2 = 0, 0
+    while p1 < len(lst1) and p2 < len(lst2):
+        if lst1[p1] == lst2[p2]:
+            ans.append(lst1[p1])
+            p1, p2 = p1 + 1, p2 + 1
+        elif lst1[p1] < lst2[p2]:
+            p1 += 1
+        else:
+            p2 += 1
+    return ans
+
+def intersection2(lst1, lst2):
+    '''removes duplicates'''
+    return list(set(lst1) & set(lst2))
+```
 
 <br/>
 
@@ -461,7 +605,27 @@ Answer here
 
 * `[1, 2, 4, 6, 10], [2, 4, 5, 7, 10]` ⇒ `[1, 2, 4, 5, 6, 7, 10]`
 
-Answer here
+```python
+def union1(lst1, lst2):
+    '''reserve duplicates'''
+    ans = []
+    p1, p2 = 0, 0
+    while p1 < len(lst1) or p2 < len(lst2):
+        if lst1[p1] == lst2[p2]:
+            ans.append(lst1[p1])
+            p1, p2 = p1 + 1, p2 + 1
+        elif lst1[p1] < lst2[p2]:
+            ans.append(lst1[p1])
+            p1 += 1
+        else:
+            ans.append(lst2[p2])
+            p2 += 1
+    return ans
+
+def union2(lst1, lst2):
+    '''removes duplicates'''
+    return list(set(lst1) | set(lst2))
+```
 
 <br/>
 
@@ -475,7 +639,17 @@ Implement the “+” operation for this representation
 * `[1, 1] + [1]` ⇒ `[1, 2]`
 * `[9, 9] + [2]` ⇒ `[1, 0, 1]`
 
-Answer here
+```python
+def addition(lst1, lst2):
+    def list_to_int(lst):
+        ans, base = 0, 1
+        for i in lst[::-1]:
+            ans += i * base
+            base *= 10
+        return ans
+    ans = list_to_int(lst1) + list_to_int(lst2)
+    return ans
+```
 
 <br/>
 
@@ -500,6 +674,17 @@ Answer here
 * Less than or equal to the number on the right
 * The definition of a tree node: `Node(value, left, right)`
 
-Answer here
+```python
+def check_is_bst(head):
+    from_left, from_right = True, True
+    if head.left is None and head.right is None:
+        return True
+    if head.left is not None:
+        from_left = head.val >= head.left.val and check_is_bst(head.left)
+    if head.right is not None:
+        from_right = head.val <= head.right.val and check_is_bst(head.right)
+    ans = from_left and from_right
+    return ans
+```
 
 <br/>
