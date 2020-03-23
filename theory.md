@@ -529,7 +529,7 @@ Random Forest is a machine learning method for regression and classification whi
 
 **Why do we need randomization in random forest? ‍⭐️**
 
-Random forest in an extention of the **bagging** algorithm which takes *random data samples from the training dataset* (with replacement), trains several models and averages predictions. In addition to that, each time a split in a tree is considered, random forest takes a *random sample of m features from full set of n features* (with replacement) and uses this sample as candidates for the split (for example, `m = sqrt(n)`).
+Random forest in an extention of the **bagging** algorithm which takes *random data samples from the training dataset* (with replacement), trains several models and averages predictions. In addition to that, each time a split in a tree is considered, random forest takes a *random sample of m features from full set of n features* (with replacement) and uses this subset of features as candidates for the split (for example, `m = sqrt(n)`).
 
 Training decision trees on random data samples from the training dataset reduces variance. Sampling features for each split **decorelates trees**.
 
