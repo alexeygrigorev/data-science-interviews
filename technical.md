@@ -533,7 +533,7 @@ def binary_search(lst, num):
             right = mid
         else:
             left = mid
-    if right == len(lst) or lst[right] != num:
+    if right < 0 or right >= len(lst) or lst[right] != num:
         return -1
     else:
         return right
