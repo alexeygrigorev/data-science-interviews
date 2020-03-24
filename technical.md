@@ -34,13 +34,21 @@ SELECT count(*) FROM Ads WHERE status = 'active';
 
 **2)** All active campaigns. A campaign is active if there’s at least one active ad.
 
-Answer here
+```sql
+SELECT DISTINCT a.campaign_id
+FROM Ads AS a
+WHERE a.status = 'active'; 
+```
 
 <br/>
 
 **3)** The number of active campaigns.
 
-Answer here
+```sql
+SELECT COUNT(DISTINCT a.campaign_id)
+FROM Ads AS a
+WHERE a.status = 'active'; 
+```
 
 <br/>
 
@@ -48,7 +56,14 @@ Answer here
 
 <img src="img/sql_4_example.png" />
 
-Answer here
+```sql
+SELECT a.ad_id, e.event_type, count(*) as "count"
+FROM Ads AS a
+  JOIN Events AS e
+      ON a.ad_id = e.ad_id
+GROUP BY a.ad_id, e.event_type
+ORDER BY a.ad_id, "count" DESC; 
+```
 
 <br/>
 
@@ -56,7 +71,15 @@ Answer here
 
 <img src="img/sql_5_example.png" />
 
-Answer here
+```sql
+SELECT a.ad_id, e.event_type, e.date, count(*) as "count"
+FROM Ads AS a
+  JOIN Events AS e
+      ON a.ad_id = e.ad_id
+WHERE a.status = 'active'
+GROUP BY a.ad_id, e.event_type, e.date
+ORDER BY e.date ASC, "count" DESC; 
+```
 
 <br/>
 
