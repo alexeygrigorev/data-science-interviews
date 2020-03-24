@@ -152,7 +152,7 @@ We can also write this function using recursion:
 
 ```python
 def factorial(n: int):
-    if n == 0:
+    if n == 0 or n == 1:
         return 1
     else:
         return n * factorial(n - 1)
@@ -448,10 +448,8 @@ def two_sum(numbers, target):
 ```python
 def fibonacci1(n):
     '''naive, complexity = O(2 ** n)'''
-    if n == 0:
-        return 0
-    elif n == 1:
-        return 1
+    if n == 0 or n == 1:
+        return n
     else:
         return fibonacci1(n - 1) + fibonacci1(n - 2)
 
