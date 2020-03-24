@@ -289,7 +289,7 @@ def counter(lst):
     ans = {}
     for i in lst:
         site = i[-2:]
-        ans[i] = ans.get(i, 0) + 1
+        ans[site] = ans.get(site, 0) + 1
     return ans
 ```
 
@@ -301,7 +301,7 @@ def counter(lst):
 
 ```python
 def top_counter(lst):
-    site_dict = counter(lst)
+    site_dict = counter(lst)  # using last problem's solution
     ans = sorted(site_dict, key=site_dict.get)[:3]
     return ans
 ```
@@ -446,23 +446,23 @@ def two_sum(numbers, target):
 * The sequence is: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
 
 ```python
-def fib1(n):
+def fibonacci1(n):
     '''naive, complexity = O(2 ** n)'''
     if n == 0:
         return 0
     elif n == 1:
         return 1
     else:
-        return fib1(n - 1) + fib(n - 2)
+        return fibonacci1(n - 1) + fibonacci1(n - 2)
 
-def fib2(n):
+def fibonacci2(n):
     '''dynamic programming, complexity = O(n)'''
     base1, base2 = 0, 1
     for i in range(n):
         base1, base2 = base2, base1 + base2
     return base1
 
-def fib3(n):
+def fibonacci3(n):
     '''matrix multiplication, complexity = O(log(n))'''
     def mx_mul(m1, m2):
         ans = [[0 for i in range(len(m2[0]))] for j in range(len(m1))]
@@ -607,7 +607,7 @@ def intersection2(lst1, lst2):
 
 ```python
 def union1(lst1, lst2):
-    '''reserve duplicates'''
+    '''reserves duplicates'''
     ans = []
     p1, p2 = 0, 0
     while p1 < len(lst1) or p2 < len(lst2):
