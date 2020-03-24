@@ -122,15 +122,15 @@ Answer here
 Example of output: 1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz, 11, Fizz, 13, 14, Fizz Buzz, 16, 17, Fizz, 19, Buzz, Fizz, 22, 23, Fizz, Buzz, 26, Fizz, 28, 29, Fizz Buzz, 31, 32, Fizz, 34, Buzz, Fizz, ...
 
 ```python
-for i in range(100):
-    j, ans = i + 1, ''
-    if j % 3 == 0:
-        ans += 'fizz'
-    if j % 5 == 0:
-        ans += 'buzz'
-    if ans == '':
-        ans += str(j)
-    print(ans)
+for i in range(1, 101):
+    if i % 3 == 0 and i % 5 == 0:
+        print('Fizz Buzz')
+    elif i % 3 == 0:
+        print('Fizz')
+    elif i % 5 == 0:
+        print('Buzz')
+    else:
+        print(i)
 ```
 
 <br/>
@@ -647,7 +647,8 @@ def addition(lst1, lst2):
             ans += i * base
             base *= 10
         return ans
-    ans = list_to_int(lst1) + list_to_int(lst2)
+    val = list_to_int(lst1) + list_to_int(lst2)
+    ans = [int(i) for i in str(val)]
     return ans
 ```
 
@@ -675,16 +676,14 @@ Answer here
 * The definition of a tree node: `Node(value, left, right)`
 
 ```python
-def check_is_bst(head):
-    from_left, from_right = True, True
-    if head.left is None and head.right is None:
-        return True
-    if head.left is not None:
-        from_left = head.val >= head.left.val and check_is_bst(head.left)
-    if head.right is not None:
-        from_right = head.val <= head.right.val and check_is_bst(head.right)
-    ans = from_left and from_right
-    return ans
+def check_is_bst(head, min_val=None, max_val=None):
+    from_val = min_val is None or head.val >= min_val
+    from_val &= max_val is None or head.val <= max_val
+    min_new = head.val if min_val is None else min(min_val, head.val)
+    max_new = head.val if max_val is None else max(max_val, head.val)
+    from_left = head.left is None or check_is_bst(head.left, min_val, max_new)
+    from_right = head.right is None or check_is_bst(head.right, min_new, max_val)
+    return from_val and from_left and from_right
 ```
 
 <br/>
