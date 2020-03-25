@@ -11,6 +11,7 @@ Contributions are welcome!
 * [120+ data science interview questions](https://github.com/kojino/120-Data-Science-Interview-Questions) by [kojino](https://github.com/kojino/)
 * [40 Interview Questions asked at Startups in Machine Learning / Data Science](https://www.analyticsvidhya.com/blog/2016/09/40-interview-questions-asked-at-startups-in-machine-learning-data-science/)
 * [The Most Comprehensive Data Science & Machine Learning Interview Guide You’ll Ever Need](https://www.analyticsvidhya.com/blog/2018/06/comprehensive-data-science-machine-learning-interview-guide/)
+* [Data Science Recruitment Challenges](https://github.com/alexeygrigorev/datascience-recruitment-challenges) - take-home assignments for data science positions
 
 ### Questions
 
@@ -27,6 +28,7 @@ Contributions are welcome!
 * [How to Succeed in A Data Science Interview](https://blog.pramp.com/how-to-succeed-in-a-data-science-interview-27553ab69d8a)
 * [Machine Learning Systems Design](https://github.com/chiphuyen/machine-learning-systems-design)
 * [I interviewed at five top companies in Silicon Valley in five days, and luckily got five job offers](https://medium.com/@XiaohanZeng/i-interviewed-at-five-top-companies-in-silicon-valley-in-five-days-and-luckily-got-five-job-offers-25178cf74e0f)
+
 
 ### Negotiation
 

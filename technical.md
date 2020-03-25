@@ -34,13 +34,21 @@ SELECT count(*) FROM Ads WHERE status = 'active';
 
 **2)** All active campaigns. A campaign is active if there’s at least one active ad.
 
-Answer here
+```sql
+SELECT DISTINCT a.campaign_id
+FROM Ads AS a
+WHERE a.status = 'active'; 
+```
 
 <br/>
 
 **3)** The number of active campaigns.
 
-Answer here
+```sql
+SELECT COUNT(DISTINCT a.campaign_id)
+FROM Ads AS a
+WHERE a.status = 'active'; 
+```
 
 <br/>
 
@@ -48,7 +56,14 @@ Answer here
 
 <img src="img/sql_4_example.png" />
 
-Answer here
+```sql
+SELECT a.ad_id, e.event_type, count(*) as "count"
+FROM Ads AS a
+  JOIN Events AS e
+      ON a.ad_id = e.ad_id
+GROUP BY a.ad_id, e.event_type
+ORDER BY a.ad_id, "count" DESC; 
+```
 
 <br/>
 
@@ -56,7 +71,15 @@ Answer here
 
 <img src="img/sql_5_example.png" />
 
-Answer here
+```sql
+SELECT a.ad_id, e.event_type, e.date, count(*) as "count"
+FROM Ads AS a
+  JOIN Events AS e
+      ON a.ad_id = e.ad_id
+WHERE a.status = 'active'
+GROUP BY a.ad_id, e.event_type, e.date
+ORDER BY e.date ASC, "count" DESC; 
+```
 
 <br/>
 
@@ -114,9 +137,9 @@ Answer here
 
 **1) FizzBuzz.** Print numbers from 1 to 100
 
-* If it’s a multiplier of 3, print “fizz”
-* If it’s a multiplier of 5, print “buzz”
-* If both 3 and 5 — “fizzbuzz"
+* If it’s a multiplier of 3, print “Fizz”
+* If it’s a multiplier of 5, print “Buzz”
+* If both 3 and 5 — “Fizz Buzz"
 * Otherwise, print the number itself 
 
 Example of output: 1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz, 11, Fizz, 13, 14, Fizz Buzz, 16, 17, Fizz, 19, Buzz, Fizz, 22, 23, Fizz, Buzz, 26, Fizz, 28, 29, Fizz Buzz, 31, 32, Fizz, 34, Buzz, Fizz, ...
@@ -452,14 +475,18 @@ def fibonacci1(n):
         return n
     else:
         return fibonacci1(n - 1) + fibonacci1(n - 2)
+```
 
+```python
 def fibonacci2(n):
     '''dynamic programming, complexity = O(n)'''
     base1, base2 = 0, 1
     for i in range(n):
         base1, base2 = base2, base1 + base2
     return base1
+```
 
+```python
 def fibonacci3(n):
     '''matrix multiplication, complexity = O(log(n))'''
     def mx_mul(m1, m2):
