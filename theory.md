@@ -289,19 +289,25 @@ Answer here
 
 **What is the ROC curve? When to use it? ‍⭐️**
 
-The diagrammatic representation that shows the contrast between true positive rate vs true negative rate. It is used when we need to predict the probability of the binary outcome.
+ROC stands for *Receiver Operating Characteristics*. The diagrammatic representation that shows the contrast between true positive rate vs true negative rate. It is used when we need to predict the probability of the binary outcome.
 
 <br/>
 
 **What is AUC (AU ROC)? When to use it? ‍⭐️**
 
-Answer here
+AUC stands for *Area Under the ROC Curve*. ROC is a probability curve and AUC represents degree or measure of separability. It's used when we need to value how much model is capable of distinguishing between classes.  The value is between 0 and 1, the higher the better.
 
 <br/>
 
 **How to interpret the AU ROC score? ‍⭐️**
 
-Answer here
+AUC score is the value of *Area Under the ROC Curve*. 
+
+If we assume ROC curve consists of dots, $\{(x_1, y_1), (x_2, y_2), \cdots, (x_m,y_m)\}$, then
+$$
+AUC = \frac{1}{2} \sum_{i=1}^{m-1}(x_{i+1}-x_i)\cdot (y_i+y_{i+1})
+$$
+An excellent model has AUC near to the 1 which means it has good measure of separability. A poor model has AUC near to the 0 which means it has worst measure of separability. When AUC score is 0.5, it means model has no class separation capacity whatsoever. 
 
 <br/>
 
