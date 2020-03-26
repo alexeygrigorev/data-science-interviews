@@ -702,13 +702,35 @@ Answer here
 
 ```python
 def check_is_bst(head, min_val=None, max_val=None):
-    from_val = min_val is None or head.val >= min_val
-    from_val &= max_val is None or head.val <= max_val
-    min_new = head.val if min_val is None else min(min_val, head.val)
-    max_new = head.val if max_val is None else max(max_val, head.val)
-    from_left = head.left is None or check_is_bst(head.left, min_val, max_new)
-    from_right = head.right is None or check_is_bst(head.right, min_new, max_val)
-    return from_val and from_left and from_right
+    """Check whether binary tree is binary search tree
+
+    Aside of the obvious node.left.val <= node.val <= node.right.val have to be 
+    fulfilled, we also have to make sure that there is NO SINGLE leaves in the
+    left part of node have more value than the current node.
+    """
+    check_val = True
+    check_left = True
+    check_right = True
+    
+    if min_val:
+        check_val = check_val and (head.val >= min_val)
+        min_new = min(min_val, head.val)
+    else:
+        min_new = head.val
+    
+    if max_val:
+        check_val = check_val and (head.val <= max_val)
+        max_new = max(max_val, head.val)
+    else:
+        max_new = head.val
+    
+    if head.left:
+        check_left = check_is_bst(head.left, min_val, max_new)
+    
+    if head.right:
+        check_right = check_is_bst(head.right, min_new, max_val)
+    
+    return check_val and check_left and check_right
 ```
 
 <br/>
