@@ -303,10 +303,10 @@ AUC stands for *Area Under the ROC Curve*. ROC is a probability curve and AUC re
 
 AUC score is the value of *Area Under the ROC Curve*. 
 
-If we assume ROC curve consists of dots, $\{(x_1, y_1), (x_2, y_2), \cdots, (x_m,y_m)\}$, then
-$$
-AUC = \frac{1}{2} \sum_{i=1}^{m-1}(x_{i+1}-x_i)\cdot (y_i+y_{i+1})
-$$
+If we assume ROC curve consists of dots, {(x_1, y_1), (x_2, y_2), ..., (x_m,y_m)\}, then
+
+![auc_formula](.\img\auc_formula.png)
+
 An excellent model has AUC near to the 1 which means it has good measure of separability. A poor model has AUC near to the 0 which means it has worst measure of separability. When AUC score is 0.5, it means model has no class separation capacity whatsoever. 
 
 <br/>

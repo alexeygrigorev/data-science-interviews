@@ -208,7 +208,16 @@ def mean(numbers):
 
 <img src="img/formula_std.png" />
 
-Answer here
+```python
+import math
+
+def std(x):
+    if len(x) <= 1:
+        return float('NaN')
+    average = sum(x)/len(x)
+    squares = sum((s - average)**2 for s in x)
+    return math.sqrt(squares / (len(x)-1) )
+```
 
 <br/>
 
