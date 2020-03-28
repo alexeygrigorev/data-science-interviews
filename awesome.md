@@ -1,4 +1,4 @@
-## Awesome Data Science Inteview Resources
+## Awesome Data Science Interview Resources
 
 A list of links with data science interview questions and other userful resources.
 
