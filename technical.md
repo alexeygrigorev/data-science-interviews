@@ -96,7 +96,18 @@ Answer here
 
 <img src="img/sql_7_example.png" />
 
-Answer here
+```sql
+-- for Postgres
+
+SELECT a.campaign_id, e.event_type, e.date, count(*)
+FROM Ads AS a
+  INNER JOIN Events AS e
+    ON a.ad_id = e.ad_id
+WHERE (current_date > e.date)
+  AND (current_date - e.date <= 7)
+GROUP BY a.campaign_id, e.event_type, e.date
+ORDER BY e.date DESC;
+```
 
 <br/>
 
