@@ -88,7 +88,14 @@ ORDER BY e.date ASC, "count" DESC;
 <img src="img/sql_6_example.png" />
 
 
-Answer here
+```sql
+SELECT a.campaign_id, e.event_type, count(*)
+FROM Ads AS a
+  INNER JOIN Events AS e
+    ON a.ad_id = e.ad_id
+GROUP BY a.campaign_id, e.event_type
+ORDER BY a.campaign_id;
+```
 
 <br/>
 
