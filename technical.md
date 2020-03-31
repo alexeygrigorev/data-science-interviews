@@ -130,7 +130,23 @@ Answer here
 
 <img src="img/sql_9_example.png" />
 
-Answer here
+```sql
+-- for Postgres
+
+SELECT conversions_clicks_table.campaign_id,
+       (conversions_clicks_table.conversions * 100 / conversions_clicks_table.clicks)::FLOAT || '%' AS CVR
+FROM
+  (
+  SELECT a.campaign_id, 
+         SUM(CASE e.event_type WHEN 'conversion' THEN 1 ELSE 0 END) conversions,
+         SUM(CASE e.event_type WHEN 'click' THEN 1 ELSE 0 END) clicks
+  FROM Ads AS a
+    INNER JOIN Events AS e
+      ON a.ad_id = e.ad_id
+  GROUP BY a.campaign_id
+  ) AS conversions_clicks_table
+ORDER BY conversions_clicks_table.campaign_id;
+```
 
 <br/>
 
