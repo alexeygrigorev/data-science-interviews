@@ -684,7 +684,7 @@ The output of the sigmoid function for large positive or negative numbers is alm
 
 **What is ReLU? How is it better than sigmoid or tanh? ‍⭐️**
 
-Answer here
+ReLU is an abbreviation for Rectified Linear Unit. It is an activation function which has the value 0 for all negative values and the value f(x) = x for all positive values. The ReLU has a simple activation function which makes it fast to compute and while the sigmoid and tanh activation functions saturate at higher values, the ReLU has a potentially infinite activation, which addresses the problem of vanishing gradients. 
 
 <br/>
 
@@ -759,7 +759,7 @@ Answer here
 
 **When would you use Adam and when SGD? ‍⭐️**
 
-Answer here
+Adam tends to converge faster, while SGD often converges to more optimal solutions.
 
 <br/>
 
@@ -798,25 +798,31 @@ Answer here
 
 **What’s a convolutional layer? ‍⭐️**
 
-Answer here
+The idea of the convolutional layer is the assumption that the information needed for making a decision often is spatially close and thus, it only takes the weighted sum over nearby inputs. It also assumes that the networks’ kernels can be reused for all nodes, hence the number of weights can be drastically reduced. To counteract only one feature being learnt per layer, multiple kernels are applied to the input which creates parallel channels in the output. Consecutive layers can also be stacked to allow the network to find more high-level features.
 
 <br/>
 
 **Why do we actually need convolutions? Can’t we use fully-connected layers for that? ‍⭐️**
 
-Answer here
+A fully-connected layer needs one weight per inter-layer connection, which means the number of weights which needs to be computed quickly balloons as the number of layers and nodes per layer is increased. 
 
 <br/>
 
 **What’s pooling in CNN? Why do we need it? ‍⭐️**
 
-Answer here
+Pooling is a technique to downsample the feature map. It allows layers which receive relatively undistorted versions of the input to learn low level features such as lines, while layers deeper in the model can learn more abstract features such as texture.
 
 <br/>
 
 **How does max pooling work? Are there other pooling techniques? ‍⭐️**
 
-Answer here
+Max pooling is a technique where the maximum value of a receptive field is passed on in the next feature map. The most commonly used receptive field is 2 x 2 with a stride of 2, which means the feature map is downsampled from N x N to N/2 x N/2. Receptive fields larger than 3 x 3 are rarely employed as too much information is lost. 
+
+Other pooling techniques include:
+
+* Average pooling, the output is the average value of the receptive field.
+* Min pooling, the output is the minimum value of the receptive field.
+* Global pooling, where the receptive field is set to be equal to the input size, this means the output is equal to a scalar and can be used to reduce the dimensionality of the feature map. 
 
 <br/>
 
