@@ -122,7 +122,24 @@ ORDER BY e.date DESC;
 
 <img src="img/sql_8_example.png" />
 
-Answer here
+```sql
+-- for Postgres
+
+SELECT impressions_clicks_table.campaign_id,
+       (impressions_clicks_table.impressions * 100 / impressions_clicks_table.clicks)::FLOAT || '%' AS CTR
+FROM
+  (
+  SELECT a.campaign_id, 
+         SUM(CASE e.event_type WHEN 'impression' THEN 1 ELSE 0 END) impressions,
+         SUM(CASE e.event_type WHEN 'click' THEN 1 ELSE 0 END) clicks
+  FROM Ads AS a
+    INNER JOIN Events AS e
+      ON a.ad_id = e.ad_id
+  GROUP BY a.campaign_id
+  ORDER BY a.campaign_id
+  ) AS impressions_clicks_table
+ORDER BY impressions_clicks_table.campaign_id;
+```
 
 <br/>
 
