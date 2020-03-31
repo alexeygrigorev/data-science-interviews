@@ -136,7 +136,6 @@ FROM
     INNER JOIN Events AS e
       ON a.ad_id = e.ad_id
   GROUP BY a.campaign_id
-  ORDER BY a.campaign_id
   ) AS impressions_clicks_table
 ORDER BY impressions_clicks_table.campaign_id;
 ```
