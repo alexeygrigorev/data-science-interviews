@@ -558,6 +558,27 @@ def fibonacci3(n):
     return ans
 ```
 
+```python
+def fibonacci4(n):
+	'''Top down + memorization (dictionary), complexity = O(n)'''
+    dic = {1:1, 2:2}
+    if n not in dic:
+        dic[n] = fibonacci4(n-1) + fibonacci4(n-2)
+    return dic[n]
+
+def fibonacci5(n):
+    '''Top down + memorization (list), complexity = O(n) '''
+     if n == 1:
+        return 1
+    dic = [-1 for i in range(n)]
+    dic[0], dic[1] = 1, 2
+    def helper(n, dic):
+        if dic[n] < 0:
+            dic[n] = helper(n-1, dic) + helper(n-2, dic)
+        return dic[n]
+    return helper(n-1, dic)
+```
+
 <br/>
 
 **3) Most frequent outcome**. We have two dice of different sizes (D1 and D2). We roll them and sum their face values. What are the most probable outcomes?
