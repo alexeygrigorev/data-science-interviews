@@ -88,7 +88,14 @@ ORDER BY e.date ASC, "count" DESC;
 <img src="img/sql_6_example.png" />
 
 
-Answer here
+```sql
+SELECT a.campaign_id, e.event_type, count(*)
+FROM Ads AS a
+  INNER JOIN Events AS e
+    ON a.ad_id = e.ad_id
+GROUP BY a.campaign_id, e.event_type
+ORDER BY a.campaign_id;
+```
 
 <br/>
 
@@ -96,7 +103,18 @@ Answer here
 
 <img src="img/sql_7_example.png" />
 
-Answer here
+```sql
+-- for Postgres
+
+SELECT a.campaign_id, e.event_type, e.date, count(*)
+FROM Ads AS a
+  INNER JOIN Events AS e
+    ON a.ad_id = e.ad_id
+WHERE (current_date > e.date)
+  AND (current_date - e.date <= 7)
+GROUP BY a.campaign_id, e.event_type, e.date
+ORDER BY e.date DESC;
+```
 
 <br/>
 
@@ -104,7 +122,23 @@ Answer here
 
 <img src="img/sql_8_example.png" />
 
-Answer here
+```sql
+-- for Postgres
+
+SELECT impressions_clicks_table.campaign_id,
+       (impressions_clicks_table.impressions * 100 / impressions_clicks_table.clicks)::FLOAT || '%' AS CTR
+FROM
+  (
+  SELECT a.campaign_id, 
+         SUM(CASE e.event_type WHEN 'impression' THEN 1 ELSE 0 END) impressions,
+         SUM(CASE e.event_type WHEN 'click' THEN 1 ELSE 0 END) clicks
+  FROM Ads AS a
+    INNER JOIN Events AS e
+      ON a.ad_id = e.ad_id
+  GROUP BY a.campaign_id
+  ) AS impressions_clicks_table
+ORDER BY impressions_clicks_table.campaign_id;
+```
 
 <br/>
 
@@ -112,7 +146,23 @@ Answer here
 
 <img src="img/sql_9_example.png" />
 
-Answer here
+```sql
+-- for Postgres
+
+SELECT conversions_clicks_table.campaign_id,
+       (conversions_clicks_table.conversions * 100 / conversions_clicks_table.clicks)::FLOAT || '%' AS CVR
+FROM
+  (
+  SELECT a.campaign_id, 
+         SUM(CASE e.event_type WHEN 'conversion' THEN 1 ELSE 0 END) conversions,
+         SUM(CASE e.event_type WHEN 'click' THEN 1 ELSE 0 END) clicks
+  FROM Ads AS a
+    INNER JOIN Events AS e
+      ON a.ad_id = e.ad_id
+  GROUP BY a.campaign_id
+  ) AS conversions_clicks_table
+ORDER BY conversions_clicks_table.campaign_id;
+```
 
 <br/>
 
