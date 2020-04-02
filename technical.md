@@ -565,7 +565,9 @@ def fibonacci4(n):
     if n not in dic:
         dic[n] = fibonacci4(n-1) + fibonacci4(n-2)
     return dic[n]
+```
 
+```python
 def fibonacci5(n):
     '''Top down + memorization (list), complexity = O(n) '''
      if n == 1:
