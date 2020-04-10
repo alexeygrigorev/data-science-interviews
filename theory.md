@@ -483,7 +483,13 @@ Answer here
 
 **What are the decision trees? 👶**
 
+This is a type of supervised learning algorithm that is mostly used for classification problems. Surprisingly, it works for both categorical and continuous dependent variables. 
+
+In this algorithm, we split the population into two or more homogeneous sets. This is done based on most significant attributes/ independent variables to make as distinct groups as possible.
+
 A decision tree is a flowchart-like tree structure, where each internal node (non-leaf node) denotes a test on an attribute, each branch represents an outcome of the test, and each leaf node (or terminal node) holds a value for the target variable.
+
+Various techniques : like Gini, Information Gain, Chi-square, entropy.
 
 <br/>
 
