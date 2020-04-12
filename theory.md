@@ -18,7 +18,8 @@ A case when we have both features (the matrix X) and the labels (the vector y)
 **What is regression? Which models can you use to solve a regression problem? 👶**
 
 Regression is a part of supervised ML. Regression models investigate the relationship between a dependent (target) and independent variable (s) (predictor).
-Here are some common regression models:
+Here are some common regression models
+
 - *Linear Regression* establishes a linear relationship between target and predictor (s). It predicts a numeric value and has a shape of a straight line.
 - *Polynomial Regression* has a regression equation with the power of independent variable more than 1. It is a curve that fits into the data points.
 - *Ridge Regression* helps when predictors are highly correlated (multicollinearity problem). It penalizes the squares of regression coefficients but doesn’t allow to reach zeros (uses l2 regularization).
@@ -209,7 +210,7 @@ Classification problems are problems in which our prediction space is discrete, 
 
 **What is logistic regression? When do we need to use it? 👶**
 
-Logistic regression is a Machine Learning algorithm that is used for binary classification classification. You should use logistic regression when your Y variable takes only two values, e.g. True and False, "spam" and "not spam", "churn" and "not churn" and so on. The variable is said to be a "binary" or "dichotomous".
+Logistic regression is a Machine Learning algorithm that is used for binary classification. You should use logistic regression when your Y variable takes only two values, e.g. True and False, "spam" and "not spam", "churn" and "not churn" and so on. The variable is said to be a "binary" or "dichotomous".
 
 <br/>
 
@@ -222,6 +223,8 @@ Yes, Logistic Regression is considered a generalized linear model because the ou
 **What is sigmoid? What does it do? 👶**
 
 A sigmoid function is a type of activation function, and more specifically defined as a squashing function. Squashing functions limit the output to a range between 0 and 1, making these functions useful in the prediction of probabilities.
+
+Sigmod(x) = 1/(1+e^{-x})
 
 <br/>
 
@@ -283,7 +286,9 @@ Most of the performance metrics for classification models are based on the value
 
 **Precision-recall trade-off ‍⭐️**
 
-Answer here
+Tradeoff means increasing one parameter would lead to decreasing of other. Precision-recall tradeoff occur due to increasing one of the parameter(precision or recall) while keeping the model same. 
+
+In an ideal scenario where there is a perfectly separable data, both precision and recall can get maximum value of 1.0. But in most of the practical situations, there is noise in the dataset and the dataset is not perfectly separable. There might be some points of positive class closer to the negative class and vice versa. In such cases, shifting the decision boundary can either increase the precision or recall but not both. Increasing one parameter leads to decreasing of the other. 
 
 <br/>
 
@@ -313,19 +318,23 @@ An excellent model has AUC near to the 1 which means it has good measure of sepa
 
 **What is the PR (precision-recall) curve? ‍⭐️**
 
-Answer here
+A *precision*-*recall curve* (or PR Curve) is a plot of the precision (y-axis) and the recall (x-axis) for different probability thresholds. Precision-recall curves (PR curves) are recommended for highly skewed domains where ROC curves may provide an excessively optimistic view of the performance.
 
 <br/>
 
 **What is the area under the PR curve? Is it a useful metric? ‍⭐️I**
 
-Answer here
+The Precision-Recall AUC is just like the ROC AUC, in that it summarizes the curve with a range of threshold values as a single score.
+
+A high area under the curve represents both high recall and high precision, where high precision relates to a low false positive rate, and high recall relates to a low false negative rate.
 
 <br/>
 
 **In which cases AU PR is better than AU ROC? ‍⭐️**
 
-Answer here
+What is different however is that AU ROC looks at a true positive rate TPR and false positive rate FPR while AU PR looks at positive predictive value PPV and true positive rate TPR.
+
+Typically, if true negatives are not meaningful to the problem or you care more about the positive class, AU PR is typically going to be more useful; otherwise, If you care equally about the positive and negative class or your dataset is quite balanced, then going with AU ROC is a good idea.
 
 <br/>
 
