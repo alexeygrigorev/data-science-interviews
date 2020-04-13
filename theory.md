@@ -719,8 +719,10 @@ If all the weights of a neural network are set to zero, the output of each conne
 
 **What regularization techniques for neural nets do you know? ‍⭐️**
 
-Answer here
-
+* L1 Regularization - Defined as the sum of absolute values of the individual parameters. The L1 penalty causes a subset of the weights to become zero, suggesting that the corresponding features may safely be discarded. 
+* L2 Regularization - Defined as the sum of square of individual parameters. Often supported by regularization hyperparameter alpha. It results in weight decay. 
+* Data Augmentation - This requires some fake data to be created as a part of training set. 
+* Drop Out : This is most effective regularization technique for newral nets. Few randome nodes in each layer is deactivated in forward pass. This allows the algorithm to train on different set of nodes in each iterations.
 <br/>
 
 **What is dropout? Why is it useful? How does it work? ‍⭐️**
