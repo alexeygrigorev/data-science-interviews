@@ -544,7 +544,7 @@ Often, we want to find a split such that it minimizes the sum of the node impuri
 
 **What is random forest? 👶**
 
-Random Forest is a machine learning method for regression and classification which is composed of many decision trees. RF belongs to a larger class of ML algorithms called ensemble methods (in other words, it involves the combination of several models to solve a single prediction problem).
+Random Forest is a machine learning method for regression and classification which is composed of many decision trees. Random Forest belongs to a larger class of ML algorithms called ensemble methods (in other words, it involves the combination of several models to solve a single prediction problem).
 
 <br/>
 
@@ -594,7 +594,9 @@ Answer here
 
 **What happens when we have correlated features in our data? ‍⭐️**
 
-Answer here
+In random forest, since random forest samples some features to build each tree, the information contained in correlated features is twice as much likely to be picked than any other information contained in other features. 
+
+In general, when you are adding correlated features, it means that they linearly contains the same information and thus it will reduce the robustness of your model. Each time you train your model, your model might pick one feature or the other to "do the same job" i.e. explain some variance, reduce entropy, etc.
 
 <br/>
 
@@ -603,7 +605,7 @@ Answer here
 
 **What is gradient boosting trees? ‍⭐️**
 
-Answer here
+Gradient boosting is a machine learning technique for regression and classification problems, which produces a prediction model in the form of an ensemble of weak prediction models, typically decision trees.
 
 <br/>
 
@@ -920,8 +922,7 @@ Answer here
 
 **What is TF-IDF? How is it useful for text classification? ‍⭐️**
 
-Term Frequency (TF) is a scoring of the frequency of the word in the current document. Inverse Document Frequency(IDF) is a scoring of how rare the word is across documents. It is used in scenario where highy recurring words may not contain as much informational content
-as the domain specific words. For example, words like “the” that are frequent across all documents therefore need to be less weighted. The Tf-IDF score highlights words that are distinct (contain useful information) in a given document.  
+Term Frequency (TF) is a scoring of the frequency of the word in the current document. Inverse Document Frequency(IDF) is a scoring of how rare the word is across documents. It is used in scenario where highly recurring words may not contain as much informational content as the domain specific words. For example, words like “the” that are frequent across all documents therefore need to be less weighted. The TF-IDF score highlights words that are distinct (contain useful information) in a given document.  
 
 <br/>
 
