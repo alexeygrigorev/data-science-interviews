@@ -95,7 +95,9 @@ This is powerful because it helps us study processes whose population distributi
 
 **What if we want to build a model for predicting prices? Are prices distributed normally? Do we need to do any pre-processing for prices? ‍⭐️**
 
-Answer here
+Data is not normal. Specially, real-world datasets or uncleaned datasets always have certain skewness. Same goes for the price prediction. Price of houses or any other thing under consideration depends on a number of factors. So, there's a great chance of presence of some skewed values i.e outliers if we talk in data science terms. 
+
+Yes, you may need to do pre-processing. Most probably, you will need to remove the outliers to make your distribution near-to-normal.
 
 <br/>
 
