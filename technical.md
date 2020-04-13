@@ -763,7 +763,11 @@ Output:
 
 * `['cat', 'green', 'home', 'network', 'egg', 'oval']`
 
-Answer here
+```python
+def sort_by_custom_alphabet(dictionary, words): 
+    words = sorted(words, key = lambda word: [dictionary.index(c) for c in word]) 
+    return words
+```
 
 <br/>
 
