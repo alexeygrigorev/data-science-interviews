@@ -389,7 +389,8 @@ There are mainly two types of regularization,
 
 **What kind of regularization techniques are applicable to linear models? ‍⭐️**
 
-Answer here
+AIC/BIC, Ridge regression, Lasso, Basis pursuit denoising, Rudin–Osher–Fatemi model (TV), Potts model, RLAD,
+Dantzig Selector,SLOPE
 
 <br/>
 
