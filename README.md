@@ -5,7 +5,7 @@
 
 <br/>
 
-# Data Science Interview Questions
+# Data Science Interviews
 
 > Data science interview questions - with answers
 

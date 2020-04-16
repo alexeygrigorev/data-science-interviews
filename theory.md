@@ -95,7 +95,9 @@ This is powerful because it helps us study processes whose population distributi
 
 **What if we want to build a model for predicting prices? Are prices distributed normally? Do we need to do any pre-processing for prices? ‍⭐️**
 
-Answer here
+Data is not normal. Specially, real-world datasets or uncleaned datasets always have certain skewness. Same goes for the price prediction. Price of houses or any other thing under consideration depends on a number of factors. So, there's a great chance of presence of some skewed values i.e outliers if we talk in data science terms. 
+
+Yes, you may need to do pre-processing. Most probably, you will need to remove the outliers to make your distribution near-to-normal.
 
 <br/>
 
@@ -387,7 +389,8 @@ There are mainly two types of regularization,
 
 **What kind of regularization techniques are applicable to linear models? ‍⭐️**
 
-Answer here
+AIC/BIC, Ridge regression, Lasso, Basis pursuit denoising, Rudin–Osher–Fatemi model (TV), Potts model, RLAD,
+Dantzig Selector,SLOPE
 
 <br/>
 
@@ -719,8 +722,10 @@ If all the weights of a neural network are set to zero, the output of each conne
 
 **What regularization techniques for neural nets do you know? ‍⭐️**
 
-Answer here
-
+* L1 Regularization - Defined as the sum of absolute values of the individual parameters. The L1 penalty causes a subset of the weights to become zero, suggesting that the corresponding features may safely be discarded. 
+* L2 Regularization - Defined as the sum of square of individual parameters. Often supported by regularization hyperparameter alpha. It results in weight decay. 
+* Data Augmentation - This requires some fake data to be created as a part of training set. 
+* Drop Out : This is most effective regularization technique for newral nets. Few randome nodes in each layer is deactivated in forward pass. This allows the algorithm to train on different set of nodes in each iterations.
 <br/>
 
 **What is dropout? Why is it useful? How does it work? ‍⭐️**
