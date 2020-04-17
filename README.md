@@ -1,4 +1,6 @@
-# Data Science Interview Questions
+<img src="img/repo-logo.png">
+
+# Data Science Interviews
 
 Data science interview questions - with answers
 

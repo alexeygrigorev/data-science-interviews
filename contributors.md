@@ -33,6 +33,7 @@ The content in this repository - especially the answers - is created by the comm
 * [vijay-ravi](https://github.com/vijay-ravi)
 * [Mudit Tiwari](https://github.com/mudittiwari255)
 * [iamsaeeddev](https://github.com/iamsaeeddev)
+* [hima9](https://github.com/hima9)
 
 
 Full list of contributors: [contributors](https://github.com/alexeygrigorev/data-science-interviews/contributors)
