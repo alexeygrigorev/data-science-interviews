@@ -17,6 +17,28 @@
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+
+    <title>{{ page.title | default: site.title | default: site.github.repository_name }}</title>
+    <meta property="og:title" content="{{ page.title | default: site.title | default: site.github.repository_name }}">
+    <meta property="twitter:title" content="{{ page.title | default: site.title | default: site.github.repository_name }}">
+    <meta name="title" content="{{ page.title | default: site.title | default: site.github.repository_name }}">
+
+    <meta property="twitter:site" content="@Al_Grigor">
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Data Science Interviews">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+    <meta property="og:image" content="{{ site.url }}/{{ page.image | default: 'img/repo-logo.png' }}">
+    <meta property="twitter:image" content="{{ site.url }}/{{ page.image  | default: 'img/repo-logo.png' }}">
+    <link rel="image_src" href="{{ site.url }}/{{ page.image  | default: 'img/repo-logo.png' }}">
+  
+    <meta property="og:description" content="{{ page.description | default: site.description | default: site.github.project_tagline }}">
+    <meta property="twitter:description" content="{{ page.description | default: site.description | default: site.github.project_tagline }}">
+    <meta name="description" content="{{ page.description | default: site.description | default: site.github.project_tagline }}">  
+
   </head>
   <body>
     <header class="page-header" role="banner">

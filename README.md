@@ -1,13 +1,8 @@
-<h4 align="center">
-    <a href="https://github.com/alexeygrigorev/data-science-interviews">
-        <img src="https://raw.githubusercontent.com/iamsaeeddev/data-science-interviews/master/repo-logo.png">
-    </a>
-
-<br/>
+<img src="img/repo-logo.png">
 
 # Data Science Interviews
 
-> Data science interview questions - with answers
+Data science interview questions - with answers
 
 The answers are given by the community
 
