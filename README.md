@@ -1,4 +1,4 @@
-<img src="img/repo-logo.png">
+<img src="img/repo-logo.jpg">
 
 # Data Science Interviews
 

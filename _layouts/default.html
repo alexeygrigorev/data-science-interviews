@@ -31,9 +31,9 @@
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     <link rel="canonical" href="{{ site.url }}{{ page.url }}">
 
-    <meta property="og:image" content="{{ site.url }}/{{ page.image | default: 'img/repo-logo.png' }}">
-    <meta property="twitter:image" content="{{ site.url }}/{{ page.image  | default: 'img/repo-logo.png' }}">
-    <link rel="image_src" href="{{ site.url }}/{{ page.image  | default: 'img/repo-logo.png' }}">
+    <meta property="og:image" content="{{ site.url }}/{{ page.image | default: site.cover_image }}">
+    <meta property="twitter:image" content="{{ site.url }}/{{ page.image  | default: site.cover_image }}">
+    <link rel="image_src" href="{{ site.url }}/{{ page.image  | default: site.cover_image }}">
   
     <meta property="og:description" content="{{ page.description | default: site.description | default: site.github.project_tagline }}">
     <meta property="twitter:description" content="{{ page.description | default: site.description | default: site.github.project_tagline }}">
