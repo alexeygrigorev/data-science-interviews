@@ -18,7 +18,8 @@ A case when we have both features (the matrix X) and the labels (the vector y)
 **What is regression? Which models can you use to solve a regression problem? 👶**
 
 Regression is a part of supervised ML. Regression models investigate the relationship between a dependent (target) and independent variable (s) (predictor).
-Here are some common regression models:
+Here are some common regression models
+
 - *Linear Regression* establishes a linear relationship between target and predictor (s). It predicts a numeric value and has a shape of a straight line.
 - *Polynomial Regression* has a regression equation with the power of independent variable more than 1. It is a curve that fits into the data points.
 - *Ridge Regression* helps when predictors are highly correlated (multicollinearity problem). It penalizes the squares of regression coefficients but doesn’t allow to reach zeros (uses l2 regularization).
@@ -94,7 +95,9 @@ This is powerful because it helps us study processes whose population distributi
 
 **What if we want to build a model for predicting prices? Are prices distributed normally? Do we need to do any pre-processing for prices? ‍⭐️**
 
-Answer here
+Data is not normal. Specially, real-world datasets or uncleaned datasets always have certain skewness. Same goes for the price prediction. Price of houses or any other thing under consideration depends on a number of factors. So, there's a great chance of presence of some skewed values i.e outliers if we talk in data science terms. 
+
+Yes, you may need to do pre-processing. Most probably, you will need to remove the outliers to make your distribution near-to-normal.
 
 <br/>
 
@@ -209,7 +212,7 @@ Classification problems are problems in which our prediction space is discrete, 
 
 **What is logistic regression? When do we need to use it? 👶**
 
-Logistic regression is a Machine Learning algorithm that is used for binary classification classification. You should use logistic regression when your Y variable takes only two values, e.g. True and False, "spam" and "not spam", "churn" and "not churn" and so on. The variable is said to be a "binary" or "dichotomous".
+Logistic regression is a Machine Learning algorithm that is used for binary classification. You should use logistic regression when your Y variable takes only two values, e.g. True and False, "spam" and "not spam", "churn" and "not churn" and so on. The variable is said to be a "binary" or "dichotomous".
 
 <br/>
 
@@ -222,6 +225,8 @@ Yes, Logistic Regression is considered a generalized linear model because the ou
 **What is sigmoid? What does it do? 👶**
 
 A sigmoid function is a type of activation function, and more specifically defined as a squashing function. Squashing functions limit the output to a range between 0 and 1, making these functions useful in the prediction of probabilities.
+
+Sigmod(x) = 1/(1+e^{-x})
 
 <br/>
 
@@ -283,7 +288,9 @@ Most of the performance metrics for classification models are based on the value
 
 **Precision-recall trade-off ‍⭐️**
 
-Answer here
+Tradeoff means increasing one parameter would lead to decreasing of other. Precision-recall tradeoff occur due to increasing one of the parameter(precision or recall) while keeping the model same. 
+
+In an ideal scenario where there is a perfectly separable data, both precision and recall can get maximum value of 1.0. But in most of the practical situations, there is noise in the dataset and the dataset is not perfectly separable. There might be some points of positive class closer to the negative class and vice versa. In such cases, shifting the decision boundary can either increase the precision or recall but not both. Increasing one parameter leads to decreasing of the other. 
 
 <br/>
 
@@ -303,29 +310,33 @@ AUC stands for *Area Under the ROC Curve*. ROC is a probability curve and AUC re
 
 AUC score is the value of *Area Under the ROC Curve*. 
 
-If we assume ROC curve consists of dots, $\{(x_1, y_1), (x_2, y_2), \cdots, (x_m,y_m)\}$, then
-$$
-AUC = \frac{1}{2} \sum_{i=1}^{m-1}(x_{i+1}-x_i)\cdot (y_i+y_{i+1})
-$$
+If we assume ROC curve consists of dots, <img src="https://render.githubusercontent.com/render/math?math=(x_1, y_1), (x_2, y_2), \cdots, (x_m,y_m)">, then
+
+<img src="https://render.githubusercontent.com/render/math?math=AUC = \frac{1}{2} \sum_{i=1}^{m-1}(x_{i%2B1}-x_i)\cdot (y_i%2By_{i%2B1})">
+
 An excellent model has AUC near to the 1 which means it has good measure of separability. A poor model has AUC near to the 0 which means it has worst measure of separability. When AUC score is 0.5, it means model has no class separation capacity whatsoever. 
 
 <br/>
 
 **What is the PR (precision-recall) curve? ‍⭐️**
 
-Answer here
+A *precision*-*recall curve* (or PR Curve) is a plot of the precision (y-axis) and the recall (x-axis) for different probability thresholds. Precision-recall curves (PR curves) are recommended for highly skewed domains where ROC curves may provide an excessively optimistic view of the performance.
 
 <br/>
 
 **What is the area under the PR curve? Is it a useful metric? ‍⭐️I**
 
-Answer here
+The Precision-Recall AUC is just like the ROC AUC, in that it summarizes the curve with a range of threshold values as a single score.
+
+A high area under the curve represents both high recall and high precision, where high precision relates to a low false positive rate, and high recall relates to a low false negative rate.
 
 <br/>
 
 **In which cases AU PR is better than AU ROC? ‍⭐️**
 
-Answer here
+What is different however is that AU ROC looks at a true positive rate TPR and false positive rate FPR while AU PR looks at positive predictive value PPV and true positive rate TPR.
+
+Typically, if true negatives are not meaningful to the problem or you care more about the positive class, AU PR is typically going to be more useful; otherwise, If you care equally about the positive and negative class or your dataset is quite balanced, then going with AU ROC is a good idea.
 
 <br/>
 
@@ -369,16 +380,17 @@ Regularization is used to reduce overfitting in machine learning models. It help
 **Which regularization techniques do you know? ‍⭐️**
 
 There are mainly two types of regularization,
-1. L1 Regularization (Lasso regularization) - Adds the sum of absolute values of the coefficients to the cost function. $\lambda\sum_{i=1}^{n} \left | w_i \right |$
-2. L2 Regularization (Ridge regularization) - Adds the sum of squares of coefficients to the cost function. $\lambda\sum_{i=1}^{n} {w_{i}}^{2}$
+1. L1 Regularization (Lasso regularization) - Adds the sum of absolute values of the coefficients to the cost function. <img src="https://render.githubusercontent.com/render/math?math=\lambda\sum_{i=1}^{n} \left | w_i \right |">
+2. L2 Regularization (Ridge regularization) - Adds the sum of squares of coefficients to the cost function. <img src="https://render.githubusercontent.com/render/math?math=\lambda\sum_{i=1}^{n} {w_{i}}^{2}">
 
-* Where $\lambda$ determines the amount of regularization.
+* Where <img src="https://render.githubusercontent.com/render/math?math=\lambda"> determines the amount of regularization.
 
 <br/>
 
 **What kind of regularization techniques are applicable to linear models? ‍⭐️**
 
-Answer here
+AIC/BIC, Ridge regression, Lasso, Basis pursuit denoising, Rudin–Osher–Fatemi model (TV), Potts model, RLAD,
+Dantzig Selector,SLOPE
 
 <br/>
 
@@ -535,7 +547,7 @@ Often, we want to find a split such that it minimizes the sum of the node impuri
 
 **What is random forest? 👶**
 
-Random Forest is a machine learning method for regression and classification which is composed of many decision trees. RF belongs to a larger class of ML algorithms called ensemble methods (in other words, it involves the combination of several models to solve a single prediction problem).
+Random Forest is a machine learning method for regression and classification which is composed of many decision trees. Random Forest belongs to a larger class of ML algorithms called ensemble methods (in other words, it involves the combination of several models to solve a single prediction problem).
 
 <br/>
 
@@ -585,7 +597,9 @@ Answer here
 
 **What happens when we have correlated features in our data? ‍⭐️**
 
-Answer here
+In random forest, since random forest samples some features to build each tree, the information contained in correlated features is twice as much likely to be picked than any other information contained in other features. 
+
+In general, when you are adding correlated features, it means that they linearly contains the same information and thus it will reduce the robustness of your model. Each time you train your model, your model might pick one feature or the other to "do the same job" i.e. explain some variance, reduce entropy, etc.
 
 <br/>
 
@@ -594,7 +608,7 @@ Answer here
 
 **What is gradient boosting trees? ‍⭐️**
 
-Answer here
+Gradient boosting is a machine learning technique for regression and classification problems, which produces a prediction model in the form of an ensemble of weak prediction models, typically decision trees.
 
 <br/>
 
@@ -708,8 +722,10 @@ If all the weights of a neural network are set to zero, the output of each conne
 
 **What regularization techniques for neural nets do you know? ‍⭐️**
 
-Answer here
-
+* L1 Regularization - Defined as the sum of absolute values of the individual parameters. The L1 penalty causes a subset of the weights to become zero, suggesting that the corresponding features may safely be discarded. 
+* L2 Regularization - Defined as the sum of square of individual parameters. Often supported by regularization hyperparameter alpha. It results in weight decay. 
+* Data Augmentation - This requires some fake data to be created as a part of training set. 
+* Drop Out : This is most effective regularization technique for newral nets. Few randome nodes in each layer is deactivated in forward pass. This allows the algorithm to train on different set of nodes in each iterations.
 <br/>
 
 **What is dropout? Why is it useful? How does it work? ‍⭐️**
@@ -911,8 +927,7 @@ Answer here
 
 **What is TF-IDF? How is it useful for text classification? ‍⭐️**
 
-Term Frequency (TF) is a scoring of the frequency of the word in the current document. Inverse Document Frequency(IDF) is a scoring of how rare the word is across documents. It is used in scenario where highy recurring words may not contain as much informational content
-as the domain specific words. For example, words like “the” that are frequent across all documents therefore need to be less weighted. The Tf-IDF score highlights words that are distinct (contain useful information) in a given document.  
+Term Frequency (TF) is a scoring of the frequency of the word in the current document. Inverse Document Frequency(IDF) is a scoring of how rare the word is across documents. It is used in scenario where highly recurring words may not contain as much informational content as the domain specific words. For example, words like “the” that are frequent across all documents therefore need to be less weighted. The TF-IDF score highlights words that are distinct (contain useful information) in a given document.  
 
 <br/>
 

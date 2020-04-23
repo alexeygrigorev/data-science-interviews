@@ -1,4 +1,6 @@
-# Data Science Interview Questions
+<img src="img/repo-logo.jpg">
+
+# Data Science Interviews
 
 Data science interview questions - with answers
 
@@ -20,3 +22,6 @@ For updates, follow me on Twitter ([@Al_Grigor](https://twitter.com/Al_Grigor)) 
 ## Other useful things
 
 * Awesome data science interview questions and other resources: [awesome.md](awesome.md)
+
+
+This is a joint effort of many people. You can see the list of contributors here: [contributors.md](contributors.md)
