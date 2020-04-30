@@ -508,6 +508,17 @@ def two_sum(numbers, target):
     return False
 ```
 
+Using itertools.combinations
+```python
+from itertools import combinations
+
+def two_sum(numbers, target):
+    for elem in combinations(numbers, 2):
+        if elem[0] + elem[1] == target:
+            return True
+    return False
+```
+
 
 <br/>
 
