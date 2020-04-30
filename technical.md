@@ -375,8 +375,8 @@ def counter(lst):
 ```python
 def top_counter(lst):
     site_dict = counter(lst)  # using last problem's solution
-    ans = sorted(site_dict, key=site_dict.get)[:3]
-    return ans
+    top_keys = sorted(site_dict, reverse=True, key=site_dict.get)
+    return {key: site_dict[key] for key in top_k}
 ```
 
 <br/>
