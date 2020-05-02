@@ -560,24 +560,41 @@ Training decision trees on random data samples from the training dataset *reduce
 
 **What are the main parameters of the random forest model? ‍⭐️**
 
-Answer here
+- max_depth: Longest Path between root node and the leaf
+- min_sample_split: The minimum number of observations needed to split a given node
+- max_leaf_nodes: Conditions the splitting of the tree and hence, limits the growth of the trees
+- min_samples_leaf: minimum number of samples in the leaf node
+- n_estimators: Number of trees
+- max_sample: Fraction of original dataset given to any individual tree in the given model
+- max_features: Limits the maximum number of features provided to trees in random forest model
 
 <br/>
 
 **How do we select the depth of the trees in random forest? ‍⭐️**
-
-Answer here
+The greater the depth, the greater amount of information is extracted from the tree, however, there is a limit to this, and the algorithm even if defensive against overfitting may learn complex features of noise present in data and as a result, may overfit on noise. Hence, there is no hard thumb rule in deciding the depth, but literature suggests a few tips on tuning the depth of the tree to prevent overfitting:
+- limit the maximum depth of a tree
+- limit the number of test nodes
+- limit the minimum number of objects at a node required to split
+- do not split a node when, at least, one of the resulting subsample sizes is below a given threshold
+- stop developing a node if it does not sufficiently improve the fit.
 
 <br/>
 
 **How do we know how many trees we need in random forest? ‍⭐️**
 
-Answer here
+The number of trees in random forest is worked by n_estimators, and a random forest reduces overfitting by increasing the number of trees. There is no fixed thumb rule to decide the number of trees in a random forest, it is rather fine tuned with the data, typically starting off by taking the square of the number of features (n) present in the data followed by tuning until we get the optimal results.
 
 <br/>
 
 **Is it easy to parallelize training of a random forest model? How can we do it? ‍⭐️**
-
+Yes, R provides a simple way to parallelize training of random forests on large scale data.
+It makes use of a parameter called multicombine which can be set to TRUE for parallelizing random forest computations.
+```R
+rf <- foreach(ntree=rep(25000, 6), .combine=randomForest::combine,
+              .multicombine=TRUE, .packages='randomForest') %dopar% {
+    randomForest(x, y, ntree=ntree)
+}
+```
 Answer here
 
 <br/>
