@@ -87,7 +87,7 @@ This is powerful because it helps us study processes whose population distributi
 **How do we check if a variable follows the normal distribution? ‍⭐️**
 
 1. Plot a histogram out of the sampled data. If you can fit the bell-shaped "normal" curve to the histogram, then the hypothesis that the underlying random variable follows the normal distribution can not be rejected.
-2. Check Skewness and Kurtosis of the sampled data. Zero-skewness and zero-kurtosis are typical for a normal distribution, so the farther away from 0, the more non-normal the distribution.
+2. Check Skewness and Kurtosis of the sampled data. Skewness = 0 and kurtosis = 3 are typical for a normal distribution, so the farther away they are from these values, the more non-normal the distribution.
 3. Use Kolmogorov-Smirnov or/and Shapiro-Wilk tests for normality. They take into account both Skewness and Kurtosis simultaneously.
 4. Check for Quantile-Quantile plot. It is a scatterplot created by plotting two sets of quantiles against one another. Normal Q-Q plot place the data points in a roughly straight line.
 
