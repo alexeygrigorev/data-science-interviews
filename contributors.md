@@ -5,7 +5,7 @@ The content in this repository - especially the answers - is created by the comm
 * [sash-ko](https://github.com/sash-ko)
 * [samaritanhu](https://github.com/samaritanhu)
 * [gabrielatrindade](https://github.com/gabrielatrindade)
-* [manu183](https://github.com/manu183)
+* [manuel-lang](https://github.com/manuel-lang)
 * [damiannmm](https://github.com/damiannmm)
 * [MahdiRahbar](https://github.com/MahdiRahbar)
 * [pedrogengo](https://github.com/pedrogengo)
