@@ -1,9 +1,20 @@
 # Theoretical interview questions
 
+<table>
+   <tr>
+      <td>:warning:</td>
+      <td>
+         The answers here are given by the community. Be careful and double check the answers using them. <br>
+         If you see an error, please create a PR with a fix
+      </td>
+   </tr>
+</table>
+
+
 * The list of questions is based on [this post](https://medium.com/data-science-insider/160-data-science-interview-questions-14dbd8bf0a08?source=friends_link&sk=7acf122a017c672a95f70c7cb7b585c0)
 * Legend: 👶 easy ‍⭐️ medium 🚀 expert
 * Do you know how to answer questions without answers? Please create a PR
-* See an error? Please create a PR with fix
+
 
 ## Supervised machine learning
 
