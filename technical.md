@@ -412,6 +412,14 @@ def rle(s):
     return ans
 ```
 
+Using itertools.groupby
+```python
+import itertools
+
+def rle(s):
+    return [(l, len(list(g))) for l, g in itertools.groupby(s)]
+```
+
 <br/>
 
 **12) Jaccard**. Calculate the Jaccard similarity between two sets: the size of intersection divided by the size of union.
