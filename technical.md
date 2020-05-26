@@ -587,13 +587,28 @@ def fibonacci3(n):
     return ans
 ```
 
+Memoization with a dictionary
+
 ```python
+memo = {0: 0, 1: 1}
+
 def fibonacci4(n):
-	'''Top down + memorization (dictionary), complexity = O(n)'''
-    dic = {1:1, 2:2}
-    if n not in dic:
-        dic[n] = fibonacci4(n-1) + fibonacci4(n-2)
-    return dic[n]
+    '''Top down + memorization (dictionary), complexity = O(n)'''
+    if n not in memo:
+        memo[n] = fibonacci4(n-1) + fibonacci4(n-2)
+    return memo[n]
+```
+
+Memoization with `lru_cache`
+
+```
+from functools import lru_cache
+
+@lru_cache()
+def fibonacci4(n):
+    if n == 0 or n == 1:
+        return n
+    return fibonacci4(n - 1) + fibonacci4(n - 2)
 ```
 
 ```python
@@ -609,6 +624,8 @@ def fibonacci5(n):
         return dic[n]
     return helper(n-1, dic)
 ```
+
+
 
 <br/>
 
