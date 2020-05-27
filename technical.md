@@ -450,15 +450,34 @@ Where:
 ```python
 from math import log10
 
-def idf(lst):
+def idf1(docs):
+    docs = [set(doc) for doc in docs]
     n_tokens = {}
-    for doc in lst:
+    for doc in docs:
         for token in doc:
             n_tokens[token] = n_tokens.get(token, 0) + 1
     ans = {}
     for token in n_tokens:
-        ans[token] = log10(len(lst) / (1 + n_tokens[token]))
+        ans[token] = log10(len(docs) / (1 + n_tokens[token]))
     return ans
+```
+
+```python
+import math
+
+def idf2(docs):
+    n_docs = len(docs)
+
+    docs = [set(doc) for doc in docs]
+    all_tokens = set.union(*docs)
+
+    idf_coefficients = {}
+    for token in all_tokens:
+        n_docs_w_token = sum(token in doc for doc in docs)
+        idf_c = math.log10(n_docs / (1 + n_docs_w_token))
+        idf_coefficients[token] = idf_c
+
+    return idf_coefficients
 ```
 
 <br/>
