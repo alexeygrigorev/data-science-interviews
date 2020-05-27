@@ -601,7 +601,7 @@ def fibonacci4(n):
 
 Memoization with `lru_cache`
 
-```
+```python
 from functools import lru_cache
 
 @lru_cache()
