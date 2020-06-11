@@ -33,8 +33,8 @@ Here are some common regression models
 
 - *Linear Regression* establishes a linear relationship between target and predictor (s). It predicts a numeric value and has a shape of a straight line.
 - *Polynomial Regression* has a regression equation with the power of independent variable more than 1. It is a curve that fits into the data points.
-- *Ridge Regression* helps when predictors are highly correlated (multicollinearity problem). It penalizes the squares of regression coefficients but doesn’t allow to reach zeros (uses l2 regularization).
-- *Lasso Regression* penalizes the absolute values of regression coefficients and allow reach absolute zero for some coefficient (allow feature selection).
+- *Ridge Regression* helps when predictors are highly correlated (multicollinearity problem). It penalizes the squares of regression coefficients but doesn’t allow the coefficients to reach zeros (uses L2 regularization).
+- *Lasso Regression* penalizes the absolute values of regression coefficients and allows some of the coefficients to reach absolute zero (thereby allowing feature selection).
 
 <br/>
 
@@ -112,9 +112,11 @@ Yes, you may need to do pre-processing. Most probably, you will need to remove t
 
 <br/>
 
-**What are the methods for solving linear regression do you know? ‍⭐️**
+**What methods for solving linear regression do you know? ‍⭐️**
 
-Answer here
+Linear Algebra method: Let's say you have `X`, a matrix of features, and `y`, a vector with your dependent output. Linear regression dictates that you have to find the coefficients, represented here as a vector called <img src="https://render.githubusercontent.com/render/math?math=\beta">, which minimize the sum of squared residuals. This is the resulting equation: <img src="https://render.githubusercontent.com/render/math?math=\beta = (X^{T}X)^{-1}X^{T}y">. This looks like a clean solution, but if `X` is very large, it becomes a very computationally expensive equation to solve.
+
+Alternative method: Gradient Descent. See explanation below.
 
 <br/>
 
@@ -372,7 +374,7 @@ If we simply encode categorical variables with a Label encoder, they become ordi
 
 **What happens to our linear regression model if we have three columns in our data: x, y, z  —  and z is a sum of x and y? ‍⭐️**
 
-We would not be able to perform the resgression. Beacuse z is linear dependent of x and y so when performing the regression <img src="https://render.githubusercontent.com/render/math?math={X}^{T}{X}"> would be a singular (not invertible) matrix.
+We would not be able to perform the resgression. Beacuse z is linearly dependent on x and y so when performing the regression <img src="https://render.githubusercontent.com/render/math?math={X}^{T}{X}"> would be a singular (not invertible) matrix.
 <br/>
 
 **What happens to our linear regression model if the column z in the data is a sum of columns x and y and some random noise? ‍⭐️**
@@ -469,7 +471,7 @@ Answer here
 
 **What is feature selection? Why do we need it? 👶**
 
-Answer Feature Selection is a method used to select the relevant features for the model to train on. We need feature selection to remove the irrelevant features which leads the model to under-perform.  
+Feature Selection is a method used to select the relevant features for the model to train on. We need feature selection to remove the irrelevant features which leads the model to under-perform.  
 
 <br/>
 
