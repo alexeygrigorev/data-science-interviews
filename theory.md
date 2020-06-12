@@ -454,13 +454,17 @@ Answer here
 
 **How do we interpret weights in linear models? ‍⭐️**
 
+Without normalizing weights or variables, if you increase the corresponding predictor by one unit, the coefficient represents on average how much the output changes. By the way, this interpretation still works for logistic regression - if you increase the corresponding predictor by one unit, the weight represents the change in the log of the odds.
+
 If the variables are normalized, we can interpret weights in linear models like the importance of this variable in the predicted result.
 
 <br/>
 
 **If a weight for one variable is higher than for another  —  can we say that this variable is more important? ‍⭐️**
 
-Answer here
+As the answer above states, you cannot interpret weights as the importance of the variable unless they are normalized.
+
+Without normalization, the weight represents the change in the output per unit change in the predictor. If you have a predictor with a huge range and scale that predicts an output with a very small range - for example, using each nation's GDP to predict maternal mortality rates - your coefficient should be very small. That does not necessarily mean that this predictor variable is not important compared to your others.
 
 <br/>
 
