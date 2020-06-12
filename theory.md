@@ -114,7 +114,11 @@ Yes, you may need to do pre-processing. Most probably, you will need to remove t
 
 **What methods for solving linear regression do you know? ‍⭐️**
 
-Linear Algebra method: Let's say you have `X`, a matrix of features, and `y`, a vector with your dependent output. Linear regression dictates that you have to find the coefficients, represented here as a vector called <img src="https://render.githubusercontent.com/render/math?math=\beta">, which minimize the sum of squared residuals. This is the resulting equation: <img src="https://render.githubusercontent.com/render/math?math=\beta = (X^{T}X)^{-1}X^{T}y">. This looks like a clean solution, but if `X` is very large, it becomes a very computationally expensive equation to solve.
+To solve linear regression, you need to find the coefficients <img src="https://render.githubusercontent.com/render/math?math=\beta"> which minimize the sum of squared errors.
+
+Matrix Algebra method: Let's say you have `X`, a matrix of features, and `y`, a vector with the values you want to predict. After going through the matrix algebra and minimization problem, you get this solution: <img src="https://render.githubusercontent.com/render/math?math=\beta = (X^{T}X)^{-1}X^{T}y">. 
+
+But solving this requires you to find an inverse, which can be time-consuming, if not impossible. Luckily, there are methods like Singular Value Decomposition (SVD) or QR Decomposition that can reliably calculate this part <img src="https://render.githubusercontent.com/render/math?math=(X^{T}X)^{-1}X^{T}"> (called the pseudo-inverse) without actually needing to find an inverse. The popular python ML library `sklearn` uses SVD to solve least squares.
 
 Alternative method: Gradient Descent. See explanation below.
 
