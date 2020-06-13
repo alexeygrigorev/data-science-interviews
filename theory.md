@@ -33,8 +33,8 @@ Here are some common regression models
 
 - *Linear Regression* establishes a linear relationship between target and predictor (s). It predicts a numeric value and has a shape of a straight line.
 - *Polynomial Regression* has a regression equation with the power of independent variable more than 1. It is a curve that fits into the data points.
-- *Ridge Regression* helps when predictors are highly correlated (multicollinearity problem). It penalizes the squares of regression coefficients but doesn’t allow to reach zeros (uses l2 regularization).
-- *Lasso Regression* penalizes the absolute values of regression coefficients and allow reach absolute zero for some coefficient (allow feature selection).
+- *Ridge Regression* helps when predictors are highly correlated (multicollinearity problem). It penalizes the squares of regression coefficients but doesn’t allow the coefficients to reach zeros (uses L2 regularization).
+- *Lasso Regression* penalizes the absolute values of regression coefficients and allows some of the coefficients to reach absolute zero (thereby allowing feature selection).
 
 <br/>
 
@@ -112,9 +112,15 @@ Yes, you may need to do pre-processing. Most probably, you will need to remove t
 
 <br/>
 
-**What are the methods for solving linear regression do you know? ‍⭐️**
+**What methods for solving linear regression do you know? ‍⭐️**
 
-Answer here
+To solve linear regression, you need to find the coefficients <img src="https://render.githubusercontent.com/render/math?math=\beta"> which minimize the sum of squared errors.
+
+Matrix Algebra method: Let's say you have `X`, a matrix of features, and `y`, a vector with the values you want to predict. After going through the matrix algebra and minimization problem, you get this solution: <img src="https://render.githubusercontent.com/render/math?math=\beta = (X^{T}X)^{-1}X^{T}y">. 
+
+But solving this requires you to find an inverse, which can be time-consuming, if not impossible. Luckily, there are methods like Singular Value Decomposition (SVD) or QR Decomposition that can reliably calculate this part <img src="https://render.githubusercontent.com/render/math?math=(X^{T}X)^{-1}X^{T}"> (called the pseudo-inverse) without actually needing to find an inverse. The popular python ML library `sklearn` uses SVD to solve least squares.
+
+Alternative method: Gradient Descent. See explanation below.
 
 <br/>
 
@@ -372,7 +378,7 @@ If we simply encode categorical variables with a Label encoder, they become ordi
 
 **What happens to our linear regression model if we have three columns in our data: x, y, z  —  and z is a sum of x and y? ‍⭐️**
 
-We would not be able to perform the resgression. Beacuse z is linear dependent of x and y so when performing the regression <img src="https://render.githubusercontent.com/render/math?math={X}^{T}{X}"> would be a singular (not invertible) matrix.
+We would not be able to perform the resgression. Beacuse z is linearly dependent on x and y so when performing the regression <img src="https://render.githubusercontent.com/render/math?math={X}^{T}{X}"> would be a singular (not invertible) matrix.
 <br/>
 
 **What happens to our linear regression model if the column z in the data is a sum of columns x and y and some random noise? ‍⭐️**
@@ -448,13 +454,17 @@ Answer here
 
 **How do we interpret weights in linear models? ‍⭐️**
 
+Without normalizing weights or variables, if you increase the corresponding predictor by one unit, the coefficient represents on average how much the output changes. By the way, this interpretation still works for logistic regression - if you increase the corresponding predictor by one unit, the weight represents the change in the log of the odds.
+
 If the variables are normalized, we can interpret weights in linear models like the importance of this variable in the predicted result.
 
 <br/>
 
 **If a weight for one variable is higher than for another  —  can we say that this variable is more important? ‍⭐️**
 
-Answer here
+Yes - if your predictor variables are normalized.
+
+Without normalization, the weight represents the change in the output per unit change in the predictor. If you have a predictor with a huge range and scale that is used to predict an output with a very small range - for example, using each nation's GDP to predict maternal mortality rates - your coefficient should be very small. That does not necessarily mean that this predictor variable is not important compared to the others.
 
 <br/>
 
@@ -469,7 +479,7 @@ Answer here
 
 **What is feature selection? Why do we need it? 👶**
 
-Answer Feature Selection is a method used to select the relevant features for the model to train on. We need feature selection to remove the irrelevant features which leads the model to under-perform.  
+Feature Selection is a method used to select the relevant features for the model to train on. We need feature selection to remove the irrelevant features which leads the model to under-perform.  
 
 <br/>
 
@@ -712,7 +722,7 @@ For specifics, refer to the above answer.
 
 **What kind of problems neural nets can solve? 👶**
 
-Answer here
+Neural nets are good at solving non-linear problems. Some good examples are problems that are relatively easy for humans (because of experience, intuition, understanding, etc), but difficult for traditional regression models: speech recognition, handwriting recognition, image identification, etc.
 
 <br/>
 
