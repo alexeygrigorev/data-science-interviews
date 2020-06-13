@@ -722,7 +722,7 @@ For specifics, refer to the above answer.
 
 **What kind of problems neural nets can solve? 👶**
 
-Neural nets are good at solving non-linear problems. Some good examples are problems that are relatively easy for humans (because of experience, intuition, understanding, etc), but difficult for traditional regressio models: speech recognition, handwriting recognition, image dist
+Neural nets are good at solving non-linear problems. Some good examples are problems that are relatively easy for humans (because of experience, intuition, understanding, etc), but difficult for traditional regression models: speech recognition, handwriting recognition, image identification, etc.
 
 <br/>
 
