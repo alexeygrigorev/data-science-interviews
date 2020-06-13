@@ -462,9 +462,9 @@ If the variables are normalized, we can interpret weights in linear models like 
 
 **If a weight for one variable is higher than for another  —  can we say that this variable is more important? ‍⭐️**
 
-As the answer above states, you cannot interpret weights as the importance of the variable unless they are normalized.
+Yes - if your predictor variables are normalized.
 
-Without normalization, the weight represents the change in the output per unit change in the predictor. If you have a predictor with a huge range and scale that predicts an output with a very small range - for example, using each nation's GDP to predict maternal mortality rates - your coefficient should be very small. That does not necessarily mean that this predictor variable is not important compared to your others.
+Without normalization, the weight represents the change in the output per unit change in the predictor. If you have a predictor with a huge range and scale that is used to predict an output with a very small range - for example, using each nation's GDP to predict maternal mortality rates - your coefficient should be very small. That does not necessarily mean that this predictor variable is not important compared to the others.
 
 <br/>
 
@@ -722,7 +722,7 @@ For specifics, refer to the above answer.
 
 **What kind of problems neural nets can solve? 👶**
 
-Answer here
+Neural nets are good at solving non-linear problems. Some good examples are problems that are relatively easy for humans (because of experience, intuition, understanding, etc), but difficult for traditional regressio models: speech recognition, handwriting recognition, image dist
 
 <br/>
 
