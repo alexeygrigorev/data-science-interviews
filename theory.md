@@ -448,7 +448,7 @@ Answer here
 
 **What’s the interpretation of the bias term in linear models? ‍⭐️**
 
-Answer here
+Bias is simply, a difference between predicted value and actual/true value. It can be interpreted as the distance from the average prediction and true value i.e. true value minus mean(predictions). But dont get confused between accuracy and bias.
 
 <br/>
 
@@ -655,7 +655,8 @@ Gradient boosting is a machine learning technique for regression and classificat
 
 **What’s the difference between random forest and gradient boosting? ‍⭐️**
 
-Answer here
+   1. Random Forests builds each tree independently while Gradient Boosting builds one tree at a time.
+   2. Random Forests combine results at the end of the process (by averaging or "majority rules") while Gradient Boosting combines     results along the way.
 
 <br/>
 
@@ -679,7 +680,13 @@ Answer here
 
 **What are the main parameters in the gradient boosting model? ‍⭐️**
 
-Answer here
+There are many parameters, but below are a few key defaults.
+   learning_rate=0.1 (shrinkage).
+   n_estimators=100 (number of trees).
+   max_depth=3.
+   min_samples_split=2.
+   min_samples_leaf=1.
+   subsample=1.0.
 
 <br/>
 
@@ -691,7 +698,7 @@ Answer here
 
 **How do you select the number of trees in the gradient boosting model? ‍⭐️**
 
-Answer here
+Most implementations of gradient boosting are configured by default with a relatively small number of trees, such as hundreds or thousands. Using scikit-learn we can perform a grid search of the n_estimators model parameter
 
 <br/>
 
@@ -752,8 +759,15 @@ ReLU is an abbreviation for Rectified Linear Unit. It is an activation function 
 
 **How we can initialize the weights of a neural network? ‍⭐️**
 
-Answer here
-
+Proper initialization of weight matrix in neural network is very necessary.
+Simply we can say there are two ways for initializtions.
+   1. Initializing weights with zeroes.
+      Setting weights to zero makes your network no better than a linear model. It is important to note that setting biases to 0 will not create any troubles as non zero weights take care of breaking the symmetry and even if bias is 0, the values in every neuron are still different.  
+   2. Initializing weights randomly.
+      Assigning random values to weights is better than just 0 assignment. 
+      a) If weights are initialized with very high values the term np.dot(W,X)+b becomes significantly higher and if an activation function like sigmoid() is applied, the function maps its value near to 1 where the slope of gradient changes slowly and learning takes a lot of time.
+      b) If weights are initialized with low values it gets mapped to 0, where the case is the same as above. This problem is often referred to as the vanishing gradient.
+      
 <br/>
 
 **What if we set all the weights of a neural network to 0? ‍⭐️**
@@ -781,13 +795,29 @@ Dropout is a technique that at each training step turns off each neuron with a c
 
 **What is backpropagation? How does it work? Why do we need it? ‍⭐️**
 
-Answer here
+The Backpropagation algorithm looks for the minimum value of the error function in weight space using a technique called the delta rule or gradient descent. 
+The weights that minimize the error function is then considered to be a solution to the learning problem. 
+
+:Answer how does it work here:
+
+We need backpropogation because,
+   Calculate the error – How far is your model output from the actual output.
+   Minimum Error – Check whether the error is minimized or not.
+   Update the parameters – If the error is huge then, update the parameters (weights and biases). After that again check the error. Repeat the process until the error becomes minimum.
+   Model is ready to make a prediction – Once the error becomes minimum, you can feed some inputs to your model and it will produce the output.
 
 <br/>
 
 **Which optimization techniques for training neural nets do you know? ‍⭐️**
 
-Answer here
+Gradient Descent
+Stochastic Gradient Descent
+Mini-Batch Gradient Descent(best among gradient descents)
+Nesterov Accelerated Gradient
+Momentum
+Adagrad 
+AdaDelta
+Adam(best one. less time, more efficient)
 
 <br/>
 
@@ -817,7 +847,10 @@ Answer here
 
 **What is Adam? What’s the main difference between Adam and SGD? ‍⭐️**
 
-Answer here
+Adam (Adaptive Moment Estimation) is a optimization technique for training neural networks. on an average, it is the best optimizer .It works with momentums of first and second order. The intuition behind the Adam is that we don’t want to roll so fast just because we can jump over the minimum, we want to decrease the velocity a little bit for a careful search.
+
+Adam tends to converge faster, while SGD often converges to more optimal solutions.
+SGD's high variance disadvantages gets rectified by Adam (as advantage for Adam).
 
 <br/>
 
@@ -835,7 +868,7 @@ Answer here
 
 **How do we decide when to stop training a neural net? 👶**
 
-Answer here
+Simply stop training when the validation error is the minimum.
 
 <br/>
 
