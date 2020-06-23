@@ -681,12 +681,12 @@ Answer here
 **What are the main parameters in the gradient boosting model? ‍⭐️**
 
 There are many parameters, but below are a few key defaults.
-   learning_rate=0.1 (shrinkage).
-   n_estimators=100 (number of trees).
-   max_depth=3.
-   min_samples_split=2.
-   min_samples_leaf=1.
-   subsample=1.0.
+* learning_rate=0.1 (shrinkage).
+* n_estimators=100 (number of trees).
+* max_depth=3.
+* min_samples_split=2.
+* min_samples_leaf=1.
+* subsample=1.0.
 
 <br/>
 
@@ -798,26 +798,25 @@ Dropout is a technique that at each training step turns off each neuron with a c
 The Backpropagation algorithm looks for the minimum value of the error function in weight space using a technique called the delta rule or gradient descent. 
 The weights that minimize the error function is then considered to be a solution to the learning problem. 
 
-:Answer how does it work here:
-
 We need backpropogation because,
-   Calculate the error – How far is your model output from the actual output.
-   Minimum Error – Check whether the error is minimized or not.
-   Update the parameters – If the error is huge then, update the parameters (weights and biases). After that again check the error. Repeat the process until the error becomes minimum.
-   Model is ready to make a prediction – Once the error becomes minimum, you can feed some inputs to your model and it will produce the output.
+* Calculate the error – How far is your model output from the actual output.
+* Minimum Error – Check whether the error is minimized or not.
+* Update the parameters – If the error is huge then, update the parameters (weights and biases). After that again check the error.  
+Repeat the process until the error becomes minimum.
+* Model is ready to make a prediction – Once the error becomes minimum, you can feed some inputs to your model and it will produce the output.
 
 <br/>
 
 **Which optimization techniques for training neural nets do you know? ‍⭐️**
 
-Gradient Descent
-Stochastic Gradient Descent
-Mini-Batch Gradient Descent(best among gradient descents)
-Nesterov Accelerated Gradient
-Momentum
-Adagrad 
-AdaDelta
-Adam(best one. less time, more efficient)
+* Gradient Descent
+* Stochastic Gradient Descent
+* Mini-Batch Gradient Descent(best among gradient descents)
+* Nesterov Accelerated Gradient
+* Momentum
+* Adagrad 
+* AdaDelta
+* Adam(best one. less time, more efficient)
 
 <br/>
 
