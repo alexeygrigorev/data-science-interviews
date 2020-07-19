@@ -405,7 +405,7 @@ There are mainly two types of regularization,
 
 **What kind of regularization techniques are applicable to linear models? ‍⭐️**
 
-AIC/BIC, Ridge regression, Lasso, Basis pursuit denoising, Rudin–Osher–Fatemi model (TV), Potts model, RLAD,
+AIC/BIC, Ridge regression, Lasso, Elastic Net, Basis pursuit denoising, Rudin–Osher–Fatemi model (TV), Potts model, RLAD,
 Dantzig Selector,SLOPE
 
 <br/>
@@ -424,7 +424,7 @@ Answer here
 
 **What’s the effect of L2 regularization on the weights of a linear model? ‍⭐️**
 
-Answer here
+L2 regularization penalizes larger weights more severely (due to the squared penalty term), which encourages weight values to decay toward zero.
 
 <br/>
 
@@ -436,13 +436,16 @@ Answer here
 
 **What’s the difference between L2 and L1 regularization? ‍⭐️**
 
-Answer here
+- Penalty terms: L1 regularization uses the sum of the absolute values of the weights, while L2 regularization uses the sum of the weights squared.
+- Feature selection: L1 performs feature selection by reducing the coefficients of some predictors to 0, while L2 does not.
+- Computational efficiency: L2 has an analytical solution, while L1 does not.
+- Multicollinearity: L2 addresses multicollinearity by constraining the coefficient norm.
 
 <br/>
 
 **Can we have both L1 and L2 regularization components in a linear model? ‍⭐️**
 
-Answer here
+Yes, elastic net regularization combines L1 and L2 regularization. 
 
 <br/>
 
