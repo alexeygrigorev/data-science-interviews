@@ -1,6 +1,16 @@
 # Technical interview questions
 
-The list is based on this post: https://hackernoon.com/technical-data-science-interview-questions-sql-and-coding-jv1k32bf
+<table>
+   <tr>
+      <td>⚠️</td>
+      <td>
+         The answers here are given by the community. Be careful and double check the answers before using them. <br>
+         If you see an error, please create a PR with a fix
+      </td>
+   </tr>
+</table>
+
+The list is based on [this post](https://medium.com/data-science-insider/technical-data-science-interview-questions-f61cd9cf218?source=friends_link&sk=01f4de0de746d28fe714d92a1e91e190)
 
 Categories:
 
@@ -375,8 +385,8 @@ def counter(lst):
 ```python
 def top_counter(lst):
     site_dict = counter(lst)  # using last problem's solution
-    ans = sorted(site_dict, key=site_dict.get)[:3]
-    return ans
+    top_keys = sorted(site_dict, reverse=True, key=site_dict.get)
+    return {key: site_dict[key] for key in top_k}
 ```
 
 <br/>
@@ -400,6 +410,14 @@ def rle(s):
         if i == len(s) - 1:
             ans.append((cur, num))
     return ans
+```
+
+Using itertools.groupby
+```python
+import itertools
+
+def rle(s):
+    return [(l, len(list(g))) for l, g in itertools.groupby(s)]
 ```
 
 <br/>
@@ -432,15 +450,34 @@ Where:
 ```python
 from math import log10
 
-def idf(lst):
+def idf1(docs):
+    docs = [set(doc) for doc in docs]
     n_tokens = {}
-    for doc in lst:
+    for doc in docs:
         for token in doc:
             n_tokens[token] = n_tokens.get(token, 0) + 1
     ans = {}
     for token in n_tokens:
-        ans[token] = log10(len(lst) / (1 + n_tokens[token]))
+        ans[token] = log10(len(docs) / (1 + n_tokens[token]))
     return ans
+```
+
+```python
+import math
+
+def idf2(docs):
+    n_docs = len(docs)
+
+    docs = [set(doc) for doc in docs]
+    all_tokens = set.union(*docs)
+
+    idf_coefficients = {}
+    for token in all_tokens:
+        n_docs_w_token = sum(token in doc for doc in docs)
+        idf_c = math.log10(n_docs / (1 + n_docs_w_token))
+        idf_coefficients[token] = idf_c
+
+    return idf_coefficients
 ```
 
 <br/>
@@ -508,6 +545,17 @@ def two_sum(numbers, target):
     return False
 ```
 
+Using itertools.combinations
+```python
+from itertools import combinations
+
+def two_sum(numbers, target):
+    for elem in combinations(numbers, 2):
+        if elem[0] + elem[1] == target:
+            return True
+    return False
+```
+
 
 <br/>
 
@@ -558,13 +606,28 @@ def fibonacci3(n):
     return ans
 ```
 
+Memoization with a dictionary
+
 ```python
+memo = {0: 0, 1: 1}
+
 def fibonacci4(n):
-	'''Top down + memorization (dictionary), complexity = O(n)'''
-    dic = {1:1, 2:2}
-    if n not in dic:
-        dic[n] = fibonacci4(n-1) + fibonacci4(n-2)
-    return dic[n]
+    '''Top down + memorization (dictionary), complexity = O(n)'''
+    if n not in memo:
+        memo[n] = fibonacci4(n-1) + fibonacci4(n-2)
+    return memo[n]
+```
+
+Memoization with `lru_cache`
+
+```python
+from functools import lru_cache
+
+@lru_cache()
+def fibonacci4(n):
+    if n == 0 or n == 1:
+        return n
+    return fibonacci4(n - 1) + fibonacci4(n - 2)
 ```
 
 ```python
@@ -580,6 +643,8 @@ def fibonacci5(n):
         return dic[n]
     return helper(n-1, dic)
 ```
+
+
 
 <br/>
 

@@ -1,9 +1,20 @@
 # Theoretical interview questions
 
-* The list of questions is based on this post: https://hackernoon.com/160-data-science-interview-questions-415s3y2a
+<table>
+   <tr>
+      <td>⚠️</td>
+      <td>
+         The answers here are given by the community. Be careful and double check the answers before using them. <br>
+         If you see an error, please create a PR with a fix
+      </td>
+   </tr>
+</table>
+
+
+* The list of questions is based on [this post](https://medium.com/data-science-insider/160-data-science-interview-questions-14dbd8bf0a08?source=friends_link&sk=7acf122a017c672a95f70c7cb7b585c0)
 * Legend: 👶 easy ‍⭐️ medium 🚀 expert
 * Do you know how to answer questions without answers? Please create a PR
-* See an error? Please create a PR with fix
+
 
 ## Supervised machine learning
 
@@ -22,8 +33,8 @@ Here are some common regression models
 
 - *Linear Regression* establishes a linear relationship between target and predictor (s). It predicts a numeric value and has a shape of a straight line.
 - *Polynomial Regression* has a regression equation with the power of independent variable more than 1. It is a curve that fits into the data points.
-- *Ridge Regression* helps when predictors are highly correlated (multicollinearity problem). It penalizes the squares of regression coefficients but doesn’t allow to reach zeros (uses l2 regularization).
-- *Lasso Regression* penalizes the absolute values of regression coefficients and allow reach absolute zero for some coefficient (allow feature selection).
+- *Ridge Regression* helps when predictors are highly correlated (multicollinearity problem). It penalizes the squares of regression coefficients but doesn’t allow the coefficients to reach zeros (uses L2 regularization).
+- *Lasso Regression* penalizes the absolute values of regression coefficients and allows some of the coefficients to reach absolute zero (thereby allowing feature selection).
 
 <br/>
 
@@ -55,7 +66,7 @@ y = B0 + B1*x1 + ... + Bn * xN
 
 <br/>
 
-**What are the main assumptions of linear regression? (⭐)**
+**What are the main assumptions of linear regression? ⭐**
 
 There are several assumptions of linear regression. If any of them is violated, model predictions and interpretation may be worthless or misleading.
 
@@ -87,7 +98,7 @@ This is powerful because it helps us study processes whose population distributi
 **How do we check if a variable follows the normal distribution? ‍⭐️**
 
 1. Plot a histogram out of the sampled data. If you can fit the bell-shaped "normal" curve to the histogram, then the hypothesis that the underlying random variable follows the normal distribution can not be rejected.
-2. Check Skewness and Kurtosis of the sampled data. Zero-skewness and zero-kurtosis are typical for a normal distribution, so the farther away from 0, the more non-normal the distribution.
+2. Check Skewness and Kurtosis of the sampled data. Skewness = 0 and kurtosis = 3 are typical for a normal distribution, so the farther away they are from these values, the more non-normal the distribution.
 3. Use Kolmogorov-Smirnov or/and Shapiro-Wilk tests for normality. They take into account both Skewness and Kurtosis simultaneously.
 4. Check for Quantile-Quantile plot. It is a scatterplot created by plotting two sets of quantiles against one another. Normal Q-Q plot place the data points in a roughly straight line.
 
@@ -101,9 +112,15 @@ Yes, you may need to do pre-processing. Most probably, you will need to remove t
 
 <br/>
 
-**What are the methods for solving linear regression do you know? ‍⭐️**
+**What methods for solving linear regression do you know? ‍⭐️**
 
-Answer here
+To solve linear regression, you need to find the coefficients <img src="https://render.githubusercontent.com/render/math?math=\beta"> which minimize the sum of squared errors.
+
+Matrix Algebra method: Let's say you have `X`, a matrix of features, and `y`, a vector with the values you want to predict. After going through the matrix algebra and minimization problem, you get this solution: <img src="https://render.githubusercontent.com/render/math?math=\beta = (X^{T}X)^{-1}X^{T}y">. 
+
+But solving this requires you to find an inverse, which can be time-consuming, if not impossible. Luckily, there are methods like Singular Value Decomposition (SVD) or QR Decomposition that can reliably calculate this part <img src="https://render.githubusercontent.com/render/math?math=(X^{T}X)^{-1}X^{T}"> (called the pseudo-inverse) without actually needing to find an inverse. The popular python ML library `sklearn` uses SVD to solve least squares.
+
+Alternative method: Gradient Descent. See explanation below.
 
 <br/>
 
@@ -361,8 +378,7 @@ If we simply encode categorical variables with a Label encoder, they become ordi
 
 **What happens to our linear regression model if we have three columns in our data: x, y, z  —  and z is a sum of x and y? ‍⭐️**
 
-Answer here
-
+We would not be able to perform the resgression. Beacuse z is linearly dependent on x and y so when performing the regression <img src="https://render.githubusercontent.com/render/math?math={X}^{T}{X}"> would be a singular (not invertible) matrix.
 <br/>
 
 **What happens to our linear regression model if the column z in the data is a sum of columns x and y and some random noise? ‍⭐️**
@@ -389,7 +405,7 @@ There are mainly two types of regularization,
 
 **What kind of regularization techniques are applicable to linear models? ‍⭐️**
 
-AIC/BIC, Ridge regression, Lasso, Basis pursuit denoising, Rudin–Osher–Fatemi model (TV), Potts model, RLAD,
+AIC/BIC, Ridge regression, Lasso, Elastic Net, Basis pursuit denoising, Rudin–Osher–Fatemi model (TV), Potts model, RLAD,
 Dantzig Selector,SLOPE
 
 <br/>
@@ -408,7 +424,7 @@ Answer here
 
 **What’s the effect of L2 regularization on the weights of a linear model? ‍⭐️**
 
-Answer here
+L2 regularization penalizes larger weights more severely (due to the squared penalty term), which encourages weight values to decay toward zero.
 
 <br/>
 
@@ -420,23 +436,28 @@ Answer here
 
 **What’s the difference between L2 and L1 regularization? ‍⭐️**
 
-Answer here
+- Penalty terms: L1 regularization uses the sum of the absolute values of the weights, while L2 regularization uses the sum of the weights squared.
+- Feature selection: L1 performs feature selection by reducing the coefficients of some predictors to 0, while L2 does not.
+- Computational efficiency: L2 has an analytical solution, while L1 does not.
+- Multicollinearity: L2 addresses multicollinearity by constraining the coefficient norm.
 
 <br/>
 
 **Can we have both L1 and L2 regularization components in a linear model? ‍⭐️**
 
-Answer here
+Yes, elastic net regularization combines L1 and L2 regularization. 
 
 <br/>
 
 **What’s the interpretation of the bias term in linear models? ‍⭐️**
 
-Answer here
+Bias is simply, a difference between predicted value and actual/true value. It can be interpreted as the distance from the average prediction and true value i.e. true value minus mean(predictions). But dont get confused between accuracy and bias.
 
 <br/>
 
 **How do we interpret weights in linear models? ‍⭐️**
+
+Without normalizing weights or variables, if you increase the corresponding predictor by one unit, the coefficient represents on average how much the output changes. By the way, this interpretation still works for logistic regression - if you increase the corresponding predictor by one unit, the weight represents the change in the log of the odds.
 
 If the variables are normalized, we can interpret weights in linear models like the importance of this variable in the predicted result.
 
@@ -444,7 +465,9 @@ If the variables are normalized, we can interpret weights in linear models like 
 
 **If a weight for one variable is higher than for another  —  can we say that this variable is more important? ‍⭐️**
 
-Answer here
+Yes - if your predictor variables are normalized.
+
+Without normalization, the weight represents the change in the output per unit change in the predictor. If you have a predictor with a huge range and scale that is used to predict an output with a very small range - for example, using each nation's GDP to predict maternal mortality rates - your coefficient should be very small. That does not necessarily mean that this predictor variable is not important compared to the others.
 
 <br/>
 
@@ -459,7 +482,7 @@ Answer here
 
 **What is feature selection? Why do we need it? 👶**
 
-Answer Feature Selection is a method used to select the relevant features for the model to train on. We need feature selection to remove the irrelevant features which leads the model to under-perform.  
+Feature Selection is a method used to select the relevant features for the model to train on. We need feature selection to remove the irrelevant features which leads the model to under-perform.  
 
 <br/>
 
@@ -561,25 +584,46 @@ Training decision trees on random data samples from the training dataset *reduce
 
 **What are the main parameters of the random forest model? ‍⭐️**
 
-Answer here
+- `max_depth`: Longest Path between root node and the leaf
+- `min_sample_split`: The minimum number of observations needed to split a given node
+- `max_leaf_nodes`: Conditions the splitting of the tree and hence, limits the growth of the trees
+- `min_samples_leaf`: minimum number of samples in the leaf node
+- `n_estimators`: Number of trees
+- `max_sample`: Fraction of original dataset given to any individual tree in the given model
+- `max_features`: Limits the maximum number of features provided to trees in random forest model
 
 <br/>
 
 **How do we select the depth of the trees in random forest? ‍⭐️**
 
-Answer here
+The greater the depth, the greater amount of information is extracted from the tree, however, there is a limit to this, and the algorithm even if defensive against overfitting may learn complex features of noise present in data and as a result, may overfit on noise. Hence, there is no hard thumb rule in deciding the depth, but literature suggests a few tips on tuning the depth of the tree to prevent overfitting:
+
+- limit the maximum depth of a tree
+- limit the number of test nodes
+- limit the minimum number of objects at a node required to split
+- do not split a node when, at least, one of the resulting subsample sizes is below a given threshold
+- stop developing a node if it does not sufficiently improve the fit.
 
 <br/>
 
 **How do we know how many trees we need in random forest? ‍⭐️**
 
-Answer here
+The number of trees in random forest is worked by n_estimators, and a random forest reduces overfitting by increasing the number of trees. There is no fixed thumb rule to decide the number of trees in a random forest, it is rather fine tuned with the data, typically starting off by taking the square of the number of features (n) present in the data followed by tuning until we get the optimal results.
 
 <br/>
 
 **Is it easy to parallelize training of a random forest model? How can we do it? ‍⭐️**
 
-Answer here
+Yes, R provides a simple way to parallelize training of random forests on large scale data.
+It makes use of a parameter called multicombine which can be set to TRUE for parallelizing random forest computations.
+
+```R
+rf <- foreach(ntree=rep(25000, 6), .combine=randomForest::combine,
+              .multicombine=TRUE, .packages='randomForest') %dopar% {
+    randomForest(x, y, ntree=ntree)
+}
+```
+
 
 <br/>
 
@@ -614,7 +658,8 @@ Gradient boosting is a machine learning technique for regression and classificat
 
 **What’s the difference between random forest and gradient boosting? ‍⭐️**
 
-Answer here
+   1. Random Forests builds each tree independently while Gradient Boosting builds one tree at a time.
+   2. Random Forests combine results at the end of the process (by averaging or "majority rules") while Gradient Boosting combines     results along the way.
 
 <br/>
 
@@ -638,7 +683,13 @@ Answer here
 
 **What are the main parameters in the gradient boosting model? ‍⭐️**
 
-Answer here
+There are many parameters, but below are a few key defaults.
+* learning_rate=0.1 (shrinkage).
+* n_estimators=100 (number of trees).
+* max_depth=3.
+* min_samples_split=2.
+* min_samples_leaf=1.
+* subsample=1.0.
 
 <br/>
 
@@ -650,7 +701,7 @@ Answer here
 
 **How do you select the number of trees in the gradient boosting model? ‍⭐️**
 
-Answer here
+Most implementations of gradient boosting are configured by default with a relatively small number of trees, such as hundreds or thousands. Using scikit-learn we can perform a grid search of the n_estimators model parameter
 
 <br/>
 
@@ -671,6 +722,7 @@ There are several strategies for hyper-tuning but I would argue that the three m
 <br/>
 
 **What’s the difference between grid search parameter tuning strategy and random search? When to use one or another? ‍⭐️**
+
 For specifics, refer to the above answer.
 
 <br/>
@@ -680,7 +732,7 @@ For specifics, refer to the above answer.
 
 **What kind of problems neural nets can solve? 👶**
 
-Answer here
+Neural nets are good at solving non-linear problems. Some good examples are problems that are relatively easy for humans (because of experience, intuition, understanding, etc), but difficult for traditional regression models: speech recognition, handwriting recognition, image identification, etc.
 
 <br/>
 
@@ -710,8 +762,15 @@ ReLU is an abbreviation for Rectified Linear Unit. It is an activation function 
 
 **How we can initialize the weights of a neural network? ‍⭐️**
 
-Answer here
-
+Proper initialization of weight matrix in neural network is very necessary.
+Simply we can say there are two ways for initializtions.
+   1. Initializing weights with zeroes.
+      Setting weights to zero makes your network no better than a linear model. It is important to note that setting biases to 0 will not create any troubles as non zero weights take care of breaking the symmetry and even if bias is 0, the values in every neuron are still different.  
+   2. Initializing weights randomly.
+      Assigning random values to weights is better than just 0 assignment. 
+* a) If weights are initialized with very high values the term np.dot(W,X)+b becomes significantly higher and if an activation function like sigmoid() is applied, the function maps its value near to 1 where the slope of gradient changes slowly and learning takes a lot of time.
+* b) If weights are initialized with low values it gets mapped to 0, where the case is the same as above. This problem is often referred to as the vanishing gradient.
+      
 <br/>
 
 **What if we set all the weights of a neural network to 0? ‍⭐️**
@@ -739,13 +798,28 @@ Dropout is a technique that at each training step turns off each neuron with a c
 
 **What is backpropagation? How does it work? Why do we need it? ‍⭐️**
 
-Answer here
+The Backpropagation algorithm looks for the minimum value of the error function in weight space using a technique called the delta rule or gradient descent. 
+The weights that minimize the error function is then considered to be a solution to the learning problem. 
+
+We need backpropogation because,
+* Calculate the error – How far is your model output from the actual output.
+* Minimum Error – Check whether the error is minimized or not.
+* Update the parameters – If the error is huge then, update the parameters (weights and biases). After that again check the error.  
+Repeat the process until the error becomes minimum.
+* Model is ready to make a prediction – Once the error becomes minimum, you can feed some inputs to your model and it will produce the output.
 
 <br/>
 
 **Which optimization techniques for training neural nets do you know? ‍⭐️**
 
-Answer here
+* Gradient Descent
+* Stochastic Gradient Descent
+* Mini-Batch Gradient Descent(best among gradient descents)
+* Nesterov Accelerated Gradient
+* Momentum
+* Adagrad 
+* AdaDelta
+* Adam(best one. less time, more efficient)
 
 <br/>
 
@@ -775,7 +849,10 @@ Answer here
 
 **What is Adam? What’s the main difference between Adam and SGD? ‍⭐️**
 
-Answer here
+Adam (Adaptive Moment Estimation) is a optimization technique for training neural networks. on an average, it is the best optimizer .It works with momentums of first and second order. The intuition behind the Adam is that we don’t want to roll so fast just because we can jump over the minimum, we want to decrease the velocity a little bit for a careful search.
+
+Adam tends to converge faster, while SGD often converges to more optimal solutions.
+SGD's high variance disadvantages gets rectified by Adam (as advantage for Adam).
 
 <br/>
 
@@ -793,7 +870,7 @@ Answer here
 
 **How do we decide when to stop training a neural net? 👶**
 
-Answer here
+Simply stop training when the validation error is the minimum.
 
 <br/>
 
@@ -854,7 +931,19 @@ Answer here
 
 <br/>
 
-**What are augmentations? Why do we need them? 👶What kind of augmentations do you know? 👶How to choose which augmentations to use? ‍⭐️**
+**What are augmentations? Why do we need them? 👶**
+
+Answer here
+
+<br/>
+
+**What kind of augmentations do you know? 👶**
+
+Answer here
+
+<br/>
+
+**How to choose which augmentations to use? ‍⭐️**
 
 Answer here
 

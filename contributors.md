@@ -5,8 +5,9 @@ The content in this repository - especially the answers - is created by the comm
 * [sash-ko](https://github.com/sash-ko)
 * [samaritanhu](https://github.com/samaritanhu)
 * [gabrielatrindade](https://github.com/gabrielatrindade)
-* [manu183](https://github.com/manu183)
+* [manuel-lang](https://github.com/manuel-lang)
 * [damiannmm](https://github.com/damiannmm)
+* [vasugamdha](https://github.com/vasugamdha)
 * [MahdiRahbar](https://github.com/MahdiRahbar)
 * [pedrogengo](https://github.com/pedrogengo)
 * [rohanadagouda](https://github.com/rohanadagouda)
@@ -32,7 +33,7 @@ The content in this repository - especially the answers - is created by the comm
 * [Tejash-Shah](https://github.com/Tejash-Shah)
 * [vijay-ravi](https://github.com/vijay-ravi)
 * [Mudit Tiwari](https://github.com/mudittiwari255)
-* [iamsaeeddev](https://github.com/iamsaeeddev)
+* [mrsaeeddev](https://github.com/mrsaeeddev)
 * [hima9](https://github.com/hima9)
 
 
