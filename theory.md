@@ -750,7 +750,7 @@ The main idea of using neural networks is to learn complex nonlinear functions. 
 
 **What are the problems with sigmoid as an activation function? ‍⭐️**
 
-The output of the sigmoid function for large positive or negative numbers is almost zero. From this comes the problem of vanishing gradient — during the backpropagation our net will not learn (or will learn drastically slow). One possible way to solve this problem is to use ReLU activation function.
+The derivative of the sigmoid function for large positive or negative numbers is almost zero. From this comes the problem of vanishing gradient — during the backpropagation our net will not learn (or will learn drastically slow). One possible way to solve this problem is to use ReLU activation function.
 
 <br/>
 
