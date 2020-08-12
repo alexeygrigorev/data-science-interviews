@@ -15,7 +15,7 @@ Contributions are welcome!
 
 ### Questions
 
-* [The toughest data scince interview](https://www.linkedin.com/posts/agrigorev_datascience-machinelearning-ml-activity-6630138658219409409-bTWh) - a post on LinkedIn
+* [The toughest data science interview](https://www.linkedin.com/posts/agrigorev_datascience-machinelearning-ml-activity-6630138658219409409-bTWh) - a post on LinkedIn
 * [Data Science Interview Questions](https://www.itshared.org/2015/10/data-science-interview-questions.html) from [ITShared](https://www.itshared.org/) - from 2015, but many of them are still valid
 
 
