@@ -430,7 +430,7 @@ L2 regularization penalizes larger weights more severely (due to the squared pen
 
 **How L1 regularization looks like in a linear model? ‍⭐️**
 
-Answer here
+L1 regularization adds a penalty term to our cost function which is equal to the sum of modules of models coefficients multiplied by a lambda hyperparameter. For example, cost function with L1 regularization will look like: <img src="https://render.githubusercontent.com/render/math?math=\sum_{i=0}^{N}%20(y_i%20-%20\sum_{j=0}^{M}%20x_{ij}%20*%20w_j)%2B\lambda\sum_{j=0}^{M}%20\left%20|%20w_j%20\right%20|">
 
 <br/>
 
