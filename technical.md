@@ -24,7 +24,7 @@ Categories:
 Suppose we have the following schema with two tables: Ads and Events
 
 * Ads(ad_id, campaign_id, status)
-* status cound be active or inactive
+* status could be active or inactive
 * Events(event_id, ad_id, source, event_type, date, hour)
 * event_type could be impression, click, conversion
 
