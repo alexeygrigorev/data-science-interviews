@@ -16,6 +16,30 @@
 * Do you know how to answer questions without answers? Please create a PR
 
 
+## Table of contents
+
+* [Supervised machine learning](#supervised-machinelearning)
+* [Linear regression](#linear-regression)
+* [Validation](#validation)
+* [Classification](#classification)
+* [Regularization](#regularization)
+* [Feature selection](#feature-selection)
+* [Decision trees](#decision-trees)
+* [Random forest](#random-forest)
+* [Gradient boosting](#gradient-boosting)
+* [Parameter tuning](#parameter-tuning)
+* [Neural networks](#neural-networks)
+* [Optimization in neural networks](#optimization-in-neuralnetworks)
+* [Neural networks for computer vision](#neural-networks-for-computervision)
+* [Text classification](#text-classification)
+* [Clustering](#clustering)
+* [Dimensionality reduction](#dimensionality-reduction)
+* [Ranking and search](#ranking-andsearch)
+* [Recommender systems](#recommender-systems)
+* [Time series](#time-series)
+
+<br/>
+
 ## Supervised machine learning
 
 **What is supervised machine learning? 👶**

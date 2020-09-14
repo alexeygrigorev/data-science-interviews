@@ -12,12 +12,14 @@
 
 The list is based on [this post](https://medium.com/data-science-insider/technical-data-science-interview-questions-f61cd9cf218?source=friends_link&sk=01f4de0de746d28fe714d92a1e91e190)
 
-Categories:
 
-* SQL
-* Coding
-* Algorithmic
+## Table of contents
 
+* [SQL](#sql)
+* [Coding (Python)](#coding-python)
+* [Algorithmic Questions](#algorithmic-questions)
+
+<br/>
 
 ## SQL
 
