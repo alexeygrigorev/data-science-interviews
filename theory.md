@@ -762,7 +762,7 @@ Neural nets are good at solving non-linear problems. Some good examples are prob
 
 **How does a usual fully-connected feed-forward neural network work? ‍⭐️**
 
-Answer here
+In a usual fully-connected feed-forward network, each neuron receives input from every element of the previous layer and thus the receptive field of a neuron is the entire previous layer. They are usually used to represent feature vectors for input data in classification problems but can be expensive to train because of the number of computations involved.
 
 <br/>
 
@@ -915,7 +915,7 @@ Answer here
 
 **How we can use neural nets for computer vision? ‍⭐️**
 
-Answer here
+Neural nets used in the area of computer vision are generally Convolutional Neural Networks(CNN's). You can learn about convolutions below. It appears that convolutions are quite powerful when it comes to working with images and videos due to their ability to extract and learn complex features. Thus CNN's are a go-to method for any problem in computer vision.    
 
 <br/>
 
@@ -963,13 +963,13 @@ Augmentations are an artifical way of expanding the existing datasets by perform
 
 **What kind of augmentations do you know? 👶**
 
-Answer here
+There are many kinds of augmentations which can be used according to the type of data you are working on some of which are geometric and numerical transformation, PCA, cropping, padding, shifting, noise injection etc.
 
 <br/>
 
 **How to choose which augmentations to use? ‍⭐️**
 
-Answer here
+Augmentations really depend on the type of output classes and the features you want your model to learn. For eg. if you have mostly properly illuminated images in your dataset and want your model to predict poorly illuminated images too, you can apply channel shifting on your data and include the resultant images in your dataset for better results.
 
 <br/>
 
