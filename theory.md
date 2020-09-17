@@ -867,7 +867,7 @@ A large learning rate can accelerate the training. However, it is possible that 
 
 **How to set the learning rate? ‍⭐️**
 
-Answer here
+There is no straightforward way of finding an optimum learning rate for a model. It involves a lot of hit and trial. Usually starting with a small values such as 0.01 is a good starting point for setting a learning rate and further tweaking it so that it doesn't overshoot or converge too slowly.
 
 <br/>
 
@@ -900,7 +900,7 @@ Simply stop training when the validation error is the minimum.
 
 **What is model checkpointing? ‍⭐️**
 
-Answer here
+Saving the weights learned by a model mid training for long running processes is known as model checkpointing so that you can resume your training from a certain checkpoint.
 
 <br/>
 
@@ -957,7 +957,7 @@ Answer here
 
 **What are augmentations? Why do we need them? 👶**
 
-Answer here
+Augmentations are an artifical way of expanding the existing datasets by performing some transformations, color shifts or many other things on the data. It helps in diversifying the data and even increasing the data when there is scarcity of data for a model to train on.  
 
 <br/>
 
