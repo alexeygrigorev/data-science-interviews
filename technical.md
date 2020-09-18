@@ -38,7 +38,7 @@ Write SQL queries to extract the following information:
 **1)** The number of active ads.
 
 ```sql
-SELECT count(*) FROM Ads WHERE status = 'active'; 
+SELECT count(*) FROM Ads WHERE status = 'active';
 ```
 
 <br/>
@@ -49,7 +49,7 @@ SELECT count(*) FROM Ads WHERE status = 'active';
 ```sql
 SELECT DISTINCT a.campaign_id
 FROM Ads AS a
-WHERE a.status = 'active'; 
+WHERE a.status = 'active';
 ```
 
 <br/>
@@ -59,7 +59,7 @@ WHERE a.status = 'active';
 ```sql
 SELECT COUNT(DISTINCT a.campaign_id)
 FROM Ads AS a
-WHERE a.status = 'active'; 
+WHERE a.status = 'active';
 ```
 
 <br/>
@@ -74,7 +74,7 @@ FROM Ads AS a
   JOIN Events AS e
       ON a.ad_id = e.ad_id
 GROUP BY a.ad_id, e.event_type
-ORDER BY a.ad_id, "count" DESC; 
+ORDER BY a.ad_id, "count" DESC;
 ```
 
 <br/>
@@ -90,7 +90,7 @@ FROM Ads AS a
       ON a.ad_id = e.ad_id
 WHERE a.status = 'active'
 GROUP BY a.ad_id, e.event_type, e.date
-ORDER BY e.date ASC, "count" DESC; 
+ORDER BY e.date ASC, "count" DESC;
 ```
 
 <br/>
@@ -141,7 +141,7 @@ SELECT impressions_clicks_table.campaign_id,
        (impressions_clicks_table.impressions * 100 / impressions_clicks_table.clicks)::FLOAT || '%' AS CTR
 FROM
   (
-  SELECT a.campaign_id, 
+  SELECT a.campaign_id,
          SUM(CASE e.event_type WHEN 'impression' THEN 1 ELSE 0 END) impressions,
          SUM(CASE e.event_type WHEN 'click' THEN 1 ELSE 0 END) clicks
   FROM Ads AS a
@@ -165,7 +165,7 @@ SELECT conversions_clicks_table.campaign_id,
        (conversions_clicks_table.conversions * 100 / conversions_clicks_table.clicks)::FLOAT || '%' AS CVR
 FROM
   (
-  SELECT a.campaign_id, 
+  SELECT a.campaign_id,
          SUM(CASE e.event_type WHEN 'conversion' THEN 1 ELSE 0 END) conversions,
          SUM(CASE e.event_type WHEN 'click' THEN 1 ELSE 0 END) clicks
   FROM Ads AS a
@@ -202,7 +202,7 @@ Answer here
 * If it’s a multiplier of 3, print “Fizz”
 * If it’s a multiplier of 5, print “Buzz”
 * If both 3 and 5 — “Fizz Buzz"
-* Otherwise, print the number itself 
+* Otherwise, print the number itself
 
 Example of output: 1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz, 11, Fizz, 13, 14, Fizz Buzz, 16, 17, Fizz, 19, Buzz, Fizz, 22, 23, Fizz, Buzz, 26, Fizz, 28, 29, Fizz Buzz, 31, 32, Fizz, 34, Buzz, Fizz, ...
 
@@ -262,7 +262,7 @@ def mean(numbers):
 
 <br/>
 
-**4) STD**. Calculate the standard deviation of elements in a list. 
+**4) STD**. Calculate the standard deviation of elements in a list.
 
 * `std([1, 2, 3, 4]) = 1.29`
 * `std([1]) = NaN`
@@ -492,7 +492,7 @@ PMI is used for finding collocations in text — things like “New York” or �
 
 <img src="img/formula_pmi_1.png" />
 
-The higher the PMI, the more likely these two tokens form a collection. We can estimate PMI by counting: 
+The higher the PMI, the more likely these two tokens form a collection. We can estimate PMI by counting:
 
 <img src="img/formula_pmi_2.png" />
 
@@ -653,7 +653,7 @@ def fibonacci5(n):
 **3) Most frequent outcome**. We have two dice of different sizes (D1 and D2). We roll them and sum their face values. What are the most probable outcomes?
 
 * 6, 6 ⇒ [7]
-* 2, 4 ⇒ [3, 4, 5] 
+* 2, 4 ⇒ [3, 4, 5]
 
 ```python
 def most_frequent_outcome(d1, d2):
@@ -831,8 +831,8 @@ Output:
 * `['cat', 'green', 'home', 'network', 'egg', 'oval']`
 
 ```python
-def sort_by_custom_alphabet(dictionary, words): 
-    words = sorted(words, key = lambda word: [dictionary.index(c) for c in word]) 
+def sort_by_custom_alphabet(dictionary, words):
+    words = sorted(words, key = lambda word: [dictionary.index(c) for c in word])
     return words
 ```
 
@@ -848,33 +848,65 @@ def sort_by_custom_alphabet(dictionary, words):
 def check_is_bst(head, min_val=None, max_val=None):
     """Check whether binary tree is binary search tree
 
-    Aside of the obvious node.left.val <= node.val <= node.right.val have to be 
+    Aside of the obvious node.left.val <= node.val <= node.right.val have to be
     fulfilled, we also have to make sure that there is NO SINGLE leaves in the
     left part of node have more value than the current node.
     """
     check_val = True
     check_left = True
     check_right = True
-    
+
     if min_val:
         check_val = check_val and (head.val >= min_val)
         min_new = min(min_val, head.val)
     else:
         min_new = head.val
-    
+
     if max_val:
         check_val = check_val and (head.val <= max_val)
         max_new = max(max_val, head.val)
     else:
         max_new = head.val
-    
+
     if head.left:
         check_left = check_is_bst(head.left, min_val, max_new)
-    
+
     if head.right:
         check_right = check_is_bst(head.right, min_new, max_val)
-    
+
     return check_val and check_left and check_right
+```
+
+<br/>
+
+
+**13) Maximum Sum Contiguous Subarray**. You are given an array `A` of length `N`, you have to find the largest possible sum of an Subarray, of array `A`.  
+* `[-2, 1, -3, 4, -1, 2, 1, -5, 4]` gives `6` as largest sum (from the subarray `[4, -1, 2, -1]`
+
+```python
+from sys import maxsize
+def max_sum_subarr(list1, size):
+      """Use Kadane's Algorithm for a optimal solution
+      Time Complexity: O(n)
+      Desciption: Use one variable for current sum, and one for Overall sum at an index.
+                  So here, the global_max will keep on updating the max sum at any index-1,
+                  and curr_max will check the max value at an index.
+                  And finally after iterating through the list, return the value of global_max variable which contains Maximum sum.
+      """
+    curr_max=list1[0]
+    global_max=list1[0]
+    for each in range(1, size):
+        curr_max = max(list1[each], curr_max+list1[each])
+        global_max = max(global_max, curr_max)
+    return global_max
+
+n = int(input())         
+list1 = []
+for i in range(0,n):
+    num = int(input())
+    list1.append(num)
+
+print(max_sum_subarr(list1, len(list1)))
 ```
 
 <br/>
