@@ -266,7 +266,7 @@ def mean(numbers):
 **4) STD**. Calculate the standard deviation of elements in a list.
 
 * `std([1, 2, 3, 4]) = 1.29`
-* `std([1]) = NaN`
+* `std([1]) = NaN` (use `float('NaN')`)
 * `std([]) = NaN`
 
 <img src="img/formula_std.png" />
@@ -275,11 +275,11 @@ def mean(numbers):
 from math import sqrt
 
 def std_dev(numbers):
-    if len(numbers) > 0:
+    if len(numbers) > 1:
         avg = mean(numbers)
-        var = sum([(i - avg) ** 2 for i in numbers]) / len(numbers)
-        ans = sqrt(var)
-        return ans
+        var = sum((i - avg) ** 2 for i in numbers) / (len(numbers) - 1)
+        std = sqrt(var)
+        return std
     return float('NaN')
 ```
 
@@ -736,6 +736,7 @@ def deduplication1(lst):
     return ans
 
 def deduplication2(lst):
+    # order is not guaranteed unless call sorted(list(set(lst))) to sort again
     return list(set(lst))
 ```
 
@@ -762,6 +763,7 @@ def intersection1(lst1, lst2):
 
 def intersection2(lst1, lst2):
     '''removes duplicates'''
+    # order is not guaranteed unless call sorted(...) to sort again
     return list(set(lst1) & set(lst2))
 ```
 
@@ -790,6 +792,7 @@ def union1(lst1, lst2):
 
 def union2(lst1, lst2):
     '''removes duplicates'''
+    # order is not guaranteed unless call sorted(...) to sort again
     return list(set(lst1) | set(lst2))
 ```
 
@@ -815,6 +818,22 @@ def addition(lst1, lst2):
         return ans
     val = list_to_int(lst1) + list_to_int(lst2)
     ans = [int(i) for i in str(val)]
+    return ans
+
+# another solution without int() and str() should be helpful
+def addition2(lst1, lst2):
+    if len(lst2) == 0 or lst2 == [0]:
+        return lst1[:]
+    elif len(lst1) == 0:
+        return lst2[:]
+    # lst1, lst2 not empty
+    digit1, lst1rest = lst1[-1], lst1[:-1]
+    digit2, lst2rest = lst2[-1], lst2[:-1]
+    digit, remainder = divmod(digit1 + digit2, 10)
+    lst = addition2(
+        addition2(lst1rest, [digit]),  # recursively add digit to lst1
+        lst2rest)  # and then continue to add lst2
+    ans = lst + [remainder]  # add the remainder as last digit
     return ans
 ```
 
