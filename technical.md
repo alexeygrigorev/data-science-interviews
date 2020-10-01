@@ -317,6 +317,17 @@ def remove_duplicates(lst):
             new_list.append(elem)
             mentioned_values.add(elem)
     return new_list
+
+# The above solution checks the values into a set and it is O(1) efficient using
+# a few of lines.
+# A shorter solution follows: it is O(n) but can be fine when lst has no "too
+# many elements" - the quantity depends by the running box.
+def remove_duplicates2(lst):
+    new_list = []
+    for elem in lst:
+        if elem not in new_list:
+            new_list.append(elem)
+    return new_list
 ```
 
 <br/>
