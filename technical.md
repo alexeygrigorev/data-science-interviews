@@ -901,7 +901,7 @@ def check_is_bst(head, min_val=None, max_val=None):
 
 
 **13) Maximum Sum Contiguous Subarray**. You are given an array `A` of length `N`, you have to find the largest possible sum of an Subarray, of array `A`.  
-* `[-2, 1, -3, 4, -1, 2, 1, -5, 4]` gives `6` as largest sum (from the subarray `[4, -1, 2, -1]`
+* `[-2, 1, -3, 4, -1, 2, 1, -5, 4]` gives `6` as largest sum (from the subarray `[4, -1, 2, -1]`)
 
 ```python
 from sys import maxsize
@@ -927,6 +927,26 @@ for i in range(0,n):
     list1.append(num)
 
 print(max_sum_subarr(list1, len(list1)))
+```
+
+<br/>
+
+
+**14) Lambda Function**. Lambda functions are anonymous functions, declared by using *lambda* keyword. Although syntactically this functions look different, but behave in the same way as regular functions that are declared using the *def* keyword.
+
+*Properties of lambda function:*
+* A lambda function can take any number of arguments, but they contain only a single expression.
+* Lambda functions can be used to return function objects.
+* Syntactically, lambda functions are restricted to only a single expression.
+
+*Syntax to declare a lambda function*:`lambda argument(s): expression`
+
+**Example**
+```python
+# Adding two number using lambda function
+add_num = lambda num1, num2: num1 + num2
+
+add_num(10, 20)
 ```
 
 <br/>
