@@ -975,7 +975,18 @@ Augmentations really depend on the type of output classes and the features you w
 
 **What kind of CNN architectures for classification do you know? 🚀**
 
-Answer here
+Image Classification
+Inception v3
+Xception 
+DenseNet
+AlexNet
+VGG16
+ResNet
+SqueezeNet
+EfficientNet
+MobileNet
+
+* The last three are designed so they use smaller number of parameters which is helpful for edge AI. 
 
 <br/>
 
