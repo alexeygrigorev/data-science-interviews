@@ -951,7 +951,7 @@ Other pooling techniques include:
 
 **Are CNNs resistant to rotations? What happens to the predictions of a CNN if an image is rotated? 🚀**
 
-Answer here
+CNNs are not resistant to rotation by design. However, we can make our models resistant by augmenting our datasets with different rotations of the raw data. The predictions of a CNN will change if an image is rotated and we did not augment our dataset accordingly. A demonstration of this occurence can be seen in [this video](https://www.youtube.com/watch?v=VO1bQo4PXV4), where a CNN changes its predicted class between a duck and a rabbit based on the rotation of the image.
 
 <br/>
 
