@@ -499,7 +499,7 @@ Without normalization, the weight represents the change in the output per unit c
 
 Feature normalization is necessary for L1 and L2 regularizations. The idea of both methods is to penalize all the features relatively equally. This can't be done effectively if every feature is scaled differently. 
 
-Linear regression without regularization techniques can be used without feature normalization. Also, regularization can help to make the analytical solution more stable, — it adds the reqularization matrix to the feature matrix before inverting it. 
+Linear regression without regularization techniques can be used without feature normalization. Also, regularization can help to make the analytical solution more stable, — it adds the regularization matrix to the feature matrix before inverting it. 
 
 <br/>
 
