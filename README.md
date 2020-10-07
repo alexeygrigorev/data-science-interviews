@@ -29,3 +29,12 @@ For updates, follow me on Twitter ([@Al_Grigor](https://twitter.com/Al_Grigor)) 
 
 
 This is a joint effort of many people. You can see the list of contributors here: [contributors.md](contributors.md)
+
+## License
+
+This work is licensed under a [Creative Commons Attribution 4.0 International License][cc-by].
+
+[![CC BY 4.0][cc-by-image]][cc-by]
+
+[cc-by]: http://creativecommons.org/licenses/by/4.0/
+[cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
