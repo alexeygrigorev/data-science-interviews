@@ -23,6 +23,13 @@ For updates, follow me on Twitter ([@Al_Grigor](https://twitter.com/Al_Grigor)) 
 * Technical questions: [technical.md](technical.md) (SQL, Python, coding)
 * More to come
 
+## Contributed questions
+
+The `contrib` folder contains contributed interview questions:
+
+* Probability: [contrib/probability.md](contrib/probability.md)
+* Add your questions here!
+
 ## Other useful things
 
 * Awesome data science interview questions and other resources: [awesome.md](awesome.md)
