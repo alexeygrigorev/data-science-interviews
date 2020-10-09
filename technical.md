@@ -155,7 +155,7 @@ ORDER BY impressions_clicks_table.campaign_id;
 
 <br/>
 
-**9)** CVR (conversion rate) for each ad. CVR = number of clicks / number of installs.
+**9)** CVR (conversion rate) for each ad. CVR = number of conversions / number of clicks.
 
 <img src="img/sql_9_example.png" />
 
