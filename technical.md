@@ -131,7 +131,7 @@ ORDER BY e.date DESC;
 
 <br/>
 
-**8)** CTR (click-through rate) for each ad. CTR = number of impressions / number of clicks.
+**8)** CTR (click-through rate) for each ad. CTR = number of clicks / number of impressions.
 
 <img src="img/sql_8_example.png" />
 
@@ -139,7 +139,7 @@ ORDER BY e.date DESC;
 -- for Postgres
 
 SELECT impressions_clicks_table.campaign_id,
-       (impressions_clicks_table.impressions * 100 / impressions_clicks_table.clicks)::FLOAT || '%' AS CTR
+       (impressions_clicks_table.clicks * 100 / impressions_clicks_table.impressions)::FLOAT || '%' AS CTR
 FROM
   (
   SELECT a.campaign_id,
