@@ -138,19 +138,19 @@ ORDER BY e.date DESC;
 ```sql
 -- for Postgres
 
-SELECT impressions_clicks_table.campaign_id,
+SELECT impressions_clicks_table.ad_id,
        (impressions_clicks_table.clicks * 100 / impressions_clicks_table.impressions)::FLOAT || '%' AS CTR
 FROM
   (
-  SELECT a.campaign_id,
+  SELECT a.ad_id,
          SUM(CASE e.event_type WHEN 'impression' THEN 1 ELSE 0 END) impressions,
          SUM(CASE e.event_type WHEN 'click' THEN 1 ELSE 0 END) clicks
   FROM Ads AS a
     INNER JOIN Events AS e
       ON a.ad_id = e.ad_id
-  GROUP BY a.campaign_id
+  GROUP BY a.ad_id
   ) AS impressions_clicks_table
-ORDER BY impressions_clicks_table.campaign_id;
+ORDER BY impressions_clicks_table.ad_id;
 ```
 
 <br/>
@@ -162,19 +162,19 @@ ORDER BY impressions_clicks_table.campaign_id;
 ```sql
 -- for Postgres
 
-SELECT conversions_clicks_table.campaign_id,
+SELECT conversions_clicks_table.ad_id,
        (conversions_clicks_table.conversions * 100 / conversions_clicks_table.clicks)::FLOAT || '%' AS CVR
 FROM
   (
-  SELECT a.campaign_id,
+  SELECT a.ad_id,
          SUM(CASE e.event_type WHEN 'conversion' THEN 1 ELSE 0 END) conversions,
          SUM(CASE e.event_type WHEN 'click' THEN 1 ELSE 0 END) clicks
   FROM Ads AS a
     INNER JOIN Events AS e
       ON a.ad_id = e.ad_id
-  GROUP BY a.campaign_id
+  GROUP BY a.ad_id
   ) AS conversions_clicks_table
-ORDER BY conversions_clicks_table.campaign_id;
+ORDER BY conversions_clicks_table.ad_id;
 ```
 
 <br/>
@@ -182,6 +182,35 @@ ORDER BY conversions_clicks_table.campaign_id;
 **10)** CTR and CVR for each ad broken down by day and hour (most recent first).
 
 <img src="img/sql_10_example.png" />
+
+
+```sql
+-- for Postgres
+
+SELECT conversions_clicks_table.ad_id,
+       conversions_clicks_table.date,
+       conversions_clicks_table.hour,
+       (impressions_clicks_table.clicks * 100 / impressions_clicks_table.impressions)::FLOAT || '%' AS CTR,
+       (conversions_clicks_table.conversions * 100 / conversions_clicks_table.clicks)::FLOAT || '%' AS CVR
+FROM
+  (
+  SELECT a.ad_id, e.date, e.hour, 
+         SUM(CASE e.event_type WHEN 'conversion' THEN 1 ELSE 0 END) conversions,
+         SUM(CASE e.event_type WHEN 'click' THEN 1 ELSE 0 END) clicks,
+         SUM(CASE e.event_type WHEN 'impression' THEN 1 ELSE 0 END) impressions
+  FROM Ads AS a
+    INNER JOIN Events AS e
+      ON a.ad_id = e.ad_id
+  GROUP BY a.ad_id, e.date, e.hour
+  ) AS conversions_clicks_table
+ORDER BY conversions_clicks_table.ad_id, conversions_clicks_table.date, conversions_clicks_table.hour;
+```
+
+<br/>
+
+**11)** CTR for each ad broken down by source and day
+
+<img src="img/sql_11_example.png" />
 
 
 ```sql
@@ -205,14 +234,6 @@ FROM
   ) AS conversions_clicks_table
 ORDER BY conversions_clicks_table.campaign_id, conversions_clicks_table.date, conversions_clicks_table.hour;
 ```
-
-<br/>
-
-**11)** CTR for each ad broken down by source and day
-
-<img src="img/sql_11_example.png" />
-
-Answer here
 
 <br/>
 
