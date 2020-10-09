@@ -442,7 +442,8 @@ L2 regularization adds a penalty term to our cost function which is equal to the
 
 **How do we select the right regularization parameters? 👶**
 
-Answer here
+Regularization parameters can be chosen using a grid search, for example https://scikit-learn.org/stable/modules/linear_model.html has one formula for the implementing for regularization, alpha in the formula mentioned can be found by doing a RandomSearch or a GridSearch on a set of values and selecting the alpha which gives the least cross validation or validation error.
+
 
 <br/>
 
