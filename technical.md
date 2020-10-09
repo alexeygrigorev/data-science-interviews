@@ -194,7 +194,7 @@ SELECT conversions_clicks_table.ad_id,
        (conversions_clicks_table.conversions * 100 / conversions_clicks_table.clicks)::FLOAT || '%' AS CVR
 FROM
   (
-  SELECT a.ad_id, e.date, e.hour, 
+  SELECT a.ad_id, e.date, e.hour,
          SUM(CASE e.event_type WHEN 'conversion' THEN 1 ELSE 0 END) conversions,
          SUM(CASE e.event_type WHEN 'click' THEN 1 ELSE 0 END) clicks,
          SUM(CASE e.event_type WHEN 'impression' THEN 1 ELSE 0 END) impressions
@@ -216,23 +216,21 @@ ORDER BY conversions_clicks_table.ad_id, conversions_clicks_table.date, conversi
 ```sql
 -- for Postgres
 
-SELECT conversions_clicks_table.campaign_id,
+SELECT conversions_clicks_table.ad_id,
        conversions_clicks_table.date,
-       conversions_clicks_table.hour,
-       (impressions_clicks_table.clicks * 100 / impressions_clicks_table.impressions)::FLOAT || '%' AS CTR,
-       (conversions_clicks_table.conversions * 100 / conversions_clicks_table.clicks)::FLOAT || '%' AS CVR
+       conversions_clicks_table.source,
+       (impressions_clicks_table.clicks * 100 / impressions_clicks_table.impressions)::FLOAT || '%' AS CTR
 FROM
   (
-  SELECT a.campaign_id, e.date, e.hour, 
-         SUM(CASE e.event_type WHEN 'conversion' THEN 1 ELSE 0 END) conversions,
+  SELECT a.ad_id, e.date, e.source,
          SUM(CASE e.event_type WHEN 'click' THEN 1 ELSE 0 END) clicks,
          SUM(CASE e.event_type WHEN 'impression' THEN 1 ELSE 0 END) impressions
   FROM Ads AS a
     INNER JOIN Events AS e
       ON a.ad_id = e.ad_id
-  GROUP BY a.campaign_id, e.date, e.hour
+  GROUP BY a.ad_id, e.date, e.source
   ) AS conversions_clicks_table
-ORDER BY conversions_clicks_table.campaign_id, conversions_clicks_table.date, conversions_clicks_table.hour;
+ORDER BY conversions_clicks_table.ad_id, conversions_clicks_table.date, conversions_clicks_table.source;
 ```
 
 <br/>
