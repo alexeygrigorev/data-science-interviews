@@ -381,6 +381,20 @@ Typically, if true negatives are not meaningful to the problem or you care more 
 
 <br/>
 
+<br/>
+
+**How to interpret the Brier score? ‍⭐️**
+
+Brier Score evaluates the accuracy of probabilistic predictions. It appears especially when we are working with variables that can only take a finite number of values (we can call them categories or labels too).
+
+The Brier Score is more like a cost function. Therefore, the lower the value of this score, the better the prediction: a perfect prediction will get a score of 0. The worst score is 1. In other words, it is a synthetic criterion that provides combined information on the accuracy and finesse of the prediction.
+
+Let’s take a very quick example to assimilate this concept. We consider the following event A=”Tomorrow is a sunny day”. If you predict the event A will occur with a probability of 100%, and the event occurs (the next is in fact sunny), the Brier score is therefore equal to (1-1^2)=0. This is the lowest value possible, in other words the best case we can achieve.
+
+The brier score helps us to check if our model is well-calibrated.
+
+<br/>
+
 **What do we do with categorical variables? ‍⭐️**
 
 Categorical variables must be encoded before they can be used as features to train a machine learning model. There are various encoding techniques, including:
