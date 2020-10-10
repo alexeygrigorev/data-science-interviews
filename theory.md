@@ -381,8 +381,6 @@ Typically, if true negatives are not meaningful to the problem or you care more 
 
 <br/>
 
-<br/>
-
 **How to interpret the Brier score? ‍⭐️**
 
 Brier Score evaluates the accuracy of probabilistic predictions. It appears especially when we are working with variables that can only take a finite number of values (we can call them categories or labels too).
