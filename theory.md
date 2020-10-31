@@ -852,7 +852,7 @@ Repeat the process until the error becomes minimum.
 
 **How do we use SGD (stochastic gradient descent) for training a neural net? ‍⭐️**
 
-Answer here
+SGD approximates the expectation with few randomly selected samples (instead of the full data). In comparison to batch gradient descent, we can efficiently approximate the expectation in large data sets using SGD. For neural networks this reduces the training time a lot even considering that it will converge later as the random sampling adds noise to the gradient descent.
 
 <br/>
 
