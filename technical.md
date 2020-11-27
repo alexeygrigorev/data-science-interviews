@@ -360,7 +360,7 @@ def remove_duplicates(lst):
 
 # The above solution checks the values into a set and it is O(1) efficient using
 # a few of lines.
-# A shorter solution follows: it is O(n) but can be fine when lst has no "too
+# A shorter solution follows: it is O(n^2) but can be fine when lst has no "too
 # many elements" - the quantity depends by the running box.
 def remove_duplicates2(lst):
     new_list = []
