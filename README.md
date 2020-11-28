@@ -16,6 +16,8 @@ The answers are given by the community
 
 For updates, follow me on Twitter ([@Al_Grigor](https://twitter.com/Al_Grigor)) and on LinkedIn ([agrigorev](https://www.linkedin.com/in/agrigorev))
 
+Do you want to talk about data? Join [DataTalks.Club](https://DataTalks.Club)
+
 
 ## Questions by category
 
