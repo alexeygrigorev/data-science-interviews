@@ -982,7 +982,7 @@ print(max_sum_subarr(list1, len(list1)))
 
 <br/>
 
-**14) Three sum**. Given an array, and a target value, find all possible combinations such that the sum of three distinct elements is equal to the target value.
+**14) Three sum**. Given an array, and a target value, find all possible combinations of three distinct numbers such that the sum of these three distinct numbers is equal to the target value.
 
 Example:
 
