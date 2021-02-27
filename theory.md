@@ -692,7 +692,7 @@ Gradient boosting is a machine learning technique for regression and classificat
 
 **Is it possible to parallelize training of a gradient boosting model? How to do it? ‍⭐️**
 
-Answer here
+Yes, different frameworks provide different options to make training faster, using GPUs to speed up the process by making it highly parallelizable.For example, for XGBoost <i>tree_method = 'gpu_hist'</i> option makes training faster by use of GPUs. 
 
 <br/>
 
@@ -722,7 +722,7 @@ There are many parameters, but below are a few key defaults.
 
 **How do you approach tuning parameters in XGBoost or LightGBM? 🚀**
 
-Answer here
+Depending upon the dataset, parameter tuning can be done manually or using hyperparameter optimization frameworks such as optuna and hyperopt. In manual parameter tuning, we need to be aware of max-depth, min_samples_leaf and min_samples_split so that our model does not overfit the data but try to predict generalized characteristics of data (basically keeping variance and bias low for our model).
 
 <br/>
 
