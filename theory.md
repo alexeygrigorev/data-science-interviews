@@ -337,7 +337,7 @@ In an ideal scenario where there is a perfectly separable data, both precision a
 
 **What is the ROC curve? When to use it? ‍⭐️**
 
-ROC stands for *Receiver Operating Characteristics*. The diagrammatic representation that shows the contrast between true positive rate vs true negative rate. It is used when we need to predict the probability of the binary outcome.
+ROC stands for *Receiver Operating Characteristics*. The diagrammatic representation that shows the contrast between true positive rate vs false positive rate. It is used when we need to predict the probability of the binary outcome.
 
 <br/>
 
