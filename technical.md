@@ -89,7 +89,7 @@ FROM Ads AS a
   JOIN Events AS e
       ON a.ad_id = e.ad_id
 WHERE a.status = 'active'
-   AND e.date >= DATEADD(week, DATEDIFF(week,0,GETDATE()),-1)
+   AND e.date >= DATEADD(week, -1, GETDATE())
 GROUP BY a.ad_id, e.event_type, e.date
 ORDER BY e.date ASC, "count" DESC;
 ```
