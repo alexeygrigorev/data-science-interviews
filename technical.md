@@ -102,12 +102,12 @@ ORDER BY e.date ASC, "count" DESC;
 
 
 ```sql
-SELECT a.campaign_id, e.event_type, count(*)
+SELECT a.campaign_id, e.event_type, count(*) as count
 FROM Ads AS a
   INNER JOIN Events AS e
     ON a.ad_id = e.ad_id
 GROUP BY a.campaign_id, e.event_type
-ORDER BY a.campaign_id;
+ORDER BY a.campaign_id, "count" DESC
 ```
 
 <br/>
