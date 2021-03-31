@@ -203,7 +203,7 @@ FROM
       ON a.ad_id = e.ad_id
   GROUP BY a.ad_id, e.date, e.hour
   ) AS conversions_clicks_table
-ORDER BY conversions_clicks_table.ad_id, conversions_clicks_table.date, conversions_clicks_table.hour;
+ORDER BY conversions_clicks_table.ad_id, conversions_clicks_table.date DESC, conversions_clicks_table.hour DESC, "CTR" DESC, "CVR" DESC;
 ```
 
 <br/>
