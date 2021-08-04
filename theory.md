@@ -515,7 +515,7 @@ Feature Selection is a method used to select the relevant features for the model
 
 **Is feature selection important for linear models? ‍⭐️**
 
-Answer here
+Yes, It is. It can make model performance better through selecting the most importance features and remove irrelanvant features in order to make a prediction and it can also avoid overfitting, underfitting and bias-variance tradeoff. 
 
 <br/>
 
