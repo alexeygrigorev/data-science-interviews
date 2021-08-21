@@ -1003,13 +1003,17 @@ In the context of CNNs, we can use networks that were pre-trained on popular dat
 
 **What is object detection? Do you know any architectures for that? 🚀**
 
-Answer here
+Object detection is finding Bounding Boxes around objects in an image. 
+Architectures :
+YOLO, Faster RCNN, Center Net
 
 <br/>
 
 **What is object segmentation? Do you know any architectures for that? 🚀**
 
-Answer here
+Object Segmentation is predicting masks. It does not differentiate objects. 
+Architectures :
+Mask RCNN, UNet
 
 <br/>
 
