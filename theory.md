@@ -536,7 +536,7 @@ Yes, because the nature of L1 regularization will lead to sparse coefficients of
 
 **Can we use L2 regularization for feature selection? ‍⭐️**
 
-Answer here
+No, Because L2 regularization doesnot make the weights zero but only makes them very very small. L2 regularization can be used to solve multicollinearity since it stablizes the model.
 
 <br/>
 
