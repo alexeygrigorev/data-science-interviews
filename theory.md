@@ -1022,7 +1022,7 @@ Mask RCNN, UNet
 
 **How can we use machine learning for text classification? ‍⭐️**
 
-Answer here
+Machine learning classification algorithms predict a class based on a numerical feature representation. This means that in order to use machine learning for text classification, we need to extract numerical features from our text data first before we can apply machine learning algorithms. Common approaches to extract numerical features from text data are bag of words, N-grams or word embeddings.
 
 <br/>
 
