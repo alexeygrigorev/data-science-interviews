@@ -36,7 +36,7 @@ Extra comments:
  - The formula (*), in general, has [the form ](https://en.wikipedia.org/wiki/Likelihood_ratios_in_diagnostic_testing#Estimation_of_pre-_and_post-test_probability)
  
       `post-odd = likelihood ratio of the event A * pre-odd`
- - Another solution is to compute directly `P(B_1|A)` by using Bayes and total probability theorem,
+ - Another solution is to compute directly `P(B_1|A)` by using Bayes and total probability theorems,
  
    ``` 
    P(B_1|A) = P(A|B_1) P(B_1) / P(A) = P(A|B_1) P(B_1) / (P(A|B_1) P(B_1) + P(A|B_2) P(B_2))
