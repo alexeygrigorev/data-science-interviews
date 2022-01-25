@@ -43,6 +43,9 @@ Extra comments:
    = 1 * (1/500) / (1/500 + (1/2)^8 * (499/500)) 
    ```
    and see that it is `<1`
+ - The problem contains several implicit assumptions. For example: 
+   - A with one head and tail is called **fair** under the assumption that both sides have equal chance to land in each toss.
+   - We assume that each toss results in a head or a tail face but no other scenarios (like standing)
 <br/>
 
 
