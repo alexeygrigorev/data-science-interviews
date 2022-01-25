@@ -23,7 +23,7 @@ If this odd is greater than 1, then the answer is yes. Otherwise, no.
 
 By Bayes theorem (some manipulations),
 - `P(B_1|A) : P(B_2 |A) = (P(A|B_1) P(B_1)) : (P(A|B_2) P (B_2)) ` 
-- `= ( P(A|B_1)/ P(A| B_2) ) (P(B_1) / P(B_2) (*)`
+- `= ( P(A|B_1)/ P(A| B_2) ) * (P(B_1) / P(B_2) (*)`
  
  The second ratio is the odd of choosing the special coin over the fair one. It equals `1/499`.
  
@@ -36,6 +36,13 @@ Extra comments:
  - The formula (*), in general, has [the form ](https://en.wikipedia.org/wiki/Likelihood_ratios_in_diagnostic_testing#Estimation_of_pre-_and_post-test_probability)
  
       `post-odd = likelihood ratio of the event A * pre-odd`
+ - Another solution is to compute directly `P(B_1|A)` by using Bayes and total probability theorem,
+ 
+   ``` 
+   P(B_1|A) = P(A|B_1) P(B_1) / P(A) = P(A|B_1) P(B_1) / (P(A|B_1) P(B_1) + P(A|B_2) P(B_2))
+   = 1 * (1/500) / (1/500 + (1/2)^8 * (499/500)) 
+   ```
+   and see that it is `<1`
 <br/>
 
 
