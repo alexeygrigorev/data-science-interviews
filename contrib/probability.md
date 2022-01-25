@@ -31,7 +31,7 @@ By Bayes theorem (some manipulations),
 
 So the odd of choosing the special coin over the fair one given the event A is `256/499` which <1. Hence there is a lower chance that we took the special coin than the fair one.
 
-Extra comment:
+Extra comments:
  - From the solution, if there were 9 consecutive heads, then the odd would be 512/499 and hence the answer would be `yes`.
  - The formula (*), in general, has [the form ](https://en.wikipedia.org/wiki/Likelihood_ratios_in_diagnostic_testing#Estimation_of_pre-_and_post-test_probability)
  
