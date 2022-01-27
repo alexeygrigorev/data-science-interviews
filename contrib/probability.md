@@ -14,14 +14,38 @@
 
 **Imagine you have a jar of 500 coins. 1 out of 500 is a coin with two heads and all the others have a tail and a head. You take a random coin from the jar and flip it 8 times. You observe heads 8 consecutive time. Are the chances that you took the coin with two heads higher than having drawn a regular coin with a head and a tail?**
  
- Use Bayes Theorem. Define Event A as the probability of drawing the two-headed coin, Event B as having heads 8 times. 
- P(A/B) = P(B/A) * P(A) / P(B)
- P(B/A) is the odds of having 8 heads while the two-headed coin is drawn, = 1
- P(A) = 1/500 (only one coin is two-headed)
- P(B) = (1/500 * 1^8 + 499/500 * 0.5^8) = 0.0058984375
- Then P(A/B) = 0.3391
- Probability of P(not A/B), i.e. drawing an unbiased coin given we've rolled 8 heads = 1 - P(A/B) = 0.6609
- Hence the probability of taking a two-headed coin is no higher than the probability of taking a regular coin.
+The main tool is Bayes Theorem. 
+
+Define A the event of tossing the chosen coin and having heads 8 times, `B_1` and `B_2` the events of choosing the special and fair coins respectivly. We compute the odd of choosing the special coin over the fair one given the event A.
+ - `P(B_1|A) : P(B_2 |A)`
+
+If this odd is greater than 1, then the answer is yes. Otherwise, no.
+
+By Bayes theorem (some manipulations),
+- `P(B_1|A) : P(B_2 |A) = (P(A|B_1) P(B_1)) : (P(A|B_2) P (B_2)) ` 
+- `= ( P(A|B_1)/ P(A| B_2) ) * (P(B_1) / P(B_2) (*)`
+ 
+ The second ratio is the odd of choosing the special coin over the fair one. It equals `1/499`.
+ 
+ The first ratio is `1/(1/2)^8 = 256`.
+
+So the odd of choosing the special coin over the fair one given the event A is `256/499` which <1. Hence there is a lower chance that we took the special coin than the fair one.
+
+Extra comments:
+ - From the solution, if there were 9 consecutive heads, then the odd would be 512/499 and hence the answer would be `yes`.
+ - The formula (*), in general, has [the form ](https://en.wikipedia.org/wiki/Likelihood_ratios_in_diagnostic_testing#Estimation_of_pre-_and_post-test_probability)
+ 
+      `post-odd = likelihood ratio of the event A * pre-odd`
+ - Another solution is to compute directly `P(B_1|A)` by using Bayes and total probability theorems,
+ 
+   ``` 
+   P(B_1|A) = P(A|B_1) P(B_1) / P(A) = P(A|B_1) P(B_1) / (P(A|B_1) P(B_1) + P(A|B_2) P(B_2))
+   = 1 * (1/500) / (1/500 + (1/2)^8 * (499/500)) 
+   ```
+   and see that it is `<1`
+ - The problem contains several implicit assumptions. For example: 
+   - A with one head and tail is called **fair** under the assumption that both sides have equal chance to land in each toss.
+   - We assume that each toss results in a head or a tail face but no other scenarios (like standing)
 <br/>
 
 
