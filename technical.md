@@ -1008,3 +1008,24 @@ def threeSum(array, target):
                 left += 1
     return triplets
 ```
+
+**15) Find Duplicate in array** Given and array, find all duplicated value in the array
+
+Example:
+  
+   input: [1,2,3,4,3,4,5]
+   output: [3,4]
+   
+```python
+a = [1,2,3,4,3,4,5]
+
+def duplicates(a):
+   seen = set()
+   duplicated = set()
+   for i in a:
+      if i in seen:
+         duplicated.add(i)
+      else:
+         seen.add(i)
+   return duplicated
+```
