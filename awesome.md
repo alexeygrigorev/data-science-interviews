@@ -12,6 +12,7 @@ Contributions are welcome!
 * [40 Interview Questions asked at Startups in Machine Learning / Data Science](https://www.analyticsvidhya.com/blog/2016/09/40-interview-questions-asked-at-startups-in-machine-learning-data-science/)
 * [The Most Comprehensive Data Science & Machine Learning Interview Guide You’ll Ever Need](https://www.analyticsvidhya.com/blog/2018/06/comprehensive-data-science-machine-learning-interview-guide/)
 * [Data Science Recruitment Challenges](https://github.com/alexeygrigorev/datascience-recruitment-challenges) - take-home assignments for data science positions
+* [Latest Data Science Interview Questions](https://www.interviewbit.com/data-science-interview-questions/) - Complete Interview Guide
 
 ### Questions
 
