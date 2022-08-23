@@ -312,6 +312,7 @@ def mean(numbers):
 
 ```python
 from math import sqrt
+from statistics import mean
 
 def std_dev(numbers):
     if len(numbers) > 1:
