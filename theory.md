@@ -1089,8 +1089,9 @@ It can be generated using two methods:
 
 **Do you know any other ways to get word embeddings? 🚀**
 
-Answer here
-
+- TF-IDF
+- GloVe
+- BERT
 <br/>
 
 **If you have a sentence with multiple words, you may need to combine multiple word embeddings into one. How would you do it? ‍⭐️**
