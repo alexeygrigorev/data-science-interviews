@@ -1079,12 +1079,16 @@ Usually logistic regression is better because bag of words creates a matrix with
 
 Word Embeddings are vector representations for words. Each word is mapped to one vector, this vector tries to capture some characteristics of the word, allowing similar words to have similar vector representations.  
 Word Embeddings helps in capturing the inter-word semantics and represents it in real-valued vectors.  
+
 <br/>
 
 Word2Vec is a method to construct such an embedding. It takes a text corpus as input and outputs a set of vectors which represents words in that corpus.  
+
 It can be generated using two methods:
+
 - Common Bag of Words (CBOW)
 - Skip-Gram
+
 <br/>
 
 **Do you know any other ways to get word embeddings? 🚀**
