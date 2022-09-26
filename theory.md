@@ -1065,7 +1065,12 @@ Term Frequency (TF) is a scoring of the frequency of the word in the current doc
 
 **Which model would you use for text classification with bag of words features? ‍⭐️**
 
-Answer here
+1. Bag Of Words model
+2. Word2Vec Embeddings
+3. fastText Embeddings
+4. Convolutional Neural Networks (CNN)
+5. Long Short-Term Memory (LSTM)
+6. Bidirectional Encoder Representations from Transformers (BERT)
 
 <br/>
 
