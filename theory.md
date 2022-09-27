@@ -399,8 +399,9 @@ If we simply encode categorical variables with a Label encoder, they become ordi
 <br/>
 
 **What is "curse of dimensionality"? ‍⭐️**
+
 The curse of dimensionality is an issue that arises when working with high-dimensional data. It is often said that "the curse of dimensionality" is one of the main problems with machine learning. The curse of dimensionality refers to the fact that, as the number of dimensions (features) in a data set increases, the number of data points required to accurately learn the relationships between those features increases exponentially.
-<br/>
+
 A simple example where we have a data set with two features, x1 and x2. If we want to learn the relationship between these two features, we need to have enough data points so that we can accurately estimate the parameters of that relationship. However, if we add a third feature, x3, then the number of data points required to accurately learn the relationships between all three features increases exponentially. This is because there are now more parameters to estimate, and the number of data points needed to accurately estimate those parameters increases exponentially with the number of parameters.
 
 Simply put, the curse of dimensionality basically means that the error increases with the increase in the number of features.
