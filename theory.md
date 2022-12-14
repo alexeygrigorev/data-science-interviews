@@ -902,7 +902,8 @@ Adam tends to converge faster, while SGD often converges to more optimal solutio
 
 **Do we want to have a constant learning rate or we better change it throughout training? ‍⭐️**
 
-Answer here
+Generally, it is recommended to start learning rate with relatively high value and then gradually decrease learning rate so the model does not overshoot the minima and at the same time we don't want to start with very low learning rate as the model will take too long to converge. There are many available techniques to do decay the learning rate. For example, in PyTorch you can use
+a function called **StepLR** which decays the learning rate of each parameter by value **gamma**-which we have to pass through argument- after n number of epoch which you can also set through function argument named **epoch_size**. 
 
 <br/>
 
