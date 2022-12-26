@@ -101,7 +101,7 @@ There are several assumptions of linear regression. If any of them is violated, 
 4. Errors are independently and identically normally distributed (y<sub>i</sub> = B0 + B1*x1<sub>i</sub> + ... + error<sub>i</sub>):
    1. No correlation between errors (consecutive errors in the case of time series data).
    2. Constant variance of errors - **homoscedasticity**. For example, in case of time series, seasonal patterns can increase errors in seasons with higher activity.
-   3. Errors are normaly distributed, otherwise some features will have more influence on the target variable than to others. If the error distribution is significantly non-normal, confidence intervals may be too wide or too narrow.
+   3. Errors are normally distributed, otherwise some features will have more influence on the target variable than to others. If the error distribution is significantly non-normal, confidence intervals may be too wide or too narrow.
 
 <br/>
 
@@ -225,7 +225,7 @@ The training set is used to fit the model, i.e. to train the model with the data
 
 **Can you explain how cross-validation works? 👶**
 
-Cross-validation is the process to separate your total training set into two subsets: training and validation set, and evaluate your model to choose the hyperparameters. But you do this process iteratively, selecting differents training and validation set, in order to reduce the bias that you would have by selecting only one validation set.
+Cross-validation is the process to separate your total training set into two subsets: training and validation set, and evaluate your model to choose the hyperparameters. But you do this process iteratively, selecting different training and validation set, in order to reduce the bias that you would have by selecting only one validation set.
 
 <br/>
 
@@ -413,7 +413,7 @@ Simply put, the curse of dimensionality basically means that the error increases
 
 **What happens to our linear regression model if we have three columns in our data: x, y, z  —  and z is a sum of x and y? ‍⭐️**
 
-We would not be able to perform the resgression. Because z is linearly dependent on x and y so when performing the regression <img src="https://render.githubusercontent.com/render/math?math={X}^{T}{X}"> would be a singular (not invertible) matrix.
+We would not be able to perform the regression. Because z is linearly dependent on x and y so when performing the regression <img src="https://render.githubusercontent.com/render/math?math={X}^{T}{X}"> would be a singular (not invertible) matrix.
 <br/>
 
 **What happens to our linear regression model if the column z in the data is a sum of columns x and y and some random noise? ‍⭐️**
@@ -526,7 +526,7 @@ Feature Selection is a method used to select the relevant features for the model
 
 **Is feature selection important for linear models? ‍⭐️**
 
-Yes, It is. It can make model performance better through selecting the most importance features and remove irrelanvant features in order to make a prediction and it can also avoid overfitting, underfitting and bias-variance tradeoff. 
+Yes, It is. It can make model performance better through selecting the most importance features and remove irrelevant features in order to make a prediction and it can also avoid overfitting, underfitting and bias-variance tradeoff. 
 
 <br/>
 
@@ -547,7 +547,7 @@ Yes, because the nature of L1 regularization will lead to sparse coefficients of
 
 **Can we use L2 regularization for feature selection? ‍⭐️**
 
-No, Because L2 regularization doesnot make the weights zero but only makes them very very small. L2 regularization can be used to solve multicollinearity since it stablizes the model.
+No, Because L2 regularization does not make the weights zero but only makes them very very small. L2 regularization can be used to solve multicollinearity since it stabilizes the model.
 
 <br/>
 
@@ -614,7 +614,7 @@ Random Forest is a machine learning method for regression and classification whi
 
 **Why do we need randomization in random forest? ‍⭐️**
 
-Random forest in an extention of the **bagging** algorithm which takes *random data samples from the training dataset* (with replacement), trains several models and averages predictions. In addition to that, each time a split in a tree is considered, random forest takes a *random sample of m features from full set of n features* (with replacement) and uses this subset of features as candidates for the split (for example, `m = sqrt(n)`).
+Random forest in an extension of the **bagging** algorithm which takes *random data samples from the training dataset* (with replacement), trains several models and averages predictions. In addition to that, each time a split in a tree is considered, random forest takes a *random sample of m features from full set of n features* (with replacement) and uses this subset of features as candidates for the split (for example, `m = sqrt(n)`).
 
 Training decision trees on random data samples from the training dataset *reduces variance*. Sampling features for each split in a decision tree *decorrelates trees*.
 
@@ -801,7 +801,7 @@ ReLU is an abbreviation for Rectified Linear Unit. It is an activation function 
 **How we can initialize the weights of a neural network? ‍⭐️**
 
 Proper initialization of weight matrix in neural network is very necessary.
-Simply we can say there are two ways for initializtions.
+Simply we can say there are two ways for initializations.
    1. Initializing weights with zeroes.
       Setting weights to zero makes your network no better than a linear model. It is important to note that setting biases to 0 will not create any troubles as non zero weights take care of breaking the symmetry and even if bias is 0, the values in every neuron are still different.  
    2. Initializing weights randomly.
@@ -822,7 +822,7 @@ If all the weights of a neural network are set to zero, the output of each conne
 * L1 Regularization - Defined as the sum of absolute values of the individual parameters. The L1 penalty causes a subset of the weights to become zero, suggesting that the corresponding features may safely be discarded. 
 * L2 Regularization - Defined as the sum of square of individual parameters. Often supported by regularization hyperparameter alpha. It results in weight decay. 
 * Data Augmentation - This requires some fake data to be created as a part of training set. 
-* Drop Out : This is most effective regularization technique for newral nets. Few randome nodes in each layer is deactivated in forward pass. This allows the algorithm to train on different set of nodes in each iterations.
+* Drop Out : This is most effective regularization technique for neural nets. Few random nodes in each layer is deactivated in forward pass. This allows the algorithm to train on different set of nodes in each iterations.
 <br/>
 
 **What is dropout? Why is it useful? How does it work? ‍⭐️**
@@ -1146,7 +1146,7 @@ Answer here
 
 **What is unsupervised learning? 👶**
 
-Unsupervised learning aims to detect paterns in data where no labels are given.
+Unsupervised learning aims to detect patterns in data where no labels are given.
 
 <br/>
 
@@ -1345,7 +1345,7 @@ Collaborative filterung incorporates crowd knowledge to give recommendations for
 
 **Possible approaches to solving the cold start problem? ‍⭐️🚀**
 
-* Content-based filtering incorporates features about items to calculate a similarity between them. In this way, we can recommend items that have a high similarity to items that a user liked already. In this way, we are not dependant on the ratings of other users for a given item anymore and solve the cold start problem for new items.
+* Content-based filtering incorporates features about items to calculate a similarity between them. In this way, we can recommend items that have a high similarity to items that a user liked already. In this way, we are not dependent on the ratings of other users for a given item anymore and solve the cold start problem for new items.
 * Demographic filtering incorporates user profiles to calculate a similarity between them and solves the cold start problem for new users.
 
 <br/>
@@ -1367,10 +1367,10 @@ The principle behind causal forecasting is that the value that has to be predict
 
 **Which models do you know for solving time series problems? ‍⭐️**
 
-* Simple Exponential Smoothing: approximate the time series with an exponentional function
+* Simple Exponential Smoothing: approximate the time series with an exponential function
 * Trend-Corrected Exponential Smoothing (Holt‘s Method): exponential smoothing that also models the trend
 * Trend- and Seasonality-Corrected Exponential Smoothing (Holt-Winter‘s Method): exponential smoothing that also models trend and seasonality
-* Time Series Decomposition: decomposed a time series into the four components trend, seasonal variation, cycling varation and irregular component
+* Time Series Decomposition: decomposed a time series into the four components trend, seasonal variation, cycling variation and irregular component
 * Autoregressive models: similar to multiple linear regression, except that the dependent variable y_t depends on its own previous values rather than other independent variables.
 * Deep learning approaches (RNN, LSTM, etc.)
 
@@ -1390,7 +1390,7 @@ We want to look at the correlation between different observations of y. This mea
 
 **You have a series with a variable “y” and a set of features. How do you predict “y” at t+1? Which approaches would you use? ‍⭐️**
 
-Given the assumption that the set of features gives a meaningful causation to y, a causal forecasting approach such as linear regression or multiple nonlinear regression might be useful. In case there is a lot of data and the explanability of the results is not a high priority, we can also consider deep learning approaches.
+Given the assumption that the set of features gives a meaningful causation to y, a causal forecasting approach such as linear regression or multiple nonlinear regression might be useful. In case there is a lot of data and the explainability of the results is not a high priority, we can also consider deep learning approaches.
 
 <br/>
 
