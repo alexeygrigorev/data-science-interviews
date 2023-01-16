@@ -667,7 +667,17 @@ rf <- foreach(ntree=rep(25000, 6), .combine=randomForest::combine,
 
 **What are the potential problems with many large trees? ‍⭐️**
 
-Answer here
+- Overfitting: A large number of large trees can lead to overfitting, where the model becomes too complex and is able to memorize the training data but doesn't generalize well to new, unseen data.
+
+- Slow prediction time: As the number of trees in the forest increases, the prediction time for new data points can become quite slow. This can be a problem when you need to make predictions in real-time or on a large dataset.
+
+- Memory consumption: Random Forest models with many large trees can consume a lot of memory, which can be a problem when working with large datasets or on a limited hardware.
+
+- Lack of interpretability: Random Forest models with many large trees can be difficult to interpret, making it harder to understand how the model is making predictions or what features are most important.
+
+- Difficulty in tuning : With an increasing number of large trees the tuning process becomes more complex and computationally expensive.
+
+It's important to keep in mind that the number of trees in a Random Forest should be chosen based on the specific problem and dataset, rather than using a large number of trees by default. In practice, the number of trees in a random forest is chosen based on the trade-off between the computational cost and the performance.
 
 <br/>
 
