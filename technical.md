@@ -553,8 +553,28 @@ Where:
 * c(t1, t2) is the number of times t1 and t2 appear together,
 * c(t1) and c(t2) — the number of times they appear separately.
 
+```python
+import math
 
-Answer here
+def pmi(docs):
+    n_pairs = {}
+    n_tokens = {}
+
+    docs = [tuple(doc) for doc in docs]
+    for doc in docs:
+        for token in doc:
+            n_tokens[token] = n_tokens.get(token, 0) + 1
+
+        n_pairs[doc] = n_pairs.get(doc, 0) + 1
+        ans = {}
+        for pair in n_pairs:
+            ans[pair] = math.log2(n_pairs[pair] * (sum(n_tokens.values())) / (n_tokens[pair[0]] * n_tokens[pair[1]]))
+
+        srt = sorted(ans.items(), key=lambda x: x[1], reverse=True)[:10]
+
+    return srt
+```
+
 
 <br/>
 
