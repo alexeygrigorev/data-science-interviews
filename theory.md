@@ -165,7 +165,7 @@ Normal equations are equations obtained by setting equal to zero the partial der
 
 In both gradient descent (GD) and stochastic gradient descent (SGD), you update a set of parameters in an iterative manner to minimize an error function.
 
-While in GD, you have to run through ALL the samples in your training set to do a single update for a parameter in a particular iteration, in SGD, on the other hand, you use ONLY ONE or SUBSET of training sample from your training set to do the update for a parameter in a particular iteration. If you use SUBSET, it is called Minibatch Stochastic gradient Descent.
+The difference lies in how the gradient of the loss function is estimated. In the usual GD, you have to run through ALL the samples in your training set in order to estimate the gradient and do a single update for a parameter in a particular iteration. In SGD, on the other hand, you use ONLY ONE or SUBSET of training sample from your training set to estimate the gradient and do the update for a parameter in a particular iteration. If you use SUBSET, it is called Minibatch Stochastic gradient Descent.
 
 <br/>
 
