@@ -1136,7 +1136,13 @@ Approaches ranked from simple to more complex:
 
 **Would you prefer gradient boosting trees model or logistic regression when doing text classification with embeddings? ‍⭐️**
 
-Answer here
+Gradient boosting trees (GBTs) are generally a better choice than logistic regression for text classification with embeddings. This is because GBTs are able to learn more complex relationships between the features in the data, including the features extracted from the embeddings.
+
+Logistic regression is a linear model, which means that it can only learn linear relationships between the features. This can be a limitation for text classification, where the relationships between the features are often complex and non-linear.
+
+GBTs, on the other hand, are able to learn non-linear relationships between the features by combining multiple decision trees. This allows GBTs to learn more complex patterns in the data, which can lead to better performance on text classification tasks.
+
+In addition, GBTs are more robust to outliers and noise in the data than logistic regression. This can be important for text classification tasks, where the data can be noisy and imbalanced.
 
 <br/>
 
