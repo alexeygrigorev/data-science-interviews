@@ -1166,7 +1166,12 @@ Neural nets have achieved state-of-the-art results on many text classification t
 
 **How can we use CNN for text classification? 🚀**
 
-Answer here
+Here are some specific examples of how CNNs can be used for text classification:
+
+Sentiment analysis: CNNs can be used to classify text as positive, negative, or neutral sentiment. This is a common task in social media analysis and customer service.
+Spam detection: CNNs can be used to classify emails as spam or not spam. This is a common task in email filtering systems.
+Topic classification: CNNs can be used to classify text documents into different topics. This is a common task in news and social media analysis.
+Language identification: CNNs can be used to identify the language of a text document. This is a common task in translation systems.
 
 <br/>
 
