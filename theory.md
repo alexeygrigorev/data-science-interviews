@@ -1144,11 +1144,23 @@ GBTs, on the other hand, are able to learn non-linear relationships between the 
 
 In addition, GBTs are more robust to outliers and noise in the data than logistic regression. This can be important for text classification tasks, where the data can be noisy and imbalanced.
 
+Overall, GBTs are a better choice than logistic regression for text classification with embeddings, especially when the data is noisy or imbalanced. However, it is important to consider the computational cost and interpretability of GBTs before using them.
+
 <br/>
 
 **How can you use neural nets for text classification? 🚀**
 
-Answer here
+Here is a general overview of how to use neural nets for text classification:
+
+Preprocess the text: This includes cleaning the text by removing stop words, punctuation, and other irrelevant symbols. It may also involve converting the text to lowercase and stemming or lemmatizing the words.
+Represent the text as a vector: This can be done using a variety of methods, such as one-hot encoding or word embeddings.
+Build the neural net: The neural net architecture will depend on the specific text classification task. However, a typical architecture will include an embedding layer, one or more hidden layers, and an output layer.
+Train the neural net: The neural net is trained by feeding it labeled examples of text data. The neural net will learn to adjust its parameters in order to minimize the loss function, which is typically the cross-entropy loss function.
+Evaluate the neural net: Once the neural net is trained, it can be evaluated on a held-out test set to assess its performance.
+Here are some specific examples of how neural nets can be used for text classification:
+Sentiment analysis, Spam detection, Topic classification, Language identification
+
+Neural nets have achieved state-of-the-art results on many text classification tasks. However, they can be computationally expensive to train and deploy. 
 
 <br/>
 
