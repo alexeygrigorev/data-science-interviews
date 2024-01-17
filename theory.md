@@ -418,7 +418,7 @@ We would not be able to perform the regression. Because z is linearly dependent 
 
 **What happens to our linear regression model if the column z in the data is a sum of columns x and y and some random noise? ‍⭐️**
 
-Answer here
+It creates a situation known as multicollinearity. Multicollinearity occurs when two or more independent variables in a regression model are highly correlated, leading to issues in the estimation of the regression coefficients. The issue arises because the variables X and Y will be highly correlated, making it difficult for the model to distinguish the individual effects of X and Y on the dependent variable Z. To address it, feature selection, PCA or regularization techniques (L2) may be used.
 
 <br/>
 
@@ -614,7 +614,7 @@ Random Forest is a machine learning method for regression and classification whi
 
 **Why do we need randomization in random forest? ‍⭐️**
 
-Random forest in an extension of the **bagging** algorithm which takes *random data samples from the training dataset* (with replacement), trains several models and averages predictions. In addition to that, each time a split in a tree is considered, random forest takes a *random sample of m features from full set of n features* (with replacement) and uses this subset of features as candidates for the split (for example, `m = sqrt(n)`).
+Random forest in an extension of the **bagging** algorithm which takes *random data samples from the training dataset* (with replacement), trains several models and averages predictions. In addition to that, each time a split in a tree is considered, random forest takes a *random sample of m features from full set of n features* (without replacement) and uses this subset of features as candidates for the split (for example, `m = sqrt(n)`).
 
 Training decision trees on random data samples from the training dataset *reduces variance*. Sampling features for each split in a decision tree *decorrelates trees*.
 
