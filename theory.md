@@ -719,7 +719,11 @@ Yes, different frameworks provide different options to make training faster, usi
 
 **Feature importance in gradient boosting trees  —  what are possible options? ‍⭐️**
 
-Answer here
+With CatBoost you can use implemented method get_feature_importance for getting SHAP values. https://arxiv.org/abs/1905.04610v1
+
+It allows to understand how excluding features helps to provide better results. Higher value is better.
+
+Also you can add random noise column to your data (with normal distribution), calculate feature importance and exclude all features below noise importance.
 
 <br/>
 
