@@ -1140,19 +1140,42 @@ Approaches ranked from simple to more complex:
 
 **Would you prefer gradient boosting trees model or logistic regression when doing text classification with embeddings? ‍⭐️**
 
-Answer here
+Gradient boosting trees (GBTs) are generally a better choice than logistic regression for text classification with embeddings. This is because GBTs are able to learn more complex relationships between the features in the data, including the features extracted from the embeddings.
+
+Logistic regression is a linear model, which means that it can only learn linear relationships between the features. This can be a limitation for text classification, where the relationships between the features are often complex and non-linear.
+
+GBTs, on the other hand, are able to learn non-linear relationships between the features by combining multiple decision trees. This allows GBTs to learn more complex patterns in the data, which can lead to better performance on text classification tasks.
+
+In addition, GBTs are more robust to outliers and noise in the data than logistic regression. This can be important for text classification tasks, where the data can be noisy and imbalanced.
+
+Overall, GBTs are a better choice than logistic regression for text classification with embeddings, especially when the data is noisy or imbalanced. However, it is important to consider the computational cost and interpretability of GBTs before using them.
 
 <br/>
 
 **How can you use neural nets for text classification? 🚀**
 
-Answer here
+Here is a general overview of how to use neural nets for text classification:
+
+Preprocess the text: This includes cleaning the text by removing stop words, punctuation, and other irrelevant symbols. It may also involve converting the text to lowercase and stemming or lemmatizing the words.
+Represent the text as a vector: This can be done using a variety of methods, such as one-hot encoding or word embeddings.
+Build the neural net: The neural net architecture will depend on the specific text classification task. However, a typical architecture will include an embedding layer, one or more hidden layers, and an output layer.
+Train the neural net: The neural net is trained by feeding it labeled examples of text data. The neural net will learn to adjust its parameters in order to minimize the loss function, which is typically the cross-entropy loss function.
+Evaluate the neural net: Once the neural net is trained, it can be evaluated on a held-out test set to assess its performance.
+Here are some specific examples of how neural nets can be used for text classification:
+Sentiment analysis, Spam detection, Topic classification, Language identification
+
+Neural nets have achieved state-of-the-art results on many text classification tasks. However, they can be computationally expensive to train and deploy. 
 
 <br/>
 
 **How can we use CNN for text classification? 🚀**
 
-Answer here
+Here are some specific examples of how CNNs can be used for text classification:
+
+Sentiment analysis: CNNs can be used to classify text as positive, negative, or neutral sentiment. This is a common task in social media analysis and customer service.
+Spam detection: CNNs can be used to classify emails as spam or not spam. This is a common task in email filtering systems.
+Topic classification: CNNs can be used to classify text documents into different topics. This is a common task in news and social media analysis.
+Language identification: CNNs can be used to identify the language of a text document. This is a common task in translation systems.
 
 <br/>
 
