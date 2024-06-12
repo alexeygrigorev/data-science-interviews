@@ -1123,7 +1123,6 @@ It can be generated using two methods:
 
 **Do you know any other ways to get word embeddings? 🚀**
 
-- TF-IDF
 - GloVe
 - BERT
 <br/>
