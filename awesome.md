@@ -14,11 +14,13 @@ Contributions are welcome!
 * [Data Science Recruitment Challenges](https://github.com/alexeygrigorev/datascience-recruitment-challenges) - take-home assignments for data science positions
 * [Latest Data Science Interview Questions](https://www.interviewbit.com/data-science-interview-questions/) - Complete Interview Guide
 * [Daily Machine Learning Questions](https://today.bnomial.com/) - One machine learning question every day with answers, explanations, references.
+* [Data Science Interview Questions Answers](https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers) - Another awesome repo with comprehensive Dta Science QnA.
 
 ### Questions
 
 * [The toughest data science interview](https://www.linkedin.com/posts/agrigorev_datascience-machinelearning-ml-activity-6630138658219409409-bTWh) - a post on LinkedIn
 * [Data Science Interview Questions](https://www.itshared.org/2015/10/data-science-interview-questions.html) from [ITShared](https://www.itshared.org/) - from 2015, but many of them are still valid
+* * [Meta Data Science Interview Questions](https://www.datateams.ai/blog/questions-to-expect-in-a-meta-data-science-interview) - 35 Data Science Questions to expect in Meta Data Science Interview.
 
 
 ### Other useful links
@@ -32,6 +34,7 @@ Contributions are welcome!
 * [Machine Learning Systems Design](https://github.com/chiphuyen/machine-learning-systems-design)
 * [I interviewed at five top companies in Silicon Valley in five days, and luckily got five job offers](https://medium.com/@XiaohanZeng/i-interviewed-at-five-top-companies-in-silicon-valley-in-five-days-and-luckily-got-five-job-offers-25178cf74e0f)
 * [Navigating working with other teams](https://counting.substack.com/p/navigating-working-with-other-teams)
+* [Best Job Boards to find a Data Science Job](https://www.datateams.ai/blog/data-job-boards)
 
 
 ### Negotiation
