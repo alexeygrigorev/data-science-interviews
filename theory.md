@@ -353,7 +353,7 @@ AUC stands for *Area Under the ROC Curve*. ROC is a probability curve and AUC re
 
 AUC score is the value of *Area Under the ROC Curve*. 
 
-If we assume ROC curve consists of dots, <img src="https://render.githubusercontent.com/render/math?math=(x_1, y_1), (x_2, y_2), \cdots, (x_m,y_m)">, then
+If we assume ROC curve consists of dots, $`(x_1, y_1), (x_2, y_2), \cdots, (x_m,y_m)`$, then
 
 <img src="https://render.githubusercontent.com/render/math?math=AUC = \frac{1}{2} \sum_{i=1}^{m-1}(x_{i%2B1}-x_i)\cdot (y_i%2By_{i%2B1})">
 
