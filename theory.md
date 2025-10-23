@@ -140,11 +140,11 @@ Yes, you may need to do pre-processing. Most probably, you will need to remove t
 
 **What methods for solving linear regression do you know? ‍⭐️**
 
-To solve linear regression, you need to find the coefficients <img src="https://render.githubusercontent.com/render/math?math=\beta"> which minimize the sum of squared errors.
+To solve linear regression, you need to find the coefficients $`\beta`$ which minimize the sum of squared errors.
 
-Matrix Algebra method: Let's say you have `X`, a matrix of features, and `y`, a vector with the values you want to predict. After going through the matrix algebra and minimization problem, you get this solution: <img src="https://render.githubusercontent.com/render/math?math=\beta = (X^{T}X)^{-1}X^{T}y">. 
+Matrix Algebra method: Let's say you have `X`, a matrix of features, and `y`, a vector with the values you want to predict. After going through the matrix algebra and minimization problem, you get this solution: $`\beta = (X^{T}X)^{-1}X^{T}y`$. 
 
-But solving this requires you to find an inverse, which can be time-consuming, if not impossible. Luckily, there are methods like Singular Value Decomposition (SVD) or QR Decomposition that can reliably calculate this part <img src="https://render.githubusercontent.com/render/math?math=(X^{T}X)^{-1}X^{T}"> (called the pseudo-inverse) without actually needing to find an inverse. The popular python ML library `sklearn` uses SVD to solve least squares.
+But solving this requires you to find an inverse, which can be time-consuming, if not impossible. Luckily, there are methods like Singular Value Decomposition (SVD) or QR Decomposition that can reliably calculate this part $`(X^{T}X)^{-1}X^{T}`$ (called the pseudo-inverse) without actually needing to find an inverse. The popular python ML library `sklearn` uses SVD to solve least squares.
 
 Alternative method: Gradient Descent. See explanation below.
 
@@ -353,9 +353,9 @@ AUC stands for *Area Under the ROC Curve*. ROC is a probability curve and AUC re
 
 AUC score is the value of *Area Under the ROC Curve*. 
 
-If we assume ROC curve consists of dots, <img src="https://render.githubusercontent.com/render/math?math=(x_1, y_1), (x_2, y_2), \cdots, (x_m,y_m)">, then
+If we assume ROC curve consists of dots, $`(x_1, y_1), (x_2, y_2), \cdots, (x_m,y_m)`$, then
 
-<img src="https://render.githubusercontent.com/render/math?math=AUC = \frac{1}{2} \sum_{i=1}^{m-1}(x_{i%2B1}-x_i)\cdot (y_i%2By_{i%2B1})">
+$`AUC = \frac{1}{2} \sum_{i=1}^{m-1}(x_{i+1}-x_i)\cdot (y_i+y_{i+1})`$
 
 An excellent model has AUC near to the 1 which means it has good measure of separability. A poor model has AUC near to the 0 which means it has worst measure of separability. When AUC score is 0.5, it means model has no class separation capacity whatsoever. 
 
@@ -414,7 +414,7 @@ Simply put, the curse of dimensionality basically means that the error increases
 
 **What happens to our linear regression model if we have three columns in our data: x, y, z  —  and z is a sum of x and y? ‍⭐️**
 
-We would not be able to perform the regression. Because z is linearly dependent on x and y so when performing the regression <img src="https://render.githubusercontent.com/render/math?math={X}^{T}{X}"> would be a singular (not invertible) matrix.
+We would not be able to perform the regression. Because z is linearly dependent on x and y so when performing the regression $`{X}^{T}{X}`$ would be a singular (not invertible) matrix.
 <br/>
 
 **What happens to our linear regression model if the column z in the data is a sum of columns x and y and some random noise? ‍⭐️**
@@ -432,10 +432,10 @@ Regularization is used to reduce overfitting in machine learning models. It help
 **Which regularization techniques do you know? ‍⭐️**
 
 There are mainly two types of regularization,
-1. L1 Regularization (Lasso regularization) - Adds the sum of absolute values of the coefficients to the cost function. <img src="https://render.githubusercontent.com/render/math?math=\lambda\sum_{i=1}^{n} \left | w_i \right |">
-2. L2 Regularization (Ridge regularization) - Adds the sum of squares of coefficients to the cost function. <img src="https://render.githubusercontent.com/render/math?math=\lambda\sum_{i=1}^{n} {w_{i}}^{2}">
+1. L1 Regularization (Lasso regularization) - Adds the sum of absolute values of the coefficients to the cost function. $`\lambda\sum_{i=1}^{n} \left | w_i \right |`$
+2. L2 Regularization (Ridge regularization) - Adds the sum of squares of coefficients to the cost function. $`\lambda\sum_{i=1}^{n} {w_{i}}^{2}`$
 
-* Where <img src="https://render.githubusercontent.com/render/math?math=\lambda"> determines the amount of regularization.
+* Where $`\lambda`$ determines the amount of regularization.
 
 <br/>
 
@@ -467,7 +467,7 @@ L2 regularization penalizes larger weights more severely (due to the squared pen
 
 **How L1 regularization looks like in a linear model? ‍⭐️**
 
-L1 regularization adds a penalty term to our cost function which is equal to the sum of modules of models coefficients multiplied by a lambda hyperparameter. For example, cost function with L1 regularization will look like: <img src="https://render.githubusercontent.com/render/math?math=\sum_{i=0}^{N}%20(y_i%20-%20\sum_{j=0}^{M}%20x_{ij}%20*%20w_j)%2B\lambda\sum_{j=0}^{M}%20\left%20|%20w_j%20\right%20|">
+L1 regularization adds a penalty term to our cost function which is equal to the sum of modules of models coefficients multiplied by a lambda hyperparameter. For example, cost function with L1 regularization will look like: $`\sum_{i=0}^{N} (y_i - \sum_{j=0}^{M} x_{ij} * w_j)+\lambda\sum_{j=0}^{M} \left | w_j \right |`$
 
 <br/>
 
