@@ -15,6 +15,7 @@ Contributions are welcome!
 * [Latest Data Science Interview Questions](https://www.interviewbit.com/data-science-interview-questions/) - Complete Interview Guide
 * [Daily Machine Learning Questions](https://today.bnomial.com/) - One machine learning question every day with answers, explanations, references.
 * [Data Science Interview Questions Answers](https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers) - Another awesome repo with comprehensive Data Science QnA.
+* [DataDriven](https://www.datadriven.io/) - Free interactive data engineering interview prep with 1,400+ real interview questions covering SQL, Python, data modeling, and system architecture.
 
 ### Questions
 
