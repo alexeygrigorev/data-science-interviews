@@ -35,6 +35,7 @@ Contributions are welcome!
 * [I interviewed at five top companies in Silicon Valley in five days, and luckily got five job offers](https://medium.com/@XiaohanZeng/i-interviewed-at-five-top-companies-in-silicon-valley-in-five-days-and-luckily-got-five-job-offers-25178cf74e0f)
 * [Navigating working with other teams](https://counting.substack.com/p/navigating-working-with-other-teams)
 * [Best Job Boards to find a Data Science Job](https://www.datateams.ai/blog/data-job-boards)
+* [Hanzilla Jobs - Data & ML Canada](https://jobs.hanzilla.co/categories/data-ml/) - Daily-updated Canadian student and recent-grad data/ML, analytics, AI, internship, co-op, new-grad, junior, and entry-level roles.
 
 
 ### Negotiation
