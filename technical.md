@@ -364,7 +364,7 @@ def remove_duplicates2(lst):
 
 **7) Count**. Count how many times each element in a list occurs.
 
-`[1, 3, 2, 1, 5, 3, 5, 1, 4]` ⇒  
+`[1, 3, 2, 1, 5, 3, 5, 1, 4]` ⇒
 * 1: 3 times
 * 2: 1 time
 * 3: 2 times
@@ -961,7 +961,7 @@ def check_is_bst(head, min_val=None, max_val=None):
 <br/>
 
 
-**13) Maximum Sum Contiguous Subarray**. You are given an array `A` of length `N`, you have to find the largest possible sum of an Subarray, of array `A`.  
+**13) Maximum Sum Contiguous Subarray**. You are given an array `A` of length `N`, you have to find the largest possible sum of an Subarray, of array `A`.
 * `[-2, 1, -3, 4, -1, 2, 1, -5, 4]` gives `6` as largest sum (from the subarray `[4, -1, 2, -1]`
 
 ```python
@@ -981,7 +981,7 @@ def max_sum_subarr(list1, size):
         global_max = max(global_max, curr_max)
     return global_max
 
-n = int(input())         
+n = int(input())
 list1 = []
 for i in range(0,n):
     num = int(input())
@@ -1003,7 +1003,7 @@ Example:
 def threeSum(array, target):
     array.sort()
     triplets = []
-    
+
     for i in range(len(array) - 2):
         left = i + 1
         right = len(array) - 1
@@ -1023,10 +1023,10 @@ def threeSum(array, target):
 **15) Find Duplicate in array** Given and array, find all duplicated value in the array
 
 Example:
-  
+
    input: [1,2,3,4,3,4,5]
    output: [3,4]
-   
+
 ```python
 a = [1,2,3,4,3,4,5]
 

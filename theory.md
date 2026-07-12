@@ -46,7 +46,7 @@
 
 Supervised learning is a type of machine learning in which our algorithms are trained using well-labeled training data, and machines predict the output based on that data. Labeled data indicates that the input data has already been tagged with the appropriate output. Basically, it is the task of learning a function that maps the input set and returns an output. Some of its examples are: Linear Regression, Logistic Regression, KNN, etc.
 
-k-Nearest Neighbors(KNN):Looking at the k closest labeled data points 
+k-Nearest Neighbors(KNN):Looking at the k closest labeled data points
 
 <br/>
 
@@ -132,7 +132,7 @@ This is powerful because it helps us study processes whose population distributi
 
 **What if we want to build a model for predicting prices? Are prices distributed normally? Do we need to do any pre-processing for prices? ‍⭐️**
 
-Data is not normal. Specially, real-world datasets or uncleaned datasets always have certain skewness. Same goes for the price prediction. Price of houses or any other thing under consideration depends on a number of factors. So, there's a great chance of presence of some skewed values i.e outliers if we talk in data science terms. 
+Data is not normal. Specially, real-world datasets or uncleaned datasets always have certain skewness. Same goes for the price prediction. Price of houses or any other thing under consideration depends on a number of factors. So, there's a great chance of presence of some skewed values i.e outliers if we talk in data science terms.
 
 Yes, you may need to do pre-processing. Most probably, you will need to remove the outliers to make your distribution near-to-normal.
 
@@ -142,7 +142,7 @@ Yes, you may need to do pre-processing. Most probably, you will need to remove t
 
 To solve linear regression, you need to find the coefficients $`\beta`$ which minimize the sum of squared errors.
 
-Matrix Algebra method: Let's say you have `X`, a matrix of features, and `y`, a vector with the values you want to predict. After going through the matrix algebra and minimization problem, you get this solution: $`\beta = (X^{T}X)^{-1}X^{T}y`$. 
+Matrix Algebra method: Let's say you have `X`, a matrix of features, and `y`, a vector with the values you want to predict. After going through the matrix algebra and minimization problem, you get this solution: $`\beta = (X^{T}X)^{-1}X^{T}y`$.
 
 But solving this requires you to find an inverse, which can be time-consuming, if not impossible. Luckily, there are methods like Singular Value Decomposition (SVD) or QR Decomposition that can reliably calculate this part $`(X^{T}X)^{-1}X^{T}`$ (called the pseudo-inverse) without actually needing to find an inverse. The popular python ML library `sklearn` uses SVD to solve least squares.
 
@@ -331,9 +331,9 @@ Most of the performance metrics for classification models are based on the value
 
 **Precision-recall trade-off ‍⭐️**
 
-Tradeoff means increasing one parameter would lead to decreasing of other. Precision-recall tradeoff occur due to increasing one of the parameter(precision or recall) while keeping the model same. 
+Tradeoff means increasing one parameter would lead to decreasing of other. Precision-recall tradeoff occur due to increasing one of the parameter(precision or recall) while keeping the model same.
 
-In an ideal scenario where there is a perfectly separable data, both precision and recall can get maximum value of 1.0. But in most of the practical situations, there is noise in the dataset and the dataset is not perfectly separable. There might be some points of positive class closer to the negative class and vice versa. In such cases, shifting the decision boundary can either increase the precision or recall but not both. Increasing one parameter leads to decreasing of the other. 
+In an ideal scenario where there is a perfectly separable data, both precision and recall can get maximum value of 1.0. But in most of the practical situations, there is noise in the dataset and the dataset is not perfectly separable. There might be some points of positive class closer to the negative class and vice versa. In such cases, shifting the decision boundary can either increase the precision or recall but not both. Increasing one parameter leads to decreasing of the other.
 
 <br/>
 
@@ -351,13 +351,13 @@ AUC stands for *Area Under the ROC Curve*. ROC is a probability curve and AUC re
 
 **How to interpret the AU ROC score? ‍⭐️**
 
-AUC score is the value of *Area Under the ROC Curve*. 
+AUC score is the value of *Area Under the ROC Curve*.
 
 If we assume ROC curve consists of dots, $`(x_1, y_1), (x_2, y_2), \cdots, (x_m,y_m)`$, then
 
 $`AUC = \frac{1}{2} \sum_{i=1}^{m-1}(x_{i+1}-x_i)\cdot (y_i+y_{i+1})`$
 
-An excellent model has AUC near to the 1 which means it has good measure of separability. A poor model has AUC near to the 0 which means it has worst measure of separability. When AUC score is 0.5, it means model has no class separation capacity whatsoever. 
+An excellent model has AUC near to the 1 which means it has good measure of separability. A poor model has AUC near to the 0 which means it has worst measure of separability. When AUC score is 0.5, it means model has no class separation capacity whatsoever.
 
 <br/>
 
@@ -482,7 +482,7 @@ L1 regularization adds a penalty term to our cost function which is equal to the
 
 **Can we have both L1 and L2 regularization components in a linear model? ‍⭐️**
 
-Yes, elastic net regularization combines L1 and L2 regularization. 
+Yes, elastic net regularization combines L1 and L2 regularization.
 
 <br/>
 
@@ -510,9 +510,9 @@ Without normalization, the weight represents the change in the output per unit c
 
 **When do we need to perform feature normalization for linear models? When it’s okay not to do it? ‍⭐️**
 
-Feature normalization is necessary for L1 and L2 regularizations. The idea of both methods is to penalize all the features relatively equally. This can't be done effectively if every feature is scaled differently. 
+Feature normalization is necessary for L1 and L2 regularizations. The idea of both methods is to penalize all the features relatively equally. This can't be done effectively if every feature is scaled differently.
 
-Linear regression without regularization techniques can be used without feature normalization. Also, regularization can help to make the analytical solution more stable, — it adds the regularization matrix to the feature matrix before inverting it. 
+Linear regression without regularization techniques can be used without feature normalization. Also, regularization can help to make the analytical solution more stable, — it adds the regularization matrix to the feature matrix before inverting it.
 
 <br/>
 
@@ -521,13 +521,13 @@ Linear regression without regularization techniques can be used without feature 
 
 **What is feature selection? Why do we need it? 👶**
 
-Feature Selection is a method used to select the relevant features for the model to train on. We need feature selection to remove the irrelevant features which leads the model to under-perform.  
+Feature Selection is a method used to select the relevant features for the model to train on. We need feature selection to remove the irrelevant features which leads the model to under-perform.
 
 <br/>
 
 **Is feature selection important for linear models? ‍⭐️**
 
-Yes, It is. It can make model performance better through selecting the most importance features and remove irrelevant features in order to make a prediction and it can also avoid overfitting, underfitting and bias-variance tradeoff. 
+Yes, It is. It can make model performance better through selecting the most importance features and remove irrelevant features in order to make a prediction and it can also avoid overfitting, underfitting and bias-variance tradeoff.
 
 <br/>
 
@@ -557,7 +557,7 @@ No, Because L2 regularization does not make the weights zero but only makes them
 
 **What are the decision trees? 👶**
 
-This is a type of supervised learning algorithm that is mostly used for classification problems. Surprisingly, it works for both categorical and continuous dependent variables. 
+This is a type of supervised learning algorithm that is mostly used for classification problems. Surprisingly, it works for both categorical and continuous dependent variables.
 
 In this algorithm, we split the population into two or more homogeneous sets. This is done based on most significant attributes/ independent variables to make as distinct groups as possible.
 
@@ -690,7 +690,7 @@ Answer here
 
 **What happens when we have correlated features in our data? ‍⭐️**
 
-In random forest, since random forest samples some features to build each tree, the information contained in correlated features is twice as much likely to be picked than any other information contained in other features. 
+In random forest, since random forest samples some features to build each tree, the information contained in correlated features is twice as much likely to be picked than any other information contained in other features.
 
 In general, when you are adding correlated features, it means that they linearly contains the same information and thus it will reduce the robustness of your model. Each time you train your model, your model might pick one feature or the other to "do the same job" i.e. explain some variance, reduce entropy, etc.
 
@@ -714,7 +714,7 @@ Gradient boosting is a machine learning technique for regression and classificat
 
 **Is it possible to parallelize training of a gradient boosting model? How to do it? ‍⭐️**
 
-Yes, different frameworks provide different options to make training faster, using GPUs to speed up the process by making it highly parallelizable.For example, for XGBoost <i>tree_method = 'gpu_hist'</i> option makes training faster by use of GPUs. 
+Yes, different frameworks provide different options to make training faster, using GPUs to speed up the process by making it highly parallelizable.For example, for XGBoost <i>tree_method = 'gpu_hist'</i> option makes training faster by use of GPUs.
 
 <br/>
 
@@ -809,7 +809,7 @@ The derivative of the sigmoid function for large positive or negative numbers is
 
 **What is ReLU? How is it better than sigmoid or tanh? ‍⭐️**
 
-ReLU is an abbreviation for Rectified Linear Unit. It is an activation function which has the value 0 for all negative values and the value f(x) = x for all positive values. The ReLU has a simple activation function which makes it fast to compute and while the sigmoid and tanh activation functions saturate at higher values, the ReLU has a potentially infinite activation, which addresses the problem of vanishing gradients. 
+ReLU is an abbreviation for Rectified Linear Unit. It is an activation function which has the value 0 for all negative values and the value f(x) = x for all positive values. The ReLU has a simple activation function which makes it fast to compute and while the sigmoid and tanh activation functions saturate at higher values, the ReLU has a potentially infinite activation, which addresses the problem of vanishing gradients.
 
 <br/>
 
@@ -818,31 +818,31 @@ ReLU is an abbreviation for Rectified Linear Unit. It is an activation function 
 Proper initialization of weight matrix in neural network is very necessary.
 Simply we can say there are two ways for initializations.
    1. Initializing weights with zeroes.
-      Setting weights to zero makes your network no better than a linear model. It is important to note that setting biases to 0 will not create any troubles as non zero weights take care of breaking the symmetry and even if bias is 0, the values in every neuron are still different.  
+      Setting weights to zero makes your network no better than a linear model. It is important to note that setting biases to 0 will not create any troubles as non zero weights take care of breaking the symmetry and even if bias is 0, the values in every neuron are still different.
    2. Initializing weights randomly.
-      Assigning random values to weights is better than just 0 assignment. 
+      Assigning random values to weights is better than just 0 assignment.
 * a) If weights are initialized with very high values the term np.dot(W,X)+b becomes significantly higher and if an activation function like sigmoid() is applied, the function maps its value near to 1 where the slope of gradient changes slowly and learning takes a lot of time.
 * b) If weights are initialized with low values it gets mapped to 0, where the case is the same as above. This problem is often referred to as the vanishing gradient.
-      
+
 <br/>
 
 **What if we set all the weights of a neural network to 0? ‍⭐️**
 
-If all the weights of a neural network are set to zero, the output of each connection is same (W*x = 0). This means the gradients which are backpropagated to each connection in a layer is same. This means all the connections/weights learn the same thing, and the model never converges. 
+If all the weights of a neural network are set to zero, the output of each connection is same (W*x = 0). This means the gradients which are backpropagated to each connection in a layer is same. This means all the connections/weights learn the same thing, and the model never converges.
 
 <br/>
 
 **What regularization techniques for neural nets do you know? ‍⭐️**
 
-* L1 Regularization - Defined as the sum of absolute values of the individual parameters. The L1 penalty causes a subset of the weights to become zero, suggesting that the corresponding features may safely be discarded. 
-* L2 Regularization - Defined as the sum of square of individual parameters. Often supported by regularization hyperparameter alpha. It results in weight decay. 
-* Data Augmentation - This requires some fake data to be created as a part of training set. 
+* L1 Regularization - Defined as the sum of absolute values of the individual parameters. The L1 penalty causes a subset of the weights to become zero, suggesting that the corresponding features may safely be discarded.
+* L2 Regularization - Defined as the sum of square of individual parameters. Often supported by regularization hyperparameter alpha. It results in weight decay.
+* Data Augmentation - This requires some fake data to be created as a part of training set.
 * Drop Out : This is most effective regularization technique for neural nets. Few random nodes in each layer is deactivated in forward pass. This allows the algorithm to train on different set of nodes in each iterations.
 <br/>
 
 **What is dropout? Why is it useful? How does it work? ‍⭐️**
 
-Dropout is a technique that at each training step turns off each neuron with a certain probability of *p*. This way at each iteration we train only *1-p* of neurons, which forces the network not to rely only on the subset of neurons for feature representation. This leads to regularizing effects that are controlled by the hyperparameter *p*.  
+Dropout is a technique that at each training step turns off each neuron with a certain probability of *p*. This way at each iteration we train only *1-p* of neurons, which forces the network not to rely only on the subset of neurons for feature representation. This leads to regularizing effects that are controlled by the hyperparameter *p*.
 
 <br/>
 
@@ -851,13 +851,13 @@ Dropout is a technique that at each training step turns off each neuron with a c
 
 **What is backpropagation? How does it work? Why do we need it? ‍⭐️**
 
-The Backpropagation algorithm looks for the minimum value of the error function in weight space using a technique called the delta rule or gradient descent. 
-The weights that minimize the error function is then considered to be a solution to the learning problem. 
+The Backpropagation algorithm looks for the minimum value of the error function in weight space using a technique called the delta rule or gradient descent.
+The weights that minimize the error function is then considered to be a solution to the learning problem.
 
 We need backpropogation because,
 * Calculate the error – How far is your model output from the actual output.
 * Minimum Error – Check whether the error is minimized or not.
-* Update the parameters – If the error is huge then, update the parameters (weights and biases). After that again check the error.  
+* Update the parameters – If the error is huge then, update the parameters (weights and biases). After that again check the error.
 Repeat the process until the error becomes minimum.
 * Model is ready to make a prediction – Once the error becomes minimum, you can feed some inputs to your model and it will produce the output.
 
@@ -870,7 +870,7 @@ Repeat the process until the error becomes minimum.
 * Mini-Batch Gradient Descent(best among gradient descents)
 * Nesterov Accelerated Gradient
 * Momentum
-* Adagrad 
+* Adagrad
 * AdaDelta
 * Adam(best one. less time, more efficient)
 
@@ -918,7 +918,7 @@ Adam tends to converge faster, while SGD often converges to more optimal solutio
 **Do we want to have a constant learning rate or we better change it throughout training? ‍⭐️**
 
 Generally, it is recommended to start learning rate with relatively high value and then gradually decrease learning rate so the model does not overshoot the minima and at the same time we don't want to start with very low learning rate as the model will take too long to converge. There are many available techniques to do decay the learning rate. For example, in PyTorch you can use
-a function called **StepLR** which decays the learning rate of each parameter by value **gamma**-which we have to pass through argument- after n number of epoch which you can also set through function argument named **epoch_size**. 
+a function called **StepLR** which decays the learning rate of each parameter by value **gamma**-which we have to pass through argument- after n number of epoch which you can also set through function argument named **epoch_size**.
 
 <br/>
 
@@ -945,7 +945,7 @@ Answer here
 
 **How we can use neural nets for computer vision? ‍⭐️**
 
-Neural nets used in the area of computer vision are generally Convolutional Neural Networks(CNN's). You can learn about convolutions below. It appears that convolutions are quite powerful when it comes to working with images and videos due to their ability to extract and learn complex features. Thus CNN's are a go-to method for any problem in computer vision.    
+Neural nets used in the area of computer vision are generally Convolutional Neural Networks(CNN's). You can learn about convolutions below. It appears that convolutions are quite powerful when it comes to working with images and videos due to their ability to extract and learn complex features. Thus CNN's are a go-to method for any problem in computer vision.
 
 <br/>
 
@@ -957,7 +957,7 @@ The idea of the convolutional layer is the assumption that the information neede
 
 **Why do we actually need convolutions? Can’t we use fully-connected layers for that? ‍⭐️**
 
-A fully-connected layer needs one weight per inter-layer connection, which means the number of weights which needs to be computed quickly balloons as the number of layers and nodes per layer is increased. 
+A fully-connected layer needs one weight per inter-layer connection, which means the number of weights which needs to be computed quickly balloons as the number of layers and nodes per layer is increased.
 
 <br/>
 
@@ -969,13 +969,13 @@ Pooling is a technique to downsample the feature map. It allows layers which rec
 
 **How does max pooling work? Are there other pooling techniques? ‍⭐️**
 
-Max pooling is a technique where the maximum value of a receptive field is passed on in the next feature map. The most commonly used receptive field is 2 x 2 with a stride of 2, which means the feature map is downsampled from N x N to N/2 x N/2. Receptive fields larger than 3 x 3 are rarely employed as too much information is lost. 
+Max pooling is a technique where the maximum value of a receptive field is passed on in the next feature map. The most commonly used receptive field is 2 x 2 with a stride of 2, which means the feature map is downsampled from N x N to N/2 x N/2. Receptive fields larger than 3 x 3 are rarely employed as too much information is lost.
 
 Other pooling techniques include:
 
 * Average pooling, the output is the average value of the receptive field.
 * Min pooling, the output is the minimum value of the receptive field.
-* Global pooling, where the receptive field is set to be equal to the input size, this means the output is equal to a scalar and can be used to reduce the dimensionality of the feature map. 
+* Global pooling, where the receptive field is set to be equal to the input size, this means the output is equal to a scalar and can be used to reduce the dimensionality of the feature map.
 
 <br/>
 
@@ -987,7 +987,7 @@ CNNs are not resistant to rotation by design. However, we can make our models re
 
 **What are augmentations? Why do we need them? 👶**
 
-Augmentations are an artifical way of expanding the existing datasets by performing some transformations, color shifts or many other things on the data. It helps in diversifying the data and even increasing the data when there is scarcity of data for a model to train on.  
+Augmentations are an artifical way of expanding the existing datasets by performing some transformations, color shifts or many other things on the data. It helps in diversifying the data and even increasing the data when there is scarcity of data for a model to train on.
 
 <br/>
 
@@ -1007,7 +1007,7 @@ Augmentations really depend on the type of output classes and the features you w
 
 Image Classification
 * Inception v3
-* Xception 
+* Xception
 * DenseNet
 * AlexNet
 * VGG16
@@ -1016,7 +1016,7 @@ Image Classification
 * EfficientNet
 * MobileNet
 
-The last three are designed so they use smaller number of parameters which is helpful for edge AI. 
+The last three are designed so they use smaller number of parameters which is helpful for edge AI.
 
 <br/>
 
@@ -1030,7 +1030,7 @@ In the context of CNNs, we can use networks that were pre-trained on popular dat
 
 **What is object detection? Do you know any architectures for that? 🚀**
 
-Object detection is finding Bounding Boxes around objects in an image. 
+Object detection is finding Bounding Boxes around objects in an image.
 Architectures :
 YOLO, Faster RCNN, Center Net
 
@@ -1038,7 +1038,7 @@ YOLO, Faster RCNN, Center Net
 
 **What is object segmentation? Do you know any architectures for that? 🚀**
 
-Object Segmentation is predicting masks. It does not differentiate objects. 
+Object Segmentation is predicting masks. It does not differentiate objects.
 Architectures :
 Mask RCNN, UNet
 
@@ -1085,7 +1085,7 @@ Answer here
 
 **What is TF-IDF? How is it useful for text classification? ‍⭐️**
 
-Term Frequency (TF) is a scoring of the frequency of the word in the current document. Inverse Document Frequency(IDF) is a scoring of how rare the word is across documents. It is used in scenario where highly recurring words may not contain as much informational content as the domain specific words. For example, words like “the” that are frequent across all documents therefore need to be less weighted. The TF-IDF score highlights words that are distinct (contain useful information) in a given document.  
+Term Frequency (TF) is a scoring of the frequency of the word in the current document. Inverse Document Frequency(IDF) is a scoring of how rare the word is across documents. It is used in scenario where highly recurring words may not contain as much informational content as the domain specific words. For example, words like “the” that are frequent across all documents therefore need to be less weighted. The TF-IDF score highlights words that are distinct (contain useful information) in a given document.
 
 <br/>
 
@@ -1108,12 +1108,12 @@ Usually logistic regression is better because bag of words creates a matrix with
 
 **What are word embeddings? Why are they useful? Do you know Word2Vec? ‍⭐️**
 
-Word Embeddings are vector representations for words. Each word is mapped to one vector, this vector tries to capture some characteristics of the word, allowing similar words to have similar vector representations.  
-Word Embeddings helps in capturing the inter-word semantics and represents it in real-valued vectors.  
+Word Embeddings are vector representations for words. Each word is mapped to one vector, this vector tries to capture some characteristics of the word, allowing similar words to have similar vector representations.
+Word Embeddings helps in capturing the inter-word semantics and represents it in real-valued vectors.
 
 <br/>
 
-Word2Vec is a method to construct such an embedding. It takes a text corpus as input and outputs a set of vectors which represents words in that corpus.  
+Word2Vec is a method to construct such an embedding. It takes a text corpus as input and outputs a set of vectors which represents words in that corpus.
 
 It can be generated using two methods:
 
@@ -1164,7 +1164,7 @@ Evaluate the neural net: Once the neural net is trained, it can be evaluated on 
 Here are some specific examples of how neural nets can be used for text classification:
 Sentiment analysis, Spam detection, Topic classification, Language identification
 
-Neural nets have achieved state-of-the-art results on many text classification tasks. However, they can be computationally expensive to train and deploy. 
+Neural nets have achieved state-of-the-art results on many text classification tasks. However, they can be computationally expensive to train and deploy.
 
 <br/>
 

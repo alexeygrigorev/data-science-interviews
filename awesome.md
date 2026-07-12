@@ -28,7 +28,7 @@ Contributions are welcome!
 * Getting a Data Science Job: [Video](https://www.youtube.com/watch?v=jYYR1fH8k7o), [Slides](https://www.slideshare.net/AlexeyGrigorev/getting-a-data-science-job)
 * [How does a technical screening for data science positions look like?](https://www.linkedin.com/posts/agrigorev_datascience-machinelearning-ml-activity-6631245015718866944-Vb87) - a post on LinkedIn
 * [How to prepare for Research Engineer (ML) interview?](https://www.linkedin.com/posts/agrigorev_machinelearning-ml-interviews-activity-6622232556311990272-_dAN) - a post on LinkedIn
-* [How to prepare for a data science interview?](https://www.quora.com/How-do-I-prepare-for-a-data-scientist-interview) - 100+ answers on Quora 
+* [How to prepare for a data science interview?](https://www.quora.com/How-do-I-prepare-for-a-data-scientist-interview) - 100+ answers on Quora
 * [How to Get a Data Science Job: A Ridiculously Specific Guide](http://brohrer.github.io/get_data_science_job.html)
 * [How to Succeed in A Data Science Interview](https://blog.pramp.com/how-to-succeed-in-a-data-science-interview-27553ab69d8a)
 * [Machine Learning Systems Design](https://github.com/chiphuyen/machine-learning-systems-design)
