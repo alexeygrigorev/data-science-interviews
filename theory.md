@@ -936,11 +936,9 @@ Saving the weights learned by a model mid training for long running processes is
 
 **Can you tell us how you approach the model training process? ‍⭐️**
 
-Data Preparation :- Clean the data, scale features, and split it into Train, Validation, and Test sets. After this, choose the architecture & hyperparameters for the model.
-
-Train & Monitor :- Run forward passes, compute loss, and update weights via backpropagation while tracking both training and validation loss.
-
-Tuning & Regularization :- Adjust hyperparameters and apply Dropout, Weight Decay, or Early Stopping to prevent overfitting. Then, evaluate the final model on the unseen test set to check real-world performance.
+- Data Preparation: Clean the data, scale features, and split it into Train, Validation, and Test sets. After this, choose the architecture & hyperparameters for the model.
+- Train & Monitor: Run forward passes, compute loss, and update weights via backpropagation while tracking both training and validation loss.
+- Tuning & Regularization: Adjust hyperparameters and apply Dropout, Weight Decay, or Early Stopping to prevent overfitting. Then, evaluate the final model on the unseen test set to check real-world performance.
 
 <br/>
 
