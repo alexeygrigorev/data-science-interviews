@@ -730,7 +730,7 @@ Also you can add random noise column to your data (with normal distribution), ca
 
 **Are there any differences between continuous and discrete variables when it comes to feature importance of gradient boosting models? 🚀**
 
-Answer here
+Yes. Gradient boosting models heavily bias default feature importance metrics toward continuous variables because their wide range of unique values provides far more candidate split thresholds to reduce impurity compared to low-cardinality discrete variables. Additionally, one-hot encoding discrete features fragments their importance across multiple columns, while continuous features keep their entire signal concentrated in one.
 
 <br/>
 
