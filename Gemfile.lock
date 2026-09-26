@@ -218,7 +218,7 @@ GEM
     rouge (3.13.0)
     ruby-enum (0.8.0)
       i18n
-    rubyzip (2.3.0)
+    rubyzip (3.4.0)
     safe_yaml (1.0.5)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
