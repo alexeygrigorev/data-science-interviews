@@ -15,6 +15,7 @@ Contributions are welcome!
 * [Latest Data Science Interview Questions](https://www.interviewbit.com/data-science-interview-questions/) - Complete Interview Guide
 * [Daily Machine Learning Questions](https://today.bnomial.com/) - One machine learning question every day with answers, explanations, references.
 * [Data Science Interview Questions Answers](https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers) - Another awesome repo with comprehensive Data Science QnA.
+* [AI Engineer Interview: Top 30 Questions](https://valenx.org/go/free-aie30?utm_source=github&utm_medium=awesome_list&utm_campaign=leadgen1125&utm_content=ds-interviews) - Free 13-page PDF (email requested) for ML and software engineers moving into AI roles: 30 questions on LLMs, RAG, agents and evaluation, each with what the interviewer tests and a 4-step answer framework.
 
 ### Questions
 
